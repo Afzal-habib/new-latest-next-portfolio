@@ -291,3 +291,25 @@ Built a mobile application for inventory management with features like stock upd
 
 
 
+
+# Experience
+
+Depllc(Digi era pro)
+Senior Full Stack Developer
+Ichra lahore
+Sep 25 to till now
+
+Devgiant
+Full Stack Developer
+Gulberg Lahore
+APR-24 to Sep 25
+
+Heapware
+Frontend Developer
+Gulberg Lahore
+SEP-23 to MAR-24
+
+Ideoversity
+InternShip 
+Arfa IT Tower
+JUN-23 to AUG-23
