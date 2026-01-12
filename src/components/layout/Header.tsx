@@ -8,7 +8,7 @@ import { Menu, X } from 'lucide-react'
 import { cn } from '@/lib/cn'
 import { ThemeToggle } from './ThemeToggle'
 import { SocialLinks } from './SocialLinks'
-import { ColorThemeSwitcher } from '@/components/common'
+import { ColorThemeSwitcher, ThemedLogo } from '@/components/common'
 import { getMainNav } from '@/data/navigation'
 import { fadeIn,staggerContainer, staggerItem } from '@/lib/animations'
 
@@ -65,7 +65,7 @@ export function Header() {
               href="/"
               className="text-xl font-bold tracking-tight transition-colors hover:text-primary md:text-2xl"
             >
-              <span className="text-gradient">Afzal</span>
+              <ThemedLogo src="/images/main-logo.png" alt="Logo" width={60} height={60} />
             </Link>
 
             {/* Desktop Navigation */}
