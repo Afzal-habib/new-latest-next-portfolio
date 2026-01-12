@@ -19,7 +19,7 @@ import type { SkillCategory } from '@/types/skill'
 import { ExperienceTimelineItem } from '@/app/about/page'
 
 // Rotating titles for hero section
-const HERO_TITLES = ['Software Engineer','Developer', 'Coder', 'Programmer', 'Tech Enthusiast', 'Full Stack Developer']
+const HERO_TITLES = ['Software Engineer', 'Developer', 'Coder', 'Programmer', 'Tech Enthusiast', 'Full Stack Developer']
 
 // Pro-level animated rotating text with smooth animation
 function RotatingText({ texts, interval = 2500 }: { texts: string[]; interval?: number }) {
@@ -39,12 +39,12 @@ function RotatingText({ texts, interval = 2500 }: { texts: string[]; interval?: 
       {/* Glow effect behind text */}
       <motion.span
         className="absolute -inset-x-4 -inset-y-2 blur-2xl bg-primary/40 -z-10 rounded-lg"
-        animate={{ 
+        animate={{
           opacity: [0.3, 0.5, 0.3],
         }}
         transition={{ duration: 3, repeat: Infinity, ease: 'easeInOut' }}
       />
-      
+
       {/* Text container with smooth vertical slide */}
       <span className="relative inline-block overflow-hidden h-[1.2em] align-bottom">
         <AnimatePresence mode="popLayout" initial={false}>
@@ -53,7 +53,7 @@ function RotatingText({ texts, interval = 2500 }: { texts: string[]; interval?: 
             initial={{ y: '100%' }}
             animate={{ y: '0%' }}
             exit={{ y: '-100%' }}
-            transition={{ 
+            transition={{
               duration: 0.5,
               ease: [0.32, 0.72, 0, 1],
             }}
@@ -63,7 +63,7 @@ function RotatingText({ texts, interval = 2500 }: { texts: string[]; interval?: 
           </motion.span>
         </AnimatePresence>
       </span>
-      
+
       {/* Progressive underline */}
       <motion.span
         key={currentIndex}
@@ -106,7 +106,7 @@ function AnimatedWords({ text, className }: { text: string; className?: string }
 // Profile Image with fallback
 function ProfileImage() {
   const [imageError, setImageError] = useState(false)
-  
+
   if (imageError) {
     return (
       <div className="absolute inset-0 flex items-center justify-center bg-gradient-to-br from-primary/20 to-primary/5">
@@ -114,7 +114,7 @@ function ProfileImage() {
       </div>
     )
   }
-  
+
   return (
     <Image
       src="/images/profile2.jpeg"
@@ -132,7 +132,7 @@ function ProfileImage() {
 export default function HomePage() {
   const heroRef = useRef<HTMLElement>(null)
   const [isMobile, setIsMobile] = useState(false)
-  
+
   // Check if mobile on mount
   useEffect(() => {
     const checkMobile = () => setIsMobile(window.innerWidth < 1024)
@@ -140,7 +140,7 @@ export default function HomePage() {
     window.addEventListener('resize', checkMobile)
     return () => window.removeEventListener('resize', checkMobile)
   }, [])
-  
+
   // Parallax effect - only apply opacity fade on desktop
   const { scrollYProgress } = useScroll({
     target: heroRef,
@@ -148,7 +148,7 @@ export default function HomePage() {
   })
   const heroY = useTransform(scrollYProgress, [0, 1], [0, isMobile ? 0 : 150])
   const heroOpacity = useTransform(scrollYProgress, [0, 0.5], [1, isMobile ? 1 : 0])
-  
+
   return (
     <>
       {/* Hero Section */}
@@ -157,10 +157,10 @@ export default function HomePage() {
         <div className="absolute inset-0 -z-10">
           {/* Base dark gradient */}
           <div className="absolute inset-0 bg-gradient-to-br from-background via-background to-background" />
-          
+
           {/* Main hero glow - positioned to left where content is */}
           <div className="absolute top-1/4 left-1/4 w-[400px] lg:w-[600px] h-[400px] lg:h-[600px] bg-primary/[0.08] rounded-full blur-[100px] lg:blur-[150px]" />
-          
+
           {/* Secondary ambient glow - top right */}
           <motion.div
             className="absolute -top-20 right-0 w-[500px] h-[500px] rounded-full"
@@ -177,7 +177,7 @@ export default function HomePage() {
               ease: 'easeInOut',
             }}
           />
-          
+
           {/* Accent glow - bottom left */}
           <motion.div
             className="absolute bottom-20 -left-20 w-[400px] h-[400px] rounded-full"
@@ -195,24 +195,24 @@ export default function HomePage() {
               delay: 2,
             }}
           />
-          
+
           {/* Gradient overlay for depth */}
           <div className="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent" />
-          
+
           {/* Pro-level constellation network animation */}
-          <ConstellationBackground 
+          <ConstellationBackground
             nodeCount={60}
             connectionDistance={140}
             interactive={true}
             className="opacity-70"
           />
-          
+
           {/* Subtle grid pattern */}
           <div className="absolute inset-0 hero-grid-pattern opacity-20" />
         </div>
 
         {/* Hero Content */}
-        <motion.div 
+        <motion.div
           style={{ y: heroY, opacity: heroOpacity }}
           className="container-custom flex min-h-screen items-center pt-24 pb-16 lg:pt-20"
         >
@@ -242,7 +242,7 @@ export default function HomePage() {
                   transition={{ duration: 0.6, delay: 0.1 }}
                   className="block text-4xl md:text-4xl lg:text-5xl xl:text-6xl font-bold tracking-tight text-foreground"
                 >
-                 I'm Afzal Habib, 
+                  I'm Afzal Habib,
                 </motion.span>
                 <motion.span
                   initial={{ opacity: 0, y: 30 }}
@@ -275,18 +275,18 @@ export default function HomePage() {
               >
                 {/* Primary CTA with Glow */}
                 <Link href="/cv/resume.pdf" download>
-                  <Button 
-                    size="lg" 
+                  <Button
+                    size="lg"
                     className="relative overflow-hidden bg-primary hover:bg-primary/90 text-primary-foreground font-semibold px-8 shadow-[0_0_30px_-5px_hsl(var(--primary)/0.5)] hover:shadow-[0_0_40px_-5px_hsl(var(--primary)/0.7)] transition-all duration-300"
                   >
                     Download cv
                   </Button>
                 </Link>
-                
+
                 {/* Secondary CTA */}
                 <Link href="/projects">
-                  <Button 
-                    size="lg" 
+                  <Button
+                    size="lg"
                     variant="outline"
                     className="group border-border hover:border-foreground/30 hover:bg-muted/50 font-semibold px-8 transition-all duration-300"
                   >
@@ -329,23 +329,23 @@ export default function HomePage() {
                     ease: 'easeInOut',
                   }}
                 />
-                
+
                 {/* Stylized frame - outer ring */}
                 <div className="relative w-[260px] h-[340px] sm:w-[300px] sm:h-[380px] lg:w-[380px] lg:h-[460px] mx-auto">
                   {/* Gradient border frame */}
                   <div className="absolute inset-0 rounded-[1.5rem] sm:rounded-[2rem] lg:rounded-[2.5rem] bg-gradient-to-br from-primary via-primary/50 to-primary/20 p-[2px] sm:p-[3px]">
                     <div className="w-full h-full rounded-[1.4rem] sm:rounded-[1.9rem] lg:rounded-[2.4rem] bg-background" />
                   </div>
-                  
+
                   {/* Inner frame with image */}
                   <div className="absolute inset-2 sm:inset-3 rounded-[1.2rem] sm:rounded-[1.5rem] lg:rounded-[2rem] overflow-hidden bg-gradient-to-br from-muted to-muted/50">
                     {/* Profile Image */}
                     <ProfileImage />
-                    
+
                     {/* Subtle gradient overlay on image */}
                     <div className="absolute inset-0 bg-gradient-to-t from-background/40 via-transparent to-transparent" />
                   </div>
-                  
+
                   {/* Decorative glow accent on frame */}
                   <motion.div
                     className="absolute -top-1 -right-1 sm:-top-2 sm:-right-2 w-10 h-10 sm:w-16 sm:h-16 lg:w-20 lg:h-20 bg-primary/60 rounded-full blur-xl sm:blur-2xl"
@@ -358,7 +358,7 @@ export default function HomePage() {
                       ease: 'easeInOut',
                     }}
                   />
-                  
+
                   {/* Bottom glow accent */}
                   <motion.div
                     className="absolute -bottom-2 -left-2 sm:-bottom-3 sm:-left-3 lg:-bottom-4 lg:-left-4 w-16 h-16 sm:w-24 sm:h-24 lg:w-32 lg:h-32 bg-primary/30 rounded-full blur-2xl sm:blur-3xl"
@@ -373,7 +373,7 @@ export default function HomePage() {
                     }}
                   />
                 </div>
-                
+
                 {/* Floating decorative elements - visible on all screens */}
                 <motion.div
                   className="absolute -top-2 right-0 sm:-top-4 sm:-right-2 lg:-top-8 lg:-right-8 w-8 h-8 sm:w-12 sm:h-12 lg:w-16 lg:h-16 z-20"
@@ -389,7 +389,7 @@ export default function HomePage() {
                 >
                   <div className="w-full h-full bg-gradient-to-br from-primary to-primary/50 rotate-45 transform rounded-md sm:rounded-lg shadow-lg shadow-primary/30" />
                 </motion.div>
-                
+
                 {/* Floating ring decoration - visible on all screens */}
                 <motion.div
                   className="absolute -bottom-2 right-0 sm:-bottom-4 sm:-right-2 lg:-bottom-6 lg:-right-6 w-10 h-10 sm:w-16 sm:h-16 lg:w-24 lg:h-24 z-20"
@@ -715,6 +715,68 @@ export default function HomePage() {
           </motion.div>
         </div>
       </section>
+
+      <Section>
+        <SectionHeading
+          title="Frequently Asked"
+          subtitle="Questions"
+          align="center"
+        />
+        <motion.div
+          initial={{ opacity: 0, x: -50 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+          className='mt-8'
+        >
+          {/* FAQ */}
+          <div className="space-y-4">
+            <div className="space-y-3 grid grid-cols-1 md:grid-cols-2 gap-4">
+              {[
+                {
+                  q: 'What services do you offer?',
+                  a: 'Full-stack web development, UI/UX design, and consulting.',
+                },
+                {
+                  q: 'What is your typical project timeline?',
+                  a: 'Depends on scope, but typically 4-8 weeks for most projects.',
+                },
+                {
+                  q: 'Do you work with international clients?',
+                  a: 'Yes! I work with clients globally and adapt to different timezones.',
+                },
+                {
+                  q: 'What technologies do you specialize in?',
+                  a: 'I specialize in React, Next.js, Node.js, MongoDB, and modern web technologies for scalable applications.',
+                },
+                {
+                  q: 'How do you ensure project quality?',
+                  a: 'Through comprehensive testing, code reviews, best practices, and regular client feedback throughout development.',
+                },
+                {
+                  q: 'Do you provide ongoing support after project completion?',
+                  a: 'Yes, I offer maintenance packages and support to ensure your application runs smoothly post-launch.',
+                },
+                {
+                  q: 'What is your development process?',
+                  a: 'I follow an agile approach: discovery, planning, development with milestones, testing, and deployment with full documentation.',
+                },
+                {
+                  q: 'Can you work with existing codebases?',
+                  a: 'Absolutely! I can refactor, optimize, or extend existing applications while maintaining code quality.',
+                },
+              ].map((faq, index) => (
+                <Card key={index} variant="outline" className="overflow-hidden">
+                  <CardContent className="p-2">
+                    <p className="font-medium text-sm">{faq.q}</p>
+                    <p className="mt-1 text-sm text-muted-foreground">{faq.a}</p>
+                  </CardContent>
+                </Card>
+              ))}
+            </div>
+          </div>
+        </motion.div>
+      </Section>
     </>
   )
 }

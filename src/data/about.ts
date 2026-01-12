@@ -185,12 +185,12 @@ export const contactInfo = {
 
 // Site metadata
 export const siteConfig = {
-  name: 'Afzal',
+  name: 'Afzal Habib',
   title: 'Afzal | Full-Stack Developer',
   description: 'Professional portfolio of Afzal, a Full-Stack Developer specializing in React, Next.js, and Node.js. Building modern web applications with clean code and great user experiences.',
-  url: 'https://afzal.dev',
-  ogImage: 'https://afzal.dev/og-image.jpg',
-  author: 'Afzal',
+  url: 'https://afzalhabib.vercel.app/',
+  ogImage: 'https://afzalhabib.vercel.app/og-image.jpg',
+  author: 'Afzal Habib',
   phone: '+92 3231103430',
   email: 'afzalhaabib786@gmail.com',
   keywords: ['Full-Stack Developer', 'React Developer', 'Next.js', 'Node.js', 'Web Developer', 'Portfolio'],

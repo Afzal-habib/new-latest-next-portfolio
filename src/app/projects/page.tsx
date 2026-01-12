@@ -147,7 +147,7 @@ export default function ProjectsPage() {
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
             onClick={() => setActiveCategory('All')}
-            className={`rounded-full px-4 py-2 text-sm font-medium transition-all ${
+            className={`rounded-full px-4 py-2 text-sm font-medium transition-all cursor-pointer ${
               activeCategory === 'All'
                 ? 'bg-primary text-primary-foreground'
                 : 'bg-muted hover:bg-muted/80'
@@ -161,7 +161,7 @@ export default function ProjectsPage() {
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
               onClick={() => setActiveCategory(category)}
-              className={`rounded-full px-4 py-2 text-sm font-medium transition-all ${
+              className={`rounded-full px-4 py-2 text-sm font-medium transition-all cursor-pointer ${
                 activeCategory === category
                   ? 'bg-primary text-primary-foreground'
                   : 'bg-muted hover:bg-muted/80'

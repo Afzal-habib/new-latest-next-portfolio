@@ -108,7 +108,7 @@ export function ColorThemeSwitcher() {
         whileHover={{ scale: 1.05 }}
         whileTap={{ scale: 0.95 }}
         onClick={() => setIsOpen(!isOpen)}
-        className="flex h-9 w-9 items-center justify-center rounded-full bg-muted text-foreground hover:bg-muted/80 transition-colors"
+        className="flex h-9 w-9 items-center justify-center rounded-full bg-muted text-foreground hover:bg-muted/80 transition-colors cursor-pointer"
         aria-label="Change color theme"
       >
         <Palette className="h-4 w-4" />
@@ -134,7 +134,7 @@ export function ColorThemeSwitcher() {
                   key={theme.name}
                   whileHover={{ x: 2 }}
                   onClick={() => handleThemeChange(theme.name)}
-                  className={`w-full flex items-center gap-3 rounded-lg px-2.5 py-2.5 text-sm transition-colors ${
+                  className={`w-full flex items-center gap-3 rounded-lg px-2.5 py-2.5 text-sm transition-colors cursor-pointer ${
                     colorTheme === theme.name
                       ? 'bg-primary/10 text-foreground'
                       : 'hover:bg-muted/50 text-foreground/80'

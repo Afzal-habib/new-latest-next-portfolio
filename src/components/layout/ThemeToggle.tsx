@@ -23,7 +23,7 @@ export function ThemeToggle({ className, showLabel = false }: ThemeToggleProps) 
     return (
       <button
         className={cn(
-          'inline-flex items-center justify-center rounded-md p-2',
+          'inline-flex items-center justify-center rounded-md p-2 cursor-pointer',
           'bg-secondary text-secondary-foreground',
           'hover:bg-secondary/80 transition-colors',
           className
@@ -65,7 +65,7 @@ export function ThemeToggle({ className, showLabel = false }: ThemeToggleProps) 
     <button
       onClick={cycleTheme}
       className={cn(
-        'inline-flex items-center justify-center gap-2 rounded-md p-2',
+        'inline-flex items-center justify-center gap-2 rounded-md p-2 cursor-pointer',
         'bg-secondary text-secondary-foreground',
         'hover:bg-secondary/80 transition-colors duration-200',
         'focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring',
