@@ -275,10 +275,10 @@ export default function AboutPage() {
                     transition={{ duration: 0.3 }}
                   >
                     <Image
-                      src="/images/profile04.jpeg"
+                      src="/images/profile06.jpeg"
                       alt="Professional Profile"
                       fill
-                      className="object-cover object-center transition-all duration-700 hover:brightness-110 hover:contrast-105"
+                      className="object-cover object-bottom transition-all duration-700 hover:brightness-110 hover:contrast-105"
                       priority
                       sizes="(max-width: 768px) 280px, (max-width: 1024px) 320px, 400px"
                       quality={100}
@@ -357,42 +357,6 @@ export default function AboutPage() {
                   }}
                 />
 
-                {/* Professional achievement badges */}
-                {/* <motion.div
-                  initial={{ opacity: 0, x: 30 }}
-                  whileInView={{ opacity: 1, x: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ delay: 0.8, duration: 0.5 }}
-                  className="absolute -right-4 top-1/4 bg-card/95 backdrop-blur-xl border border-border/50 rounded-xl p-3 shadow-2xl z-10"
-                >
-                  <div className="flex items-center gap-2">
-                    <div className="w-8 h-8 bg-primary/10 rounded-lg flex items-center justify-center">
-                      <LucideIcons.Award className="w-4 h-4 text-primary" />
-                    </div>
-                    <div>
-                      <p className="text-sm font-bold text-primary">{aboutContent.highlights[0]?.value || '5+'}</p>
-                      <p className="text-xs text-muted-foreground">{aboutContent.highlights[0]?.label || 'Years'}</p>
-                    </div>
-                  </div>
-                </motion.div>
-
-                <motion.div
-                  initial={{ opacity: 0, x: -30 }}
-                  whileInView={{ opacity: 1, x: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ delay: 1, duration: 0.5 }}
-                  className="absolute -left-4 bottom-1/4 bg-card/95 backdrop-blur-xl border border-border/50 rounded-xl p-3 shadow-2xl z-10"
-                >
-                  <div className="flex items-center gap-2">
-                    <div className="w-8 h-8 bg-accent/10 rounded-lg flex items-center justify-center">
-                      <LucideIcons.Code className="w-4 h-4 text-accent" />
-                    </div>
-                    <div>
-                      <p className="text-sm font-bold text-accent">{aboutContent.highlights[1]?.value || '50+'}</p>
-                      <p className="text-xs text-muted-foreground">{aboutContent.highlights[1]?.label || 'Projects'}</p>
-                    </div>
-                  </div>
-                </motion.div> */}
 
                 {/* Elite corner accents */}
                 <div className="absolute top-2 left-2 w-2 h-2 bg-gradient-to-br from-primary/80 to-accent/80 rounded-full blur-sm" />
