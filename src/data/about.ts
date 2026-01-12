@@ -55,16 +55,22 @@ export const aboutContent = {
   // Certifications
   certifications: [
     {
-      name: 'AWS Solutions Architect Associate',
-      issuer: 'Amazon Web Services',
-      date: '2024',
-      // credentialUrl: 'https://aws.amazon.com/verification',
+      name: 'MERN STACK',
+      issuer: 'House of Professional',
+      date: 'Mar 2022',
+      location: 'Johar Town, Lahore',
     },
     {
-      name: 'Meta Frontend Developer Professional',
-      issuer: 'Meta (Facebook)',
-      date: '2023',
-      // credentialUrl: 'https://coursera.org/verify',
+      name: 'Frontend Development',
+      issuer: 'Ideoversity Institute',
+      date: 'Sep 2022',
+      location: 'Arfa IT Tower, Lahore',
+    },
+    {
+      name: 'Backend Development',
+      issuer: 'UET Lahore',
+      date: 'Jan 2023',
+      location: 'Lahore, Pakistan',
     },
   ],
   
