@@ -120,37 +120,46 @@ function ProfileImage() {
       src="/images/profile2.jpeg"
       alt="Afzal - Full Stack Developer"
       fill
-      className="object-cover object-top rounded-[2rem]"
+      className="object-cover object-top"
       priority
-      sizes="(max-width: 1024px) 0vw, 380px"
+      sizes="(max-width: 640px) 260px, (max-width: 1024px) 300px, 380px"
       onError={() => setImageError(true)}
-      style={{ aspectRatio: '380/500',width: '100%', height: '100%' }}
+      quality={90}
     />
   )
 }
 
 export default function HomePage() {
   const heroRef = useRef<HTMLElement>(null)
+  const [isMobile, setIsMobile] = useState(false)
   
-  // Parallax effect
+  // Check if mobile on mount
+  useEffect(() => {
+    const checkMobile = () => setIsMobile(window.innerWidth < 1024)
+    checkMobile()
+    window.addEventListener('resize', checkMobile)
+    return () => window.removeEventListener('resize', checkMobile)
+  }, [])
+  
+  // Parallax effect - only apply opacity fade on desktop
   const { scrollYProgress } = useScroll({
     target: heroRef,
     offset: ['start start', 'end start'],
   })
-  const heroY = useTransform(scrollYProgress, [0, 1], [0, 150])
-  const heroOpacity = useTransform(scrollYProgress, [0, 0.5], [1, 0])
+  const heroY = useTransform(scrollYProgress, [0, 1], [0, isMobile ? 0 : 150])
+  const heroOpacity = useTransform(scrollYProgress, [0, 0.5], [1, isMobile ? 1 : 0])
   
   return (
     <>
       {/* Hero Section */}
-      <section ref={heroRef} className="relative min-h-screen overflow-hidden">
+      <section ref={heroRef} className="relative min-h-screen lg:min-h-screen overflow-hidden">
         {/* Pro-Level Background with Ambient Glow */}
         <div className="absolute inset-0 -z-10">
           {/* Base dark gradient */}
           <div className="absolute inset-0 bg-gradient-to-br from-background via-background to-background" />
           
           {/* Main hero glow - positioned to left where content is */}
-          <div className="absolute top-1/4 left-1/4 w-[600px] h-[600px] bg-primary/[0.08] rounded-full blur-[150px]" />
+          <div className="absolute top-1/4 left-1/4 w-[400px] lg:w-[600px] h-[400px] lg:h-[600px] bg-primary/[0.08] rounded-full blur-[100px] lg:blur-[150px]" />
           
           {/* Secondary ambient glow - top right */}
           <motion.div
@@ -205,7 +214,7 @@ export default function HomePage() {
         {/* Hero Content */}
         <motion.div 
           style={{ y: heroY, opacity: heroOpacity }}
-          className="container-custom flex min-h-screen items-center pt-20 pb-16"
+          className="container-custom flex min-h-screen items-center pt-24 pb-16 lg:pt-20"
         >
           <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center w-full">
             {/* Left Content */}
@@ -213,7 +222,7 @@ export default function HomePage() {
               variants={staggerContainer}
               initial="hidden"
               animate="visible"
-              className="text-left"
+              className="text-center lg:text-left order-last lg:order-first"
             >
               {/* Welcome Tag */}
               {/* <motion.p
@@ -252,7 +261,7 @@ export default function HomePage() {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.3 }}
-                className="mb-8 max-w-lg text-base md:text-lg text-muted-foreground leading-relaxed"
+                className="mb-8 max-w-lg mx-auto lg:mx-0 text-base md:text-lg text-muted-foreground leading-relaxed"
               >
                 {aboutContent.summary}
               </motion.p>
@@ -262,7 +271,7 @@ export default function HomePage() {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.4 }}
-                className="flex flex-wrap items-center gap-4"
+                className="flex flex-wrap items-center justify-center lg:justify-start gap-4"
               >
                 {/* Primary CTA with Glow */}
                 <Link href="/cv/resume.pdf" download>
@@ -292,46 +301,24 @@ export default function HomePage() {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.5 }}
-                className="mt-10"
+                className="mt-8 lg:mt-10 flex justify-center lg:justify-start"
               >
                 <SocialLinks iconSize="md" variant="muted" />
-              </motion.div>
-
-              {/* Mobile Stats - shown only on mobile/tablet */}
-              <motion.div
-                initial={{ opacity: 0, y: 30 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: 0.6 }}
-                className="mt-10 grid grid-cols-2 gap-3 lg:hidden"
-              >
-                {aboutContent.highlights.slice(0, 4).map((stat, index) => (
-                  <div
-                    key={index}
-                    className="rounded-xl border border-border/50 bg-card/30 backdrop-blur-sm p-4 text-center"
-                  >
-                    <p className="text-2xl font-bold text-primary">
-                      {stat.value}
-                    </p>
-                    <p className="text-xs text-muted-foreground mt-0.5">
-                      {stat.label}
-                    </p>
-                  </div>
-                ))}
               </motion.div>
             </motion.div>
 
             {/* Right Side - Profile Image with Stylized Frame */}
             <motion.div
-              initial={{ opacity: 0, x: 50, scale: 0.9 }}
-              animate={{ opacity: 1, x: 0, scale: 1 }}
-              transition={{ duration: 0.8, delay: 0.4, ease: [0.16, 1, 0.3, 1] }}
-              className="hidden lg:flex justify-center items-center relative"
+              initial={{ opacity: 0, scale: 0.9 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.8, delay: 0.3, ease: [0.16, 1, 0.3, 1] }}
+              className="flex justify-center items-center relative order-first lg:order-last px-8 sm:px-12 lg:px-0"
             >
               {/* Main container for profile image */}
-              <div className="relative">
+              <div className="relative w-full max-w-[280px] sm:max-w-[320px] lg:max-w-none">
                 {/* Animated glow behind the frame */}
                 <motion.div
-                  className="absolute inset-0 -m-4 rounded-[3rem] bg-gradient-to-br from-primary/40 via-primary/20 to-transparent blur-3xl"
+                  className="absolute inset-0 -m-3 sm:-m-4 rounded-[2rem] sm:rounded-[3rem] bg-gradient-to-br from-primary/40 via-primary/20 to-transparent blur-2xl sm:blur-3xl"
                   animate={{
                     opacity: [0.4, 0.6, 0.4],
                     scale: [0.95, 1.05, 0.95],
@@ -344,14 +331,14 @@ export default function HomePage() {
                 />
                 
                 {/* Stylized frame - outer ring */}
-                <div className="relative w-[380px] h-[460px]">
+                <div className="relative w-full aspect-[3/4] sm:w-[300px] sm:h-[380px] lg:w-[380px] lg:h-[460px] mx-auto">
                   {/* Gradient border frame */}
-                  <div className="absolute inset-0 rounded-[2.5rem] bg-gradient-to-br from-primary via-primary/50 to-primary/20 p-[3px]">
-                    <div className="w-full h-full rounded-[2.4rem] bg-background" />
+                  <div className="absolute inset-0 rounded-[1.5rem] sm:rounded-[2rem] lg:rounded-[2.5rem] bg-gradient-to-br from-primary via-primary/50 to-primary/20 p-[2px] sm:p-[3px]">
+                    <div className="w-full h-full rounded-[1.4rem] sm:rounded-[1.9rem] lg:rounded-[2.4rem] bg-background" />
                   </div>
                   
                   {/* Inner frame with image */}
-                  <div className="absolute inset-3 rounded-[2rem] overflow-hidden bg-gradient-to-br from-muted to-muted/50">
+                  <div className="absolute inset-2 sm:inset-3 rounded-[1.2rem] sm:rounded-[1.5rem] lg:rounded-[2rem] overflow-hidden bg-gradient-to-br from-muted to-muted/50">
                     {/* Profile Image */}
                     <ProfileImage />
                     
@@ -361,7 +348,7 @@ export default function HomePage() {
                   
                   {/* Decorative glow accent on frame */}
                   <motion.div
-                    className="absolute -top-2 -right-2 w-20 h-20 bg-primary/60 rounded-full blur-2xl"
+                    className="absolute -top-1 -right-1 sm:-top-2 sm:-right-2 w-10 h-10 sm:w-16 sm:h-16 lg:w-20 lg:h-20 bg-primary/60 rounded-full blur-xl sm:blur-2xl"
                     animate={{
                       opacity: [0.4, 0.7, 0.4],
                     }}
@@ -374,7 +361,7 @@ export default function HomePage() {
                   
                   {/* Bottom glow accent */}
                   <motion.div
-                    className="absolute -bottom-4 -left-4 w-32 h-32 bg-primary/30 rounded-full blur-3xl"
+                    className="absolute -bottom-2 -left-2 sm:-bottom-3 sm:-left-3 lg:-bottom-4 lg:-left-4 w-16 h-16 sm:w-24 sm:h-24 lg:w-32 lg:h-32 bg-primary/30 rounded-full blur-2xl sm:blur-3xl"
                     animate={{
                       opacity: [0.3, 0.5, 0.3],
                     }}
@@ -387,9 +374,9 @@ export default function HomePage() {
                   />
                 </div>
                 
-                {/* Floating decorative elements */}
+                {/* Floating decorative elements - visible on all screens */}
                 <motion.div
-                  className="absolute -top-8 -right-8 w-16 h-16"
+                  className="absolute -top-3 -right-3 sm:-top-6 sm:-right-6 lg:-top-8 lg:-right-8 w-8 h-8 sm:w-12 sm:h-12 lg:w-16 lg:h-16"
                   animate={{
                     y: [-5, 5, -5],
                     rotate: [0, 10, 0],
@@ -400,12 +387,12 @@ export default function HomePage() {
                     ease: 'easeInOut',
                   }}
                 >
-                  <div className="w-full h-full bg-gradient-to-br from-primary to-primary/50 rotate-45 transform rounded-lg shadow-lg shadow-primary/30" />
+                  <div className="w-full h-full bg-gradient-to-br from-primary to-primary/50 rotate-45 transform rounded-md sm:rounded-lg shadow-lg shadow-primary/30" />
                 </motion.div>
                 
-                {/* Floating ring decoration */}
+                {/* Floating ring decoration - visible on all screens */}
                 <motion.div
-                  className="absolute -bottom-6 -right-6 w-24 h-24"
+                  className="absolute -bottom-2 -right-2 sm:-bottom-4 sm:-right-4 lg:-bottom-6 lg:-right-6 w-10 h-10 sm:w-16 sm:h-16 lg:w-24 lg:h-24"
                   animate={{
                     y: [5, -5, 5],
                     rotate: [0, -15, 0],
@@ -417,36 +404,36 @@ export default function HomePage() {
                     delay: 0.5,
                   }}
                 >
-                  <div className="w-full h-full rounded-full border-4 border-primary/40 bg-primary/5 backdrop-blur-sm" />
+                  <div className="w-full h-full rounded-full border-2 sm:border-3 lg:border-4 border-primary/40 bg-primary/5 backdrop-blur-sm" />
                 </motion.div>
 
-                {/* Stats overlay cards */}
+                {/* Stats overlay cards - responsive positioning */}
                 <motion.div
                   initial={{ opacity: 0, x: 20 }}
                   animate={{ opacity: 1, x: 0 }}
                   transition={{ duration: 0.6, delay: 0.8 }}
-                  className="absolute -right-16 top-1/4 bg-card/80 backdrop-blur-md border border-border/50 rounded-xl p-4 shadow-xl"
+                  className="absolute right-0 translate-x-1/4 sm:translate-x-1/2 lg:-right-16 lg:translate-x-0 top-[20%] sm:top-1/4 bg-card/90 backdrop-blur-md border border-border/50 rounded-lg lg:rounded-xl p-2 sm:p-3 lg:p-4 shadow-xl z-10"
                 >
-                  <p className="text-2xl font-bold text-primary">{aboutContent.highlights[0]?.value || '5+'}</p>
-                  <p className="text-xs text-muted-foreground">{aboutContent.highlights[0]?.label || 'Years Exp'}</p>
+                  <p className="text-base sm:text-xl lg:text-2xl font-bold text-primary">{aboutContent.highlights[0]?.value || '5+'}</p>
+                  <p className="text-[9px] sm:text-xs text-muted-foreground whitespace-nowrap">{aboutContent.highlights[0]?.label || 'Years Exp'}</p>
                 </motion.div>
 
                 <motion.div
                   initial={{ opacity: 0, x: -20 }}
                   animate={{ opacity: 1, x: 0 }}
                   transition={{ duration: 0.6, delay: 1 }}
-                  className="absolute -left-12 bottom-1/4 bg-card/80 backdrop-blur-md border border-border/50 rounded-xl p-4 shadow-xl"
+                  className="absolute left-0 -translate-x-1/4 sm:-translate-x-1/2 lg:-left-12 lg:translate-x-0 bottom-[25%] sm:bottom-1/4 bg-card/90 backdrop-blur-md border border-border/50 rounded-lg lg:rounded-xl p-2 sm:p-3 lg:p-4 shadow-xl z-10"
                 >
-                  <p className="text-2xl font-bold text-primary">{aboutContent.highlights[1]?.value || '50+'}</p>
-                  <p className="text-xs text-muted-foreground">{aboutContent.highlights[1]?.label || 'Projects'}</p>
+                  <p className="text-base sm:text-xl lg:text-2xl font-bold text-primary">{aboutContent.highlights[1]?.value || '50+'}</p>
+                  <p className="text-[9px] sm:text-xs text-muted-foreground whitespace-nowrap">{aboutContent.highlights[1]?.label || 'Projects'}</p>
                 </motion.div>
               </div>
             </motion.div>
           </div>
 
-          {/* Scroll indicator */}
+          {/* Scroll indicator - hidden on mobile */}
           <motion.div
-            className="absolute bottom-8 left-1/2 -translate-x-1/2"
+            className="absolute bottom-8 left-1/2 -translate-x-1/2 hidden lg:flex"
             animate={{ y: [0, 10, 0] }}
             transition={{ duration: 2, repeat: Infinity }}
           >
