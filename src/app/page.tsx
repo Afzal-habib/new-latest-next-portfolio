@@ -12,7 +12,7 @@ import { staggerContainer, staggerItem, heroTextReveal, heroCharacter } from '@/
 import { floatingOrb, heroWordReveal, heroWord, heroSubtitle, heroCTA, springs } from '@/lib/animations-pro'
 import { aboutContent } from '@/data/about'
 import { getFeaturedProjects } from '@/data/projects'
-import { skills } from '@/data/skills'
+import { getFeaturedSkills, skills } from '@/data/skills'
 import { testimonials } from '@/data/testimonials'
 import { SKILL_CATEGORY_COLORS } from '@/lib/constants'
 import type { SkillCategory } from '@/types/skill'
@@ -472,9 +472,9 @@ export default function HomePage() {
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true }}
-            className="grid gap-8 md:grid-cols-2"
+            className="grid gap-8 md:grid-cols-2 lg:grid-cols-3"
           >
-            {getFeaturedProjects().slice(0, 2).map((project, index) => (
+            {getFeaturedProjects().slice(0, 3).map((project, index) => (
               <motion.div key={project.id} variants={staggerItem}>
                 <Link href={`/projects/${project.slug}`} className="block h-full">
                   <Card variant="elevated" hover="lift" className="h-full overflow-hidden group">
@@ -549,7 +549,7 @@ export default function HomePage() {
             viewport={{ once: true }}
             className="grid gap-4 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4"
           >
-            {skills.slice(0, 8).map((skill, index) => {
+            {getFeaturedSkills().slice(0, 8).map((skill, index) => {
               const categoryGradient = SKILL_CATEGORY_COLORS[skill.category as keyof typeof SKILL_CATEGORY_COLORS] || SKILL_CATEGORY_COLORS.Other
               return (
                 <motion.div key={skill.id} variants={staggerItem}>
