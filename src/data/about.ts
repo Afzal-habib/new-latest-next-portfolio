@@ -58,13 +58,13 @@ export const aboutContent = {
       name: 'AWS Solutions Architect Associate',
       issuer: 'Amazon Web Services',
       date: '2024',
-      credentialUrl: 'https://aws.amazon.com/verification',
+      // credentialUrl: 'https://aws.amazon.com/verification',
     },
     {
       name: 'Meta Frontend Developer Professional',
       issuer: 'Meta (Facebook)',
       date: '2023',
-      credentialUrl: 'https://coursera.org/verify',
+      // credentialUrl: 'https://coursera.org/verify',
     },
   ],
   
@@ -86,11 +86,21 @@ export const aboutContent = {
       period: 'Sep 2025 - Present',
       description: 'Leading the development and implementation of a comprehensive ERP/CRM system for Depllc, utilizing Next.js, Tailwind CSS, MongoDB, and Supabase. Oversaw project architecture, authentication modules, department management, and real-time communication features.',
       highlights: [
-        'Implemented multi-tier authentication with 2FA for admins, employees, and clients',
-        'Developed role-based permissions and department management modules',
+        'Implemented and lead the development of a full-featured ERP/CRM system using Next.js and Tailwind CSS',
         'Integrated real-time communication using Supabase with WebSockets and file sharing',
+        'Developed role-based permissions and department management modules',
         'Managed project lifecycle from lead generation to execution and reporting',
+        'Managed project and task management modules with Kanban boards and Gantt charts',
+        'Implemented Onboarding & Project Validation modules for streamlined client onboarding',
+        'Implemented Execution & Task Management modules with task assignments and progress tracking',
+        'Developed Client Portal for clients to track project status and communicate with the team',
+        'Developed Reporting & Analytics modules with customizable reports and data visualization',
       ],
+      companyInfo: {
+        content: 'At Depllc, I mastered and lead advanced full-stack development techniques, including real-time communication with Supabase, multi-tier authentication systems, and comprehensive ERP/CRM architecture. I gained expertise in project lifecycle management from lead generation to execution.',
+        location: 'Ichra, Lahore, Pakistan',
+        company: 'Depllc',
+      },
     },
     {
       role: 'Full Stack Developer',
@@ -98,11 +108,18 @@ export const aboutContent = {
       period: 'Apr 2024 - Sep 2025',
       description: 'Developed and maintained full-stack web applications using MERN stack technologies. Focused on building scalable e-commerce platforms, inventory management systems, and POS solutions with secure authentication and payment integrations.',
       highlights: [
-        'Built and deployed multiple e-commerce websites with user authentication and payment processing',
+        'Built multiple e-commerce websites with user authentication and payment processing',
         'Designed inventory management systems with real-time stock tracking and reporting',
         'Implemented POS systems with product management, sales processing, and invoice generation',
+        'Built cross-platform mobile apps using React Native for e-commerce and inventory management',
+        'Implemented modern UI/UX designs with focus on accessibility and performance',
         'Optimized database queries and API endpoints for improved performance',
       ],
+      companyInfo: {
+        content: 'At Devgiant, I honed my skills in MERN stack development, building scalable e-commerce platforms and inventory systems. I learned to optimize database queries, implement secure payment integrations, and manage full-stack application deployments.',
+        location: 'Gulberg III, Lahore, Pakistan',
+        company: 'Devgiant',
+      },
     },
     {
       role: 'Frontend Developer',
@@ -111,10 +128,15 @@ export const aboutContent = {
       description: 'Specialized in frontend development using React.js, HTML, CSS, and JavaScript. Created responsive and interactive user interfaces for various client projects, including real estate websites and mobile applications.',
       highlights: [
         'Developed responsive real estate websites with advanced filtering and image galleries',
-        'Built cross-platform mobile apps using React Native for e-commerce and inventory management',
+        'Built Multiple Template-based websites for diverse industries using Bootstrap and React.js',
         'Implemented modern UI/UX designs with focus on accessibility and performance',
         'Collaborated with design teams to translate wireframes into functional components',
       ],
+      companyInfo: {
+        content: 'At Heapware, I specialized in frontend development with React.js and React Native, creating responsive web and mobile applications. I learned UI/UX design principles, accessibility standards, and cross-platform mobile development.',
+        location: 'Model Town, Lahore, Pakistan',
+        company: 'Heapware',
+      },
     },
     {
       role: 'Intern',
@@ -122,11 +144,16 @@ export const aboutContent = {
       period: 'Jun 2023 - Aug 2023',
       description: 'Completed an intensive internship program focusing on full-stack development fundamentals. Gained hands-on experience with PHP, MySQL, and modern JavaScript frameworks while contributing to small-scale projects.',
       highlights: [
-        'Learned core PHP and MySQL for backend development and database management',
-        'Assisted in building inventory management and POS systems',
+        'Learned how to professionally write clean and maintainable code',
+        'Assisted in building many frontend projects using JavaScript and Bootstrap',
         'Developed responsive frontend components using HTML, CSS, and JavaScript',
         'Participated in code reviews and learned best practices for version control with Git',
       ],
+      companyInfo: {
+        content: 'At Ideoversity, I  gained experience with fundamental of  JavaScript, Bootstrap and mastered HTML, CSS, and developed skills in version control, code reviews, and collaborative programming practices.',
+        location: 'Faisal Town, Lahore, Pakistan',
+        company: 'Ideoversity',
+      },
     },
   ],
   

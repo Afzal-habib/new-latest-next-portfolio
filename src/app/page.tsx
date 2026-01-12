@@ -625,7 +625,6 @@ export default function HomePage() {
                 key={index}
                 exp={exp}
                 index={index}
-                testimonial={testimonials[index]}
               />
             ))}
           </div>
@@ -633,7 +632,7 @@ export default function HomePage() {
       </Section>
 
       {/* Testimonials Section */}
-      <section className="py-24">
+      {/* <section className="py-24">
         <div className="container-custom">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -655,27 +654,27 @@ export default function HomePage() {
             viewport={{ once: true }}
             className="grid gap-6 md:grid-cols-2 lg:grid-cols-3"
           >
-            {testimonials.slice(0, 3).map((testimonial, index) => (
-              <motion.div key={testimonial.id} variants={staggerItem}>
+            {aboutContent.experience.slice(0, 3).map((experience, index) => (
+              <motion.div key={experience.company} variants={staggerItem}>
                 <Card variant="elevated" className="h-full">
                   <CardContent className="p-4">
                     <Quote className="h-8 w-8 text-primary/20 mb-4" />
                     <p className="text-muted-foreground mb-6 line-clamp-4">
-                      &ldquo;{testimonial.content}&rdquo;
+                      &ldquo;{experience.companyInfo.content}&rdquo;
                     </p>
                     <div className="flex items-center gap-3">
                       <div className="h-12 w-12 rounded-full bg-gradient-to-br from-primary/20 to-accent/20 flex items-center justify-center">
                         <span className="text-lg font-bold text-primary">
-                          {testimonial.author.charAt(0)}
+                          A
                         </span>
                       </div>
                       <div>
-                        <p className="font-semibold">{testimonial.author}</p>
-                        <p className="text-sm text-muted-foreground">{testimonial.role}</p>
+                        <p className="font-semibold">Afzal Habib</p>
+                        <p className="text-sm text-muted-foreground">{experience.role}</p>
                       </div>
                     </div>
                     <div className="flex gap-1 mt-4">
-                      {[...Array(testimonial.rating)].map((_, i) => (
+                      {[...Array(5)].map((_, i) => (
                         <Star key={i} className="h-4 w-4 fill-yellow-400 text-yellow-400" />
                       ))}
                     </div>
@@ -685,7 +684,7 @@ export default function HomePage() {
             ))}
           </motion.div>
         </div>
-      </section>
+      </section> */}
 
       {/* CTA Section */}
       <section className="bg-gradient-to-br from-primary/10 via-background to-accent/10 py-24">

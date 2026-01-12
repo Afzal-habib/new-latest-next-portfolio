@@ -6,23 +6,19 @@ import Image from 'next/image'
 import { PageHero } from '@/components/layout'
 import { Section, SectionHeading, Card, CardHeader, CardTitle, CardDescription, CardContent } from '@/components/common'
 import { aboutContent, contactInfo } from '@/data/about'
-import { testimonials } from '@/data/testimonials'
 import { staggerContainer, staggerItem } from '@/lib/animations'
-import { ProfessionalLoader } from '@/components/layout/professional-loader'
 
 // Experience timeline item component
 export function ExperienceTimelineItem({
   exp,
   index,
-  testimonial,
 }: {
   exp: typeof aboutContent.experience[0]
   index: number
-  testimonial?: typeof testimonials[0]
 }) {
   return (
     <div className="relative">
-      {/* Main Grid Layout - Experience LEFT, Icon CENTER, Testimonial RIGHT */}
+      {/* Main Grid Layout - Experience LEFT, Icon CENTER, companyInfo RIGHT */}
       <motion.div
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
@@ -34,9 +30,9 @@ export function ExperienceTimelineItem({
   md:grid-cols-[35%_10%_55%] '
         // style={{ display: "grid", gridTemplateColumns: "35% 10% 55%", gap: "0px", rowGap: "16px" }}
       >
-        {/* RIGHT Side - Testimonial (smaller, with border) */}
+        {/* RIGHT Side - companyInfo (smaller, with border) */}
         <div className="hidden lg:flex lg:pb-12">
-          {testimonial ? (
+          {exp.companyInfo ? (
             <motion.div
               initial={{ opacity: 0, x: 30 }}
               whileInView={{ opacity: 1, x: 0 }}
@@ -45,16 +41,10 @@ export function ExperienceTimelineItem({
               className="w-full"
             >
               <div className="rounded-lg border border-border/30 bg-card/50 p-5 hover:border-primary/30 transition-all duration-300">
-                {/* Star Rating */}
-                <div className="flex gap-1 mb-3">
-                  {[...Array(testimonial.rating)].map((_, i) => (
-                    <LucideIcons.Star key={i} className="h-3.5 w-3.5 fill-yellow-500 text-yellow-500" />
-                  ))}
-                </div>
 
                 {/* Quote */}
                 <p className="text-sm text-muted-foreground leading-relaxed mb-4">
-                  {testimonial.content}
+                  {exp.companyInfo.content}
                 </p>
 
                 {/* Company Logo/Name */}
@@ -63,8 +53,8 @@ export function ExperienceTimelineItem({
                     <LucideIcons.Building2 className="h-4 w-4 text-primary" />
                   </div>
                   <div>
-                    <p className="font-semibold text-sm text-primary">{testimonial.company}</p>
-                    <p className="text-xs text-muted-foreground">{testimonial.author}</p>
+                    <p className="font-semibold text-sm text-primary">{exp.companyInfo.company}</p>
+                    <p className="text-xs text-muted-foreground">{exp.companyInfo.location}</p>
                   </div>
                 </div>
               </div>
@@ -111,7 +101,7 @@ export function ExperienceTimelineItem({
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true, amount: 0.15 }}
             transition={{ duration: 0.4, delay: index * 0.1 + 0.1 }}
-            className="w-full max-w-md"
+            className="w-full max-w-xl"
           >
             {/* Mobile: Show timeline icon */}
             <div className="flex lg:hidden items-center gap-3 mb-4">
@@ -163,8 +153,8 @@ export function ExperienceTimelineItem({
         </div>
       </motion.div>
 
-      {/* Mobile: Show testimonial below experience */}
-      {testimonial && (
+      {/* Mobile: Show companyInfo below experience */}
+      {exp.companyInfo && (
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -173,13 +163,8 @@ export function ExperienceTimelineItem({
           className="lg:hidden mt-6 ml-12"
         >
           <div className="rounded-lg border border-border/30 bg-card/50 p-4">
-            <div className="flex gap-1 mb-2">
-              {[...Array(testimonial.rating)].map((_, i) => (
-                <LucideIcons.Star key={i} className="h-3 w-3 fill-yellow-500 text-yellow-500" />
-              ))}
-            </div>
-            <p className="text-xs text-muted-foreground line-clamp-3 mb-2">{testimonial.content}</p>
-            <p className="text-xs font-semibold text-primary">{testimonial.company}</p>
+            <p className="text-xs text-muted-foreground line-clamp-3 mb-2">{exp.companyInfo.content}</p>
+            <p className="text-xs font-semibold text-primary">{exp.companyInfo.company}</p>
           </div>
         </motion.div>
       )}
@@ -460,7 +445,6 @@ export default function AboutPage() {
                 key={index}
                 exp={exp}
                 index={index}
-                testimonial={testimonials[index]}
               />
             ))}
           </div>
