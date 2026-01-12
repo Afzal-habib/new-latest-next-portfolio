@@ -99,7 +99,9 @@ export default function RootLayout({
           <Suspense fallback={null}>
             <NavigationProgress />
           </Suspense>
-          <RouteLoader />
+          <Suspense fallback={null}>
+            <RouteLoader />
+          </Suspense>
           <ScrollProgress />
           <div className="relative flex min-h-screen flex-col">
             <Header />
