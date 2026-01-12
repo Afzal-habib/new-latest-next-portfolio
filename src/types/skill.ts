@@ -1,6 +1,6 @@
 // Skill type definitions
 
-export type SkillCategory = 'Frontend' | 'Backend' | 'Tools' | 'Design' | 'Database' | 'DevOps' | 'Other'
+export type SkillCategory = 'Frontend' | 'Backend' | 'Tools' | 'Design' | 'Database' | 'Mobile' | 'Integrations' | 'Other'
 export type ProficiencyLevel = 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10
 export type ProficiencyLabel = 'Beginner' | 'Intermediate' | 'Advanced' | 'Expert'
 
