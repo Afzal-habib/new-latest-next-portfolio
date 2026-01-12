@@ -267,7 +267,7 @@ export default function AboutPage() {
                 </motion.div>
 
                 {/* Inner sophisticated frame */}
-                <div className="absolute inset-3 rounded-[2rem] overflow-hidden bg-gradient-to-br from-muted/80 to-muted/40 backdrop-blur-sm">
+                <div className="absolute inset-3 rounded-[2rem] overflow-hidden bg-gradient-to-br from-muted/80 to-muted/40">
                   {/* Premium Profile Image */}
                   <motion.div
                     className="relative w-full h-full"
@@ -358,7 +358,7 @@ export default function AboutPage() {
                 />
 
                 {/* Professional achievement badges */}
-                <motion.div
+                {/* <motion.div
                   initial={{ opacity: 0, x: 30 }}
                   whileInView={{ opacity: 1, x: 0 }}
                   viewport={{ once: true }}
@@ -392,7 +392,7 @@ export default function AboutPage() {
                       <p className="text-xs text-muted-foreground">{aboutContent.highlights[1]?.label || 'Projects'}</p>
                     </div>
                   </div>
-                </motion.div>
+                </motion.div> */}
 
                 {/* Elite corner accents */}
                 <div className="absolute top-2 left-2 w-2 h-2 bg-gradient-to-br from-primary/80 to-accent/80 rounded-full blur-sm" />
