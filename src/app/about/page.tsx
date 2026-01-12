@@ -2,6 +2,7 @@
 
 import { motion } from 'framer-motion'
 import * as LucideIcons from 'lucide-react'
+import Image from 'next/image'
 import { PageHero } from '@/components/layout'
 import { Section, SectionHeading, Card, CardHeader, CardTitle, CardDescription, CardContent } from '@/components/common'
 import { aboutContent, contactInfo } from '@/data/about'
@@ -197,20 +198,212 @@ export default function AboutPage() {
       {/* Intro Section */}
       <Section className="bg-muted/30">
         <div className="grid gap-12 lg:grid-cols-2 lg:items-center">
-          {/* Image placeholder */}
+          {/* Elite Professional Profile Showcase */}
           <motion.div
-            initial={{ opacity: 0, x: -50 }}
-            whileInView={{ opacity: 1, x: 0 }}
+            initial={{ opacity: 0, scale: 0.8, rotateY: -25 }}
+            whileInView={{ opacity: 1, scale: 1, rotateY: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
-            className="relative aspect-square overflow-hidden rounded-2xl bg-gradient-to-br from-primary/20 via-accent/10 to-primary/5"
+            transition={{ duration: 1, ease: [0.16, 1, 0.3, 1] }}
+            whileHover={{
+              scale: 1.02,
+              rotateY: 3,
+              rotateX: 1,
+              transition: { duration: 0.4 }
+            }}
+            className="flex justify-center items-center relative"
+            style={{
+              perspective: '1200px',
+              transformStyle: 'preserve-3d'
+            }}
           >
-            <div className="absolute inset-0 flex items-center justify-center">
-              <div className="text-center">
-                <div className="mx-auto mb-4 h-32 w-32 rounded-full bg-primary/20 flex items-center justify-center">
-                  <LucideIcons.User className="h-16 w-16 text-primary" />
+            {/* Main container */}
+            <div className="relative">
+              {/* Multi-layered ambient glow system */}
+              <motion.div
+                className="absolute inset-0 -m-6 rounded-[3rem] bg-gradient-to-br from-primary/50 via-primary/30 to-accent/40 blur-3xl"
+                animate={{
+                  opacity: [0.3, 0.6, 0.3],
+                  scale: [0.95, 1.05, 0.95],
+                }}
+                transition={{
+                  duration: 6,
+                  repeat: Infinity,
+                  ease: 'easeInOut',
+                }}
+              />
+              <motion.div
+                className="absolute inset-0 -m-8 rounded-[3.5rem] bg-gradient-to-tl from-accent/40 via-transparent to-primary/30 blur-2xl"
+                animate={{
+                  opacity: [0.2, 0.5, 0.2],
+                  scale: [1.05, 0.95, 1.05],
+                }}
+                transition={{
+                  duration: 8,
+                  repeat: Infinity,
+                  ease: 'easeInOut',
+                  delay: 1,
+                }}
+              />
+
+              {/* Elite frame structure */}
+              <div className="relative w-[280px] h-[360px] sm:w-[320px] sm:h-[400px] lg:w-[400px] lg:h-[480px] mx-auto">
+                {/* Outer premium frame with animated border */}
+                <motion.div
+                  className="absolute inset-0 rounded-[2.5rem] p-[3px] bg-gradient-to-br from-primary via-accent to-primary/60"
+                  animate={{
+                    background: [
+                      'linear-gradient(to bottom right, hsl(var(--primary)), hsl(var(--accent)), hsl(var(--primary)/0.6))',
+                      'linear-gradient(to bottom right, hsl(var(--accent)), hsl(var(--primary)), hsl(var(--accent)/0.6))',
+                      'linear-gradient(to bottom right, hsl(var(--primary)), hsl(var(--accent)), hsl(var(--primary)/0.6))',
+                    ],
+                  }}
+                  transition={{
+                    duration: 4,
+                    repeat: Infinity,
+                    ease: 'easeInOut',
+                  }}
+                >
+                  <div className="w-full h-full rounded-[2.4rem] bg-background/95 backdrop-blur-xl border border-white/10" />
+                </motion.div>
+
+                {/* Inner sophisticated frame */}
+                <div className="absolute inset-3 rounded-[2rem] overflow-hidden bg-gradient-to-br from-muted/80 to-muted/40 backdrop-blur-sm">
+                  {/* Premium Profile Image */}
+                  <motion.div
+                    className="relative w-full h-full"
+                    whileHover={{ scale: 1.05 }}
+                    transition={{ duration: 0.3 }}
+                  >
+                    <Image
+                      src="/images/profile04.jpeg"
+                      alt="Professional Profile"
+                      fill
+                      className="object-cover object-center transition-all duration-700 hover:brightness-110 hover:contrast-105"
+                      priority
+                      sizes="(max-width: 768px) 280px, (max-width: 1024px) 320px, 400px"
+                      quality={100}
+                    />
+
+                    {/* Professional gradient overlay */}
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/30 via-transparent to-white/10" />
+
+                    {/* Subtle vignette effect */}
+                    <div className="absolute inset-0 bg-radial-gradient from-transparent via-transparent to-black/20" />
+                  </motion.div>
+
+                  {/* Professional status indicators */}
+                  <motion.div
+                    initial={{ opacity: 0, scale: 0 }}
+                    whileInView={{ opacity: 1, scale: 1 }}
+                    viewport={{ once: true }}
+                    transition={{ delay: 0.5, duration: 0.4 }}
+                    className="absolute top-4 right-4 w-3 h-3 bg-green-500 rounded-full shadow-lg shadow-green-500/50 animate-pulse"
+                  />
                 </div>
-                <p className="text-sm text-muted-foreground">Your Photo Here</p>
+
+                {/* Elite decorative elements */}
+                <motion.div
+                  className="absolute -top-2 -right-2 w-12 h-12 bg-gradient-to-br from-primary to-accent rounded-full shadow-xl shadow-primary/40 z-20"
+                  animate={{
+                    rotate: [0, 360],
+                  }}
+                  transition={{
+                    duration: 20,
+                    repeat: Infinity,
+                    ease: 'linear',
+                  }}
+                >
+                  <div className="w-full h-full rounded-full bg-gradient-to-br from-white/20 to-transparent backdrop-blur-sm border border-white/30" />
+                </motion.div>
+
+                <motion.div
+                  className="absolute -bottom-3 -left-3 w-16 h-16 border-2 border-primary/40 rounded-full bg-primary/5 backdrop-blur-md z-20"
+                  animate={{
+                    scale: [1, 1.1, 1],
+                    opacity: [0.7, 1, 0.7],
+                  }}
+                  transition={{
+                    duration: 3,
+                    repeat: Infinity,
+                    ease: 'easeInOut',
+                  }}
+                />
+
+                {/* Floating geometric shapes */}
+                <motion.div
+                  className="absolute top-1/4 -left-8 w-6 h-6 bg-gradient-to-br from-accent to-primary/60 rotate-45 z-20"
+                  animate={{
+                    y: [-10, 10, -10],
+                    rotate: [45, 90, 45],
+                  }}
+                  transition={{
+                    duration: 4,
+                    repeat: Infinity,
+                    ease: 'easeInOut',
+                  }}
+                />
+
+                <motion.div
+                  className="absolute bottom-1/3 -right-6 w-4 h-4 bg-primary/60 rounded-full z-20"
+                  animate={{
+                    y: [10, -10, 10],
+                    x: [-5, 5, -5],
+                  }}
+                  transition={{
+                    duration: 5,
+                    repeat: Infinity,
+                    ease: 'easeInOut',
+                    delay: 1,
+                  }}
+                />
+
+                {/* Professional achievement badges */}
+                <motion.div
+                  initial={{ opacity: 0, x: 30 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ delay: 0.8, duration: 0.5 }}
+                  className="absolute -right-4 top-1/4 bg-card/95 backdrop-blur-xl border border-border/50 rounded-xl p-3 shadow-2xl z-10"
+                >
+                  <div className="flex items-center gap-2">
+                    <div className="w-8 h-8 bg-primary/10 rounded-lg flex items-center justify-center">
+                      <LucideIcons.Award className="w-4 h-4 text-primary" />
+                    </div>
+                    <div>
+                      <p className="text-sm font-bold text-primary">{aboutContent.highlights[0]?.value || '5+'}</p>
+                      <p className="text-xs text-muted-foreground">{aboutContent.highlights[0]?.label || 'Years'}</p>
+                    </div>
+                  </div>
+                </motion.div>
+
+                <motion.div
+                  initial={{ opacity: 0, x: -30 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ delay: 1, duration: 0.5 }}
+                  className="absolute -left-4 bottom-1/4 bg-card/95 backdrop-blur-xl border border-border/50 rounded-xl p-3 shadow-2xl z-10"
+                >
+                  <div className="flex items-center gap-2">
+                    <div className="w-8 h-8 bg-accent/10 rounded-lg flex items-center justify-center">
+                      <LucideIcons.Code className="w-4 h-4 text-accent" />
+                    </div>
+                    <div>
+                      <p className="text-sm font-bold text-accent">{aboutContent.highlights[1]?.value || '50+'}</p>
+                      <p className="text-xs text-muted-foreground">{aboutContent.highlights[1]?.label || 'Projects'}</p>
+                    </div>
+                  </div>
+                </motion.div>
+
+                {/* Elite corner accents */}
+                <div className="absolute top-2 left-2 w-2 h-2 bg-gradient-to-br from-primary/80 to-accent/80 rounded-full blur-sm" />
+                <div className="absolute top-2 right-2 w-1.5 h-1.5 bg-gradient-to-bl from-accent/80 to-primary/80 rounded-full blur-sm" />
+                <div className="absolute bottom-2 left-2 w-1.5 h-1.5 bg-gradient-to-tr from-primary/80 to-accent/80 rounded-full blur-sm" />
+                <div className="absolute bottom-2 right-2 w-2 h-2 bg-gradient-to-tl from-accent/80 to-primary/80 rounded-full blur-sm" />
+
+                {/* Premium reflection effect */}
+                <div className="absolute inset-3 rounded-[2rem] overflow-hidden">
+                  <div className="absolute bottom-0 left-0 right-0 h-20 bg-gradient-to-t from-white/5 to-transparent" />
+                </div>
               </div>
             </div>
           </motion.div>
