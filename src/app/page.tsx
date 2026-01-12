@@ -312,10 +312,10 @@ export default function HomePage() {
               initial={{ opacity: 0, scale: 0.9 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.8, delay: 0.3, ease: [0.16, 1, 0.3, 1] }}
-              className="flex justify-center items-center relative order-first lg:order-last px-8 sm:px-12 lg:px-0"
+              className="flex justify-center items-center relative order-first lg:order-last"
             >
               {/* Main container for profile image */}
-              <div className="relative w-full max-w-[280px] sm:max-w-[320px] lg:max-w-none">
+              <div className="relative">
                 {/* Animated glow behind the frame */}
                 <motion.div
                   className="absolute inset-0 -m-3 sm:-m-4 rounded-[2rem] sm:rounded-[3rem] bg-gradient-to-br from-primary/40 via-primary/20 to-transparent blur-2xl sm:blur-3xl"
@@ -331,7 +331,7 @@ export default function HomePage() {
                 />
                 
                 {/* Stylized frame - outer ring */}
-                <div className="relative w-full aspect-[3/4] sm:w-[300px] sm:h-[380px] lg:w-[380px] lg:h-[460px] mx-auto">
+                <div className="relative w-[260px] h-[340px] sm:w-[300px] sm:h-[380px] lg:w-[380px] lg:h-[460px] mx-auto">
                   {/* Gradient border frame */}
                   <div className="absolute inset-0 rounded-[1.5rem] sm:rounded-[2rem] lg:rounded-[2.5rem] bg-gradient-to-br from-primary via-primary/50 to-primary/20 p-[2px] sm:p-[3px]">
                     <div className="w-full h-full rounded-[1.4rem] sm:rounded-[1.9rem] lg:rounded-[2.4rem] bg-background" />
@@ -376,7 +376,7 @@ export default function HomePage() {
                 
                 {/* Floating decorative elements - visible on all screens */}
                 <motion.div
-                  className="absolute -top-3 -right-3 sm:-top-6 sm:-right-6 lg:-top-8 lg:-right-8 w-8 h-8 sm:w-12 sm:h-12 lg:w-16 lg:h-16"
+                  className="absolute -top-2 right-0 sm:-top-4 sm:-right-2 lg:-top-8 lg:-right-8 w-8 h-8 sm:w-12 sm:h-12 lg:w-16 lg:h-16 z-20"
                   animate={{
                     y: [-5, 5, -5],
                     rotate: [0, 10, 0],
@@ -392,7 +392,7 @@ export default function HomePage() {
                 
                 {/* Floating ring decoration - visible on all screens */}
                 <motion.div
-                  className="absolute -bottom-2 -right-2 sm:-bottom-4 sm:-right-4 lg:-bottom-6 lg:-right-6 w-10 h-10 sm:w-16 sm:h-16 lg:w-24 lg:h-24"
+                  className="absolute -bottom-2 right-0 sm:-bottom-4 sm:-right-2 lg:-bottom-6 lg:-right-6 w-10 h-10 sm:w-16 sm:h-16 lg:w-24 lg:h-24 z-20"
                   animate={{
                     y: [5, -5, 5],
                     rotate: [0, -15, 0],
@@ -412,7 +412,7 @@ export default function HomePage() {
                   initial={{ opacity: 0, x: 20 }}
                   animate={{ opacity: 1, x: 0 }}
                   transition={{ duration: 0.6, delay: 0.8 }}
-                  className="absolute right-0 translate-x-1/4 sm:translate-x-1/2 lg:-right-16 lg:translate-x-0 top-[20%] sm:top-1/4 bg-card/90 backdrop-blur-md border border-border/50 rounded-lg lg:rounded-xl p-2 sm:p-3 lg:p-4 shadow-xl z-10"
+                  className="absolute -right-2 sm:-right-6 lg:-right-20 top-[15%] sm:top-[20%] lg:top-1/4 bg-card/90 backdrop-blur-md border border-border/50 rounded-lg lg:rounded-xl p-2 sm:p-3 lg:p-4 shadow-xl z-10"
                 >
                   <p className="text-base sm:text-xl lg:text-2xl font-bold text-primary">{aboutContent.highlights[0]?.value || '5+'}</p>
                   <p className="text-[9px] sm:text-xs text-muted-foreground whitespace-nowrap">{aboutContent.highlights[0]?.label || 'Years Exp'}</p>
@@ -422,7 +422,7 @@ export default function HomePage() {
                   initial={{ opacity: 0, x: -20 }}
                   animate={{ opacity: 1, x: 0 }}
                   transition={{ duration: 0.6, delay: 1 }}
-                  className="absolute left-0 -translate-x-1/4 sm:-translate-x-1/2 lg:-left-12 lg:translate-x-0 bottom-[25%] sm:bottom-1/4 bg-card/90 backdrop-blur-md border border-border/50 rounded-lg lg:rounded-xl p-2 sm:p-3 lg:p-4 shadow-xl z-10"
+                  className="absolute -left-2 sm:-left-6 lg:-left-16 bottom-[20%] sm:bottom-[25%] lg:bottom-1/4 bg-card/90 backdrop-blur-md border border-border/50 rounded-lg lg:rounded-xl p-2 sm:p-3 lg:p-4 shadow-xl z-10"
                 >
                   <p className="text-base sm:text-xl lg:text-2xl font-bold text-primary">{aboutContent.highlights[1]?.value || '50+'}</p>
                   <p className="text-[9px] sm:text-xs text-muted-foreground whitespace-nowrap">{aboutContent.highlights[1]?.label || 'Projects'}</p>
@@ -433,7 +433,7 @@ export default function HomePage() {
 
           {/* Scroll indicator - hidden on mobile */}
           <motion.div
-            className="absolute bottom-8 left-1/2 -translate-x-1/2 hidden lg:flex"
+            className="absolute bottom-8 left-1/2 -translate-x-1/2 hidden lg:block"
             animate={{ y: [0, 10, 0] }}
             transition={{ duration: 2, repeat: Infinity }}
           >
