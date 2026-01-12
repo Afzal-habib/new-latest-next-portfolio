@@ -6,6 +6,8 @@ import { ThemeProvider } from '@/components/providers'
 import { Header, Footer } from '@/components/layout'
 import { NavigationProgress, ScrollProgress, ScrollToTop } from '@/components/common'
 import { siteConfig } from '@/data/about'
+import { ProfessionalLoader } from '@/components/layout/professional-loader'
+import { RouteLoader } from '@/components/common/route-loader'
 
 const geistSans = Geist({
   variable: '--font-geist-sans',
@@ -97,6 +99,7 @@ export default function RootLayout({
           <Suspense fallback={null}>
             <NavigationProgress />
           </Suspense>
+          <RouteLoader />
           <ScrollProgress />
           <div className="relative flex min-h-screen flex-col">
             <Header />

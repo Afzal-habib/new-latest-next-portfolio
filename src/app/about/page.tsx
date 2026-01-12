@@ -8,6 +8,7 @@ import { Section, SectionHeading, Card, CardHeader, CardTitle, CardDescription, 
 import { aboutContent, contactInfo } from '@/data/about'
 import { testimonials } from '@/data/testimonials'
 import { staggerContainer, staggerItem } from '@/lib/animations'
+import { ProfessionalLoader } from '@/components/layout/professional-loader'
 
 // Experience timeline item component
 export function ExperienceTimelineItem({
