@@ -26,6 +26,11 @@ export const metadata: Metadata = {
   keywords: siteConfig.keywords,
   authors: [{ name: siteConfig.author }],
   creator: siteConfig.author,
+  icons: {
+    icon: '/images/main-logo.png',
+    shortcut: '/images/main-logo.png',
+    apple: '/images/main-logo.png',
+  },
   openGraph: {
     type: 'website',
     locale: 'en_US',
