@@ -68,7 +68,7 @@ export default function SkillsPage() {
       </Section>
 
       {/* Skills Grid */}
-      <Section className="bg-muted/30">
+      <Section className="bg-muted/30" animated={false}>
         <AnimatePresence mode="wait">
           <motion.div
             key={activeCategory}
