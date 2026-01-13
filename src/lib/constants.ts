@@ -44,8 +44,8 @@ export const THEME = {
 
 // Web3Forms configuration
 export const WEB3FORMS_CONFIG = {
-  // accessKey: process.env.NEXT_PUBLIC_WEB3FORMS_KEY || 'c8f4da49-42bc-4d83-938e-3f0d19c46eb9',
-  accessKey: process.env.NEXT_PUBLIC_WEB3FORMS_KEY || '1ca7e426-9c30-44ad-8b8e-f751c8fd1f78',
+  // accessKey: process.env.NEXT_PUBLIC_WEB3FORMS_KEY || 'your-access,
+  accessKey: process.env.NEXT_PUBLIC_WEB3FORMS_KEY ,
   endpoint: 'https://api.web3forms.com/submit',
 } as const
 
