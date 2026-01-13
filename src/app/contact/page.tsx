@@ -1,7 +1,7 @@
 'use client'
 
-import { useState } from 'react'
-import { motion } from 'framer-motion'
+import { useState, useEffect } from 'react'
+import { motion, AnimatePresence } from 'framer-motion'
 import * as LucideIcons from 'lucide-react'
 import { PageHero, SocialLinks } from '@/components/layout'
 import { Section, SectionHeading, Card, CardContent, Button } from '@/components/common'
@@ -29,6 +29,17 @@ export default function ContactPage() {
     message: '',
   })
   const [status, setStatus] = useState<FormStatus>({ type: 'idle' })
+  const [showSuccessPopup, setShowSuccessPopup] = useState(false)
+
+  useEffect(() => {
+    if (showSuccessPopup) {
+      const timer = setTimeout(() => {
+        setShowSuccessPopup(false)
+      }, 5000) // Auto-close after 5 seconds
+
+      return () => clearTimeout(timer)
+    }
+  }, [showSuccessPopup])
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target
@@ -59,6 +70,7 @@ export default function ContactPage() {
           message: 'Thank you! Your message has been sent successfully.',
         })
         setFormData({ name: '', email: '', subject: '', message: '' })
+        setShowSuccessPopup(true)
       } else {
         throw new Error(data.message || 'Something went wrong')
       }
@@ -427,6 +439,79 @@ export default function ContactPage() {
                
         </div>
       </Section>
+
+      {/* Success Popup */}
+      <AnimatePresence>
+        {showSuccessPopup && (
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            className="fixed inset-0 z-50 flex items-center justify-center bg-black/50 backdrop-blur-sm"
+            onClick={() => setShowSuccessPopup(false)}
+          >
+            <motion.div
+              initial={{ scale: 0.8, opacity: 0, y: 20 }}
+              animate={{ scale: 1, opacity: 1, y: 0 }}
+              exit={{ scale: 0.8, opacity: 0, y: 20 }}
+              transition={{
+                type: "spring",
+                damping: 25,
+                stiffness: 300,
+                duration: 0.3
+              }}
+              className="relative max-w-md w-full mx-4"
+              onClick={(e) => e.stopPropagation()}
+            >
+              <Card variant="elevated" className="overflow-hidden shadow-2xl">
+                <CardContent className="p-8 text-center">
+                  <motion.div
+                    initial={{ scale: 0 }}
+                    animate={{ scale: 1 }}
+                    transition={{ delay: 0.2, type: "spring", stiffness: 200 }}
+                    className="mx-auto mb-6 flex h-20 w-20 items-center justify-center rounded-full bg-green-100 dark:bg-green-900/30"
+                  >
+                    <LucideIcons.CheckCircle2 className="h-10 w-10 text-green-600 dark:text-green-400" />
+                  </motion.div>
+                  
+                  <motion.h3
+                    initial={{ opacity: 0, y: 10 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ delay: 0.3 }}
+                    className="mb-2 text-2xl font-bold text-foreground"
+                  >
+                    Message Sent!
+                  </motion.h3>
+                  
+                  <motion.p
+                    initial={{ opacity: 0, y: 10 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ delay: 0.4 }}
+                    className="mb-6 text-muted-foreground"
+                  >
+                    Thank you for reaching out! I'll get back to you within 24 hours.
+                  </motion.p>
+                  
+                  <motion.div
+                    initial={{ opacity: 0, y: 10 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ delay: 0.5 }}
+                  >
+                    <Button
+                      onClick={() => setShowSuccessPopup(false)}
+                      className="w-full"
+                      size="lg"
+                    >
+                      <LucideIcons.X className="mr-2 h-5 w-5" />
+                      Close
+                    </Button>
+                  </motion.div>
+                </CardContent>
+              </Card>
+            </motion.div>
+          </motion.div>
+        )}
+      </AnimatePresence>
     </>
   )
 }
