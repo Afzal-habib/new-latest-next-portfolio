@@ -605,7 +605,7 @@ export default function HomePage() {
       </section>
 
       {/* Experience Section */}
-      <Section className="bg-muted/30 overflow-hidden">
+      <Section className="bg-muted/30 overflow-hidden" id="home-experience" animated={false}>
         <SectionHeading
           title="Work Experience"
           subtitle="My professional journey"

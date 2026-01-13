@@ -423,7 +423,7 @@ export default function AboutPage() {
       </Section>
 
       {/* Experience Section */}
-      <Section className="bg-muted/30 overflow-hidden">
+      <Section className="bg-muted/30 overflow-hidden" id="about-experience" animated={false}>
         <SectionHeading
           title="Work Experience"
           subtitle="My professional journey"
