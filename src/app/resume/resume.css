@@ -134,6 +134,7 @@
 
   html,
   body {
+    background-color: white;
     width: 210mm;
     margin: 0;
     padding: 0;

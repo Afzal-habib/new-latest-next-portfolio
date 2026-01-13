@@ -39,7 +39,7 @@ export const experiences = [
             "Architected secure RESTful APIs with Node.js & Express.js",
             "Developed cross-platform mobile apps using React Native & Expo",
         ],
-        borderColor: "border-slate-800",
+        borderColor: "border-slate-700",
     },
     {
         title: "Frontend Developer",

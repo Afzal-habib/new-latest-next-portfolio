@@ -12,21 +12,9 @@ export const metadata: Metadata = {
     "Professional resume of Afzal Habib - MERN Stack Developer with expertise in Next.js, React, Node.js, and mobile development",
   generator: "v0.app",
   icons: {
-    icon: [
-      {
-        url: "resume/icon-light-32x32.png",
-        media: "(prefers-color-scheme: light)",
-      },
-      {
-        url: "resume/icon-dark-32x32.png",
-        media: "(prefers-color-scheme: dark)",
-      },
-      {
-        url: "resume/icon.svg",
-        type: "image/svg+xml",
-      },
-    ],
-    apple: "resume/apple-icon.png",
+    icon: '/images/main-logo.png',
+    shortcut: '/images/main-logo.png',
+    apple: '/images/main-logo.png',
   },
 }
 
@@ -36,8 +24,8 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang="en">
-      <body className={`font-sans antialiased`}>
+    <html lang="en" suppressHydrationWarning>
+      <body className={`font-sans antialiased`} suppressHydrationWarning>
         {children}
       </body>
     </html>
