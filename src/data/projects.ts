@@ -8,16 +8,15 @@ export const projects: Project[] = [
     shortDescription: 'Enterprise-grade ERP/CRM system with multi-tier authentication and role-based access control',
     description: 'Comprehensive ERP/CRM platform featuring 13+ modules including lead management, project tracking, real-time communication, and department management with advanced security and role-based permissions.',
     longDescription: `Enterprise-level ERP/CRM system designed for managing complex business workflows across sales, support, IT, and administrative departments.
-
 This system features a sophisticated multi-tier authentication system with 2FA, dynamic role management with 10+ hierarchical roles, and comprehensive workflow automation across 9 project stages. The platform includes real-time communication powered by Supabase, department-based task management, and advanced reporting capabilities.
-
 Key modules include lead generation and qualification, client onboarding, project validation, approval workflows, task execution with time tracking, and a dedicated client portal for project visibility.`,
     technologies: ['Next.js', 'TypeScript', 'Redux Toolkit', 'NextAuth.js', 'MongoDB', 'Supabase', 'Tailwind CSS', 'AWS S3', 'Socket.io', 'bcryptjs'],
     featuredTechnologies: ['Next.js', 'MongoDB', 'Supabase'],
     role: 'Lead Full-Stack Developer & System Architect',
-    status: 'In Progress',
+    status: 'Completed',
     category: 'Full-Stack',
-    startDate: '2024-09-23',
+    startDate: '2025-09-23',
+    endDate: '2026-01-10',
     images: [
       {
         url: 'https://images.unsplash.com/photo-1551434678-e076c223a692?w=1200',
@@ -63,17 +62,15 @@ Key modules include lead generation and qualification, client onboarding, projec
     shortDescription: 'Full-stack e-commerce platform with secure payment integration and admin panel',
     description: 'Complete e-commerce solution built with MERN stack featuring user authentication, product catalog, shopping cart, secure payment processing, and comprehensive admin dashboard.',
     longDescription: `A full-featured e-commerce platform demonstrating expertise in the MERN (MongoDB, Express, React, Node.js) stack.
-
 The platform provides a seamless shopping experience with product browsing, advanced search and filtering, cart management, and secure checkout. The admin panel offers complete control over products, orders, inventory, and user management with detailed analytics.
-
 Implemented secure authentication system, integrated multiple payment gateways, and optimized for performance and scalability.`,
     technologies: ['React', 'Node.js', 'Express.js', 'MongoDB', 'JWT', 'Stripe', 'PayPal', 'Redux', 'Tailwind CSS'],
     featuredTechnologies: ['React', 'Node.js', 'MongoDB'],
     role: 'Full-Stack Developer',
     status: 'Completed',
     category: 'Full-Stack',
-    startDate: '2022-05-01',
-    endDate: '2022-06-30',
+    startDate: '2025-07-01',
+    endDate: '2025-08-30',
     images: [
       {
         url: 'https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=1200',
@@ -113,17 +110,15 @@ Implemented secure authentication system, integrated multiple payment gateways, 
     shortDescription: 'Comprehensive inventory tracking system with supplier management and reporting',
     description: 'Robust inventory management solution built with PHP and MySQL for tracking stock levels, managing suppliers, generating reports, and automating inventory workflows.',
     longDescription: `A professional inventory management system designed to streamline stock control and supplier management for businesses.
-
 The system provides real-time inventory tracking, automated low-stock alerts, supplier management with contact information and order history, and comprehensive reporting capabilities. Features include barcode integration, batch tracking, and multi-location inventory support.
-
 Built with security in mind, implementing role-based access control and audit logging for all inventory transactions.`,
     technologies: ['Core PHP', 'MySQL', 'JavaScript', 'Bootstrap', 'jQuery', 'AJAX'],
     featuredTechnologies: ['PHP', 'MySQL', 'Bootstrap'],
     role: 'Full-Stack Developer',
     status: 'Completed',
     category: 'Full-Stack',
-    startDate: '2023-03-01',
-    endDate: '2023-04-30',
+    startDate: '2025-03-01',
+    endDate: '2025-07-01',
     images: [
       {
         url: 'https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?w=1200',
@@ -163,17 +158,15 @@ Built with security in mind, implementing role-based access control and audit lo
     shortDescription: 'Feature-rich POS system with sales processing, inventory integration, and invoice generation',
     description: 'Complete Point of Sale solution built with Core PHP and SQL featuring product management, real-time sales processing, invoice generation, and automated stock updates.',
     longDescription: `A professional POS system designed for retail businesses requiring efficient sales processing and inventory management.
-
 The system includes a fast and intuitive sales interface, barcode scanning support, multiple payment methods, and automatic invoice generation with customizable templates. Integrated inventory management ensures real-time stock updates with each transaction.
-
 Features include customer management, sales history tracking, daily sales reports, and comprehensive analytics for business insights.`,
     technologies: ['Core PHP', 'MySQL', 'JavaScript', 'Bootstrap', 'AJAX', 'TCPDF'],
     featuredTechnologies: ['PHP', 'MySQL', 'JavaScript'],
     role: 'Full-Stack Developer',
     status: 'Completed',
     category: 'Full-Stack',
-    startDate: '2023-02-01',
-    endDate: '2023-03-30',
+    startDate: '2025-01-01',
+    endDate: '2025-02-28',
     images: [
       {
         url: 'https://images.unsplash.com/photo-1556740738-b6a63e27c4df?w=1200',
@@ -222,8 +215,8 @@ Implemented modern JavaScript for smooth animations, dynamic content loading, an
     role: 'Frontend Developer',
     status: 'Completed',
     category: 'Frontend',
-    startDate: '2023-01-01',
-    endDate: '2023-02-28',
+    startDate: '2024-09-01',
+    endDate: '2024-12-31',
     images: [
       {
         url: 'https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=1200',
@@ -272,8 +265,8 @@ Implemented with performance optimization for smooth scrolling through large pro
     role: 'Mobile App Developer',
     status: 'Completed',
     category: 'Mobile',
-    startDate: '2023-12-01',
-    endDate: '2024-01-31',
+    startDate: '2024-07-01',
+    endDate: '2024-09-30',
     images: [
       {
         url: 'https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?w=1200',
@@ -323,8 +316,8 @@ Features include low-stock alerts, order management, and multi-location inventor
     role: 'Mobile App Developer',
     status: 'Completed',
     category: 'Mobile',
-    startDate: '2023-11-01',
-    endDate: '2023-12-31',
+    startDate: '2025-05-01',
+    endDate: '2025-08-31',
     images: [
       {
         url: 'https://images.unsplash.com/photo-1586528116493-a029325540fa?w=1200',
@@ -344,7 +337,7 @@ Features include low-stock alerts, order management, and multi-location inventor
       'Created data synchronization mechanism',
     ],
     challenges: [
-      'Implementing reliable offline functionality',
+      'Implementing reliable  functionality',
       'Handling data synchronization conflicts',
       'Optimizing barcode scanning performance',
     ],
@@ -355,7 +348,7 @@ Features include low-stock alerts, order management, and multi-location inventor
     ],
     featured: false,
     order: 7,
-    tags: ['Mobile', 'React Native', 'Inventory', 'Offline-first'],
+    tags: ['Mobile', 'React Native', 'Inventory'],
     isOpenSource: false,
   },
 ]
