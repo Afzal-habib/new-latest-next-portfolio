@@ -3,11 +3,11 @@ import { Suspense } from 'react'
 import { Geist, Geist_Mono } from 'next/font/google'
 import './globals.css'
 import { ThemeProvider } from '@/components/providers'
-import { Header, Footer } from '@/components/layout'
 import { NavigationProgress, ScrollProgress, ScrollToTop } from '@/components/common'
 import { siteConfig } from '@/data/about'
 import { ProfessionalLoader } from '@/components/layout/professional-loader'
 import { RouteLoader } from '@/components/common/route-loader'
+import AppShell from '@/components/layout/AppShell'
 
 const geistSans = Geist({
   variable: '--font-geist-sans',
@@ -103,11 +103,9 @@ export default function RootLayout({
             <RouteLoader />
           </Suspense>
           <ScrollProgress />
-          <div className="relative flex min-h-screen flex-col">
-            <Header />
-            <main className="flex-1">{children}</main>
-            <Footer />
-          </div>
+        <AppShell>
+          {children}
+        </AppShell>
           <ScrollToTop />
         </ThemeProvider>
       </body>

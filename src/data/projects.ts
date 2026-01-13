@@ -41,6 +41,7 @@ Key modules include lead generation and qualification, client onboarding, projec
       'Implementing real-time updates across multiple modules without performance degradation',
       'Ensuring data consistency across 9 workflow stages with multiple user interactions',
       'Scaling WebSocket connections for real-time communication',
+      'Handling two Databases (MongoDB and Supabase) in a unified manner',
       'Designing flexible task assignment system adaptable to different department needs',
     ],
     learnings: [
@@ -64,7 +65,7 @@ Key modules include lead generation and qualification, client onboarding, projec
     longDescription: `A full-featured e-commerce platform demonstrating expertise in the MERN (MongoDB, Express, React, Node.js) stack.
 The platform provides a seamless shopping experience with product browsing, advanced search and filtering, cart management, and secure checkout. The admin panel offers complete control over products, orders, inventory, and user management with detailed analytics.
 Implemented secure authentication system, integrated multiple payment gateways, and optimized for performance and scalability.`,
-    technologies: ['React', 'Node.js', 'Express.js', 'MongoDB', 'JWT', 'Stripe', 'PayPal', 'Redux', 'Tailwind CSS'],
+    technologies: ['React', 'Node.js', 'Express.js', 'MongoDB', 'JWT', 'Squareup', 'Shippo', 'Redux', 'Tailwind CSS'],
     featuredTechnologies: ['React', 'Node.js', 'MongoDB'],
     role: 'Full-Stack Developer',
     status: 'Completed',
@@ -83,12 +84,14 @@ Implemented secure authentication system, integrated multiple payment gateways, 
       'Developed complete user authentication system with JWT',
       'Built responsive product listing with search and filtering',
       'Implemented shopping cart with session persistence',
-      'Integrated Stripe and PayPal payment gateways',
+      'Integrated Squareup payment gateway for secure transactions',
+      'Integrated Shippo for shipping and logistics management',
       'Created admin dashboard for product and order management',
       'Implemented inventory tracking and low-stock alerts',
       'Built order history and tracking system',
     ],
     challenges: [
+      'Implemented Products and product variations management',
       'Handling secure payment transactions and webhooks',
       'Managing cart state across sessions',
       'Implementing real-time inventory updates',
@@ -100,20 +103,20 @@ Implemented secure authentication system, integrated multiple payment gateways, 
     ],
     featured: true,
     order: 2,
-    tags: ['E-commerce', 'MERN', 'Payments', 'Full-Stack'],
+    tags: ['E-commerce', 'MERN', 'Payments', 'Shipping', 'Full-Stack'],
     isOpenSource: false,
   },
   {
     id: '3',
     title: 'Inventory Management System',
-    slug: 'inventory-management-php',
+    slug: 'inventory-management-mern',
     shortDescription: 'Comprehensive inventory tracking system with supplier management and reporting',
-    description: 'Robust inventory management solution built with PHP and MySQL for tracking stock levels, managing suppliers, generating reports, and automating inventory workflows.',
+    description: 'Robust inventory management solution built with MERN and MySQL(uisng Prisma ORM) for tracking stock levels, managing suppliers, generating reports, and automating inventory workflows.',
     longDescription: `A professional inventory management system designed to streamline stock control and supplier management for businesses.
 The system provides real-time inventory tracking, automated low-stock alerts, supplier management with contact information and order history, and comprehensive reporting capabilities. Features include barcode integration, batch tracking, and multi-location inventory support.
 Built with security in mind, implementing role-based access control and audit logging for all inventory transactions.`,
-    technologies: ['Core PHP', 'MySQL', 'JavaScript', 'Bootstrap', 'jQuery', 'AJAX'],
-    featuredTechnologies: ['PHP', 'MySQL', 'Bootstrap'],
+    technologies: ['MERN', 'MySQL', 'Prisma ORM', 'Tailwind CSS', 'three.js', 'Chart.js', 'JWT', 'bcryptjs', 'Socket.io'],
+    featuredTechnologies: ['MERN', 'MySQL', 'Tailwind CSS', 'Socket.io'],
     role: 'Full-Stack Developer',
     status: 'Completed',
     category: 'Full-Stack',
@@ -148,7 +151,7 @@ Built with security in mind, implementing role-based access control and audit lo
     ],
     featured: true,
     order: 3,
-    tags: ['Inventory', 'PHP', 'MySQL', 'Enterprise'],
+    tags: ['Inventory', 'MERN', 'MySQL', 'Enterprise'],
     isOpenSource: false,
   },
   {
@@ -177,9 +180,8 @@ Features include customer management, sales history tracking, daily sales report
     ],
     contributions: [
       'Developed fast and responsive sales processing interface',
-      'Implemented product management with barcode support',
+      'Implemented product management with product recipies',
       'Built automated invoice generation with PDF export',
-      'Created real-time inventory synchronization',
       'Developed customer management and loyalty system',
       'Implemented sales analytics and reporting dashboard',
       'Built multi-payment method support',
@@ -206,9 +208,7 @@ Features include customer management, sales history tracking, daily sales report
     shortDescription: 'Responsive real estate platform with property listings and advanced filtering',
     description: 'Modern real estate website featuring property showcases, advanced search filters, interactive image galleries, and integrated contact forms built with HTML5, CSS3, and JavaScript.',
     longDescription: `A professional real estate website designed to showcase properties with an engaging user experience.
-
 The platform features property listings with high-quality image galleries, advanced filtering by location, price, property type, and amenities. Interactive maps integration for property locations, virtual tour support, and responsive design optimized for all devices.
-
 Implemented modern JavaScript for smooth animations, dynamic content loading, and form validation for lead capture.`,
     technologies: ['HTML5', 'CSS3', 'JavaScript', 'Bootstrap', 'jQuery', 'Google Maps API'],
     featuredTechnologies: ['HTML5', 'CSS3', 'JavaScript'],
@@ -237,7 +237,7 @@ Implemented modern JavaScript for smooth animations, dynamic content loading, an
     challenges: [
       'Creating smooth filtering without page reloads',
       'Optimizing large image galleries for performance',
-      'Ensuring cross-browser compatibility',
+      'Ensuring cross-browser compatibility and responsiveness',
     ],
     learnings: [
       'Advanced CSS Grid and Flexbox techniques',
@@ -256,9 +256,7 @@ Implemented modern JavaScript for smooth animations, dynamic content loading, an
     shortDescription: 'Cross-platform mobile e-commerce app with seamless shopping experience',
     description: 'Feature-rich mobile e-commerce application built with React Native offering product browsing, cart management, secure checkout, and order tracking on iOS and Android.',
     longDescription: `A cross-platform mobile application delivering a native shopping experience for both iOS and Android users.
-
 The app features smooth navigation, product discovery with search and filters, wishlist functionality, shopping cart with real-time updates, and secure payment integration. Push notifications keep users informed about orders, offers, and new arrivals.
-
 Implemented with performance optimization for smooth scrolling through large product catalogs, offline capability for browsing, and secure authentication.`,
     technologies: ['React Native', 'Expo', 'Redux', 'React Navigation', 'Axios', 'AsyncStorage', 'Push Notifications'],
     featuredTechnologies: ['React Native', 'Expo', 'Redux'],
@@ -283,7 +281,6 @@ Implemented with performance optimization for smooth scrolling through large pro
       'Integrated secure payment processing',
       'Implemented push notifications for order updates',
       'Optimized performance for smooth user experience',
-      'Built offline capability for product browsing',
     ],
     challenges: [
       'Ensuring consistent UI/UX across iOS and Android',
@@ -307,9 +304,7 @@ Implemented with performance optimization for smooth scrolling through large pro
     shortDescription: 'Mobile inventory management solution with real-time stock updates and reporting',
     description: 'Cross-platform mobile application for inventory management featuring stock tracking, supplier management, barcode scanning, and comprehensive reporting built with React Native.',
     longDescription: `A mobile-first approach to inventory management, enabling businesses to manage stock on the go.
-
 The application provides real-time inventory tracking, barcode scanning for quick item lookup and updates, supplier management with contact information, and detailed reporting capabilities. Offline mode ensures functionality even without internet connectivity, with automatic synchronization when connected.
-
 Features include low-stock alerts, order management, and multi-location inventory support.`,
     technologies: ['React Native', 'Expo', 'SQLite', 'React Navigation', 'Expo Camera', 'AsyncStorage'],
     featuredTechnologies: ['React Native', 'Expo', 'SQLite'],
@@ -354,17 +349,17 @@ Features include low-stock alerts, order management, and multi-location inventor
 ]
 
 // Helper functions
-export const getFeaturedProjects = () => 
+export const getFeaturedProjects = () =>
   projects.filter((project) => project.featured).sort((a, b) => a.order - b.order)
 
-export const getProjectBySlug = (slug: string) => 
+export const getProjectBySlug = (slug: string) =>
   projects.find((project) => project.slug === slug)
 
-export const getProjectsByCategory = (category: string) => 
+export const getProjectsByCategory = (category: string) =>
   projects.filter((project) => project.category === category)
 
 export const getProjectCategories = () =>
   [...new Set(projects.map((project) => project.category))]
 
-export const getAllProjectSlugs = () => 
+export const getAllProjectSlugs = () =>
   projects.map((project) => project.slug)
