@@ -357,7 +357,7 @@ export default function ContactPage() {
                     </p>
                   </div>
                   <Button asChild variant="default" size="lg" className="w-full sm:w-auto">
-                    <a href="/cv/afzal-resume.pdf" download="Afzal-afzal-resume.pdf">
+                    <a href="/cv/Resume_Afzal_Habib.pdf" download="Afzal-Resume_Afzal_Habib.pdf">
                       <LucideIcons.Download className="mr-2 h-5 w-5" />
                       Download CV
                     </a>

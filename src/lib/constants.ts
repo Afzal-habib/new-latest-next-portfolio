@@ -50,7 +50,7 @@ export const WEB3FORMS_CONFIG = {
 } as const
 
 // CV/Resume file path
-export const CV_PATH = '/resume/afzal-afzal-resume.pdf'
+export const CV_PATH = '/resume/afzal-Resume_Afzal_Habib.pdf'
 
 // Social media platform colors (for custom styling)
 export const SOCIAL_COLORS = {
