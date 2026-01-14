@@ -168,13 +168,13 @@ export default function ContactPage() {
             transition={{ duration: 0.6 }}
           >
             <Card variant="elevated" className="h-full">
-              <CardContent className="p-4 md:p-4">
+              <CardContent className="p-0 md:p-4">
                 <h2 className="text-2xl font-bold mb-6">Send a Message</h2>
 
                 <form onSubmit={handleSubmit} className="space-y-4">
                   <div className="grid gap-4 sm:grid-cols-2">
                     <div className="space-y-2">
-                      <label htmlFor="name" className="text-sm font-medium">
+                      <label htmlFor="name" className="text-sm font-medium mb-2">
                         Name <span className="text-destructive">*</span>
                       </label>
                       <input
@@ -189,7 +189,7 @@ export default function ContactPage() {
                       />
                     </div>
                     <div className="space-y-2">
-                      <label htmlFor="email" className="text-sm font-medium">
+                      <label htmlFor="email" className="text-sm font-medium mb-2">
                         Email <span className="text-destructive">*</span>
                       </label>
                       <input
@@ -206,7 +206,7 @@ export default function ContactPage() {
                   </div>
 
                   <div className="space-y-2">
-                    <label htmlFor="subject" className="text-sm font-medium">
+                    <label htmlFor="subject" className="text-sm font-medium mb-2">
                       Subject <span className="text-destructive">*</span>
                     </label>
                     <input
@@ -222,7 +222,7 @@ export default function ContactPage() {
                   </div>
 
                   <div className="space-y-2">
-                    <label htmlFor="message" className="text-sm font-medium">
+                    <label htmlFor="message" className="text-sm font-medium mb-2">
                       Message <span className="text-destructive">*</span>
                     </label>
                     <textarea
