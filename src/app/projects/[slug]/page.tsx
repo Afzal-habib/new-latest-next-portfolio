@@ -256,11 +256,11 @@ export default function ProjectDetailPage() {
 
       {/* Project Navigation */}
       <Section>
-        <div className="flex items-center justify-between gap-4">
+        <div className="flex items-center justify-between gap-2 md:flex-row flex-col">
           {prevProject ? (
             <Link href={`/projects/${prevProject.slug}`} className="group flex-1">
               <Card variant="outline" hover="lift" className="h-full border-0">
-                <CardContent className="p-4 flex items-center gap-4">
+                <CardContent className="p-2 flex items-center gap-4">
                   <LucideIcons.ArrowLeft className="h-5 w-5 text-muted-foreground group-hover:text-primary transition-colors" />
                   <div>
                     <p className="text-xs text-muted-foreground">Previous Project</p>
@@ -285,7 +285,7 @@ export default function ProjectDetailPage() {
           {nextProject ? (
             <Link href={`/projects/${nextProject.slug}`} className="group flex-1">
               <Card variant="outline" hover="lift" className="h-full border-0">
-                <CardContent className="p-4 flex items-center justify-end gap-4">
+                <CardContent className="p-2 flex items-center md:justify-end gap-2">
                   <div className="text-right">
                     <p className="text-xs text-muted-foreground">Next Project</p>
                     <p className="font-medium group-hover:text-primary transition-colors line-clamp-1">

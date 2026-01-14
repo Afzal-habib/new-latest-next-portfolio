@@ -223,11 +223,11 @@ export default function SkillDetailPage() {
 
       {/* Skill Navigation */}
       <Section>
-        <div className="flex items-center justify-between gap-4">
+        <div className="flex items-center justify-between gap-1 md:flex-row flex-col">
           {prevSkill ? (
             <Link href={`/skills/${prevSkill.slug}`} className="group flex-1">
               <Card variant="outline" hover="lift" className="h-full border-0">
-                <CardContent className="flex items-center gap-4">
+                <CardContent className="p-2 flex items-center gap-2">
                   <LucideIcons.ArrowLeft className="h-5 w-5 text-muted-foreground group-hover:text-primary transition-colors" />
                   <div>
                     <p className="text-xs text-muted-foreground">Previous Skill</p>
@@ -252,7 +252,7 @@ export default function SkillDetailPage() {
           {nextSkill ? (
             <Link href={`/skills/${nextSkill.slug}`} className="group flex-1">
               <Card variant="outline" hover="lift" className="h-full border-0">
-                <CardContent className=" flex items-center justify-end gap-4">
+                <CardContent className="p-2 flex items-center md:justify-end gap-2">
                   <div className="text-right">
                     <p className="text-xs text-muted-foreground">Next Skill</p>
                     <p className="font-medium group-hover:text-primary transition-colors line-clamp-1">
