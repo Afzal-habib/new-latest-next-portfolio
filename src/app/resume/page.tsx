@@ -93,7 +93,7 @@ export default function ResumePage() {
                   <p className="text-base text-slate-700 font-bold mt-0.5 tracking-wide">{personalInfo.title}</p>
 
                   {/* Contact Row */}
-                  <div className="flex flex-wrap items-center gap-x-4 gap-y-1.5 mt-3 text-[11.5px] text-slate-800">
+                  <div className="flex flex-wrap items-center gap-x-4 gap-y-1.5 mt-3 text-[12.5px] text-slate-800">
                     <span className="flex items-center gap-1.5 font-semibold">
                       <Phone className="w-3.5 h-3.5 text-slate-700" />
                       {personalInfo.phone}
@@ -107,7 +107,7 @@ export default function ResumePage() {
                       {personalInfo.location}
                     </span>
                   </div>
-                  <div className="flex items-center gap-x-4 mt-1.5 text-[11.5px] text-slate-800">
+                  <div className="flex items-center gap-x-4 mt-1.5 text-[12.5px] text-slate-800">
                     <span className="flex items-center gap-1.5 font-semibold">
                       <Linkedin className="w-3.5 h-3.5 text-slate-700" />
                       {personalInfo.linkedin}
@@ -126,14 +126,14 @@ export default function ResumePage() {
 
             {/* Professional Summary */}
             <section className="mb-5">
-              <p className="text-[12px] text-slate-800 leading-relaxed">
+              <p className="text-[14px] text-slate-800 leading-relaxed">
                 <span className="font-black text-slate-900">Results-driven Full Stack Developer</span>{" "}
                 {summary.substring(summary.indexOf("with"))}
               </p>
             </section>
 
             {/* Two Column Layout */}
-            <div className="grid grid-cols-[1fr_190px] gap-6">
+            <div className="grid grid-cols-[1fr_210px] gap-4">
               {/* Left Column */}
               <div className="space-y-4">
                 {/* Experience */}
@@ -150,18 +150,21 @@ export default function ResumePage() {
                   <div className="space-y-3 pl-1">
                     {experiences.map((exp, index) => (
                       <div key={index} className={`border-l-[3px] ${exp.borderColor} pl-3`}>
-                        <div className="flex justify-between items-start">
+                        <div className="flex justify-between items-start relative">
+                          <div className="w-5 h-5 rounded-md bg-slate-900 flex items-center justify-center shadow-sm absolute -left-5 top-1">
+                            <Briefcase className="w-3 h-3 text-white" />
+                          </div>
                           <div>
-                            <h3 className="font-black text-slate-900 text-[13px]">{exp.title}</h3>
+                            <h3 className="font-black text-slate-900 text-[15px]">{exp.title}</h3>
                             <p className="text-[11.5px] text-slate-700 font-bold">
                               {exp.company} · {exp.location}
                             </p>
                           </div>
-                          <span className="text-[10px] text-slate-900 font-bold bg-slate-200 px-2 py-0.5 rounded">
+                          <span className="text-[12px] text-slate-900 font-bold bg-slate-200 px-2 py-0.5 rounded">
                             {exp.duration}
                           </span>
                         </div>
-                        <ul className="mt-1.5 space-y-0.5 text-[11px] text-slate-800">
+                        <ul className="mt-1.5 space-y-0.5 text-[13px] text-slate-800">
                           {exp.highlights.map((highlight, idx) => (
                             <li key={idx} className="flex gap-1.5">
                               <ChevronRight className="w-3 h-3 text-slate-600 mt-0.5 flex-shrink-0" />
@@ -174,22 +177,7 @@ export default function ResumePage() {
                   </div>
                 </section>
 
-                {/* Core Competencies */}
-                <section>
-                  <div className="flex items-center gap-2.5 mb-2.5">
-                    <div className="w-6 h-6 rounded-md bg-slate-900 flex items-center justify-center">
-                      <Zap className="w-3.5 h-3.5 text-white" />
-                    </div>
-                    <h2 className="text-xs font-black text-slate-900 uppercase tracking-wider">Core Competencies</h2>
-                  </div>
-                  <div className="flex flex-wrap gap-1.5 pl-1">
-                    {coreCompetencies.map((skill) => (
-                      <span key={skill} className="text-[10px] bg-slate-900 text-white px-2 py-0.5 rounded font-bold">
-                        {skill}
-                      </span>
-                    ))}
-                  </div>
-                </section>
+
               </div>
 
               {/* Right Column - Sidebar */}
@@ -200,14 +188,14 @@ export default function ResumePage() {
                     <div className="w-5 h-5 rounded bg-slate-900 flex items-center justify-center">
                       <GraduationCap className="w-3 h-3 text-white" />
                     </div>
-                    <h2 className="text-[10px] font-black text-slate-900 uppercase tracking-wider">Education</h2>
+                    <h2 className="text-[16px] font-black text-slate-900 uppercase tracking-wider">Education</h2>
                   </div>
                   <div className="space-y-2.5">
                     {education.map((edu, index) => (
                       <div key={index}>
-                        <h3 className="font-black text-slate-900 text-[11.5px]">{edu.degree}</h3>
-                        <p className="text-[10.5px] text-slate-700 font-semibold">{edu.institution}</p>
-                        <p className="text-[10px] text-slate-600 font-bold">{edu.duration}</p>
+                        <h3 className="font-black text-slate-900 text-[13px]">{edu.degree}</h3>
+                        <p className="text-[13px] text-slate-700 font-semibold">{edu.institution}</p>
+                        <p className="text-[13px] text-slate-600 font-bold">{edu.duration}</p>
                       </div>
                     ))}
                   </div>
@@ -219,13 +207,13 @@ export default function ResumePage() {
                     <div className="w-5 h-5 rounded bg-slate-900 flex items-center justify-center">
                       <Award className="w-3 h-3 text-white" />
                     </div>
-                    <h2 className="text-[10px] font-black text-slate-900 uppercase tracking-wider">Certifications</h2>
+                    <h2 className="text-[16px] font-black text-slate-900 uppercase tracking-wider">Certifications</h2>
                   </div>
                   <div className="space-y-2">
                     {certifications.map((cert, index) => (
                       <div key={index}>
-                        <p className="font-black text-slate-900 text-[11px]">{cert.name}</p>
-                        <p className="text-[9.5px] text-slate-600 font-semibold">
+                        <p className="font-black text-slate-900 text-[13px]">{cert.name}</p>
+                        <p className="text-[13px] text-slate-600 font-semibold">
                           {cert.issuer} · {cert.date}
                         </p>
                       </div>
@@ -239,9 +227,9 @@ export default function ResumePage() {
                     <div className="w-5 h-5 rounded bg-slate-900 flex items-center justify-center">
                       <Languages className="w-3 h-3 text-white" />
                     </div>
-                    <h2 className="text-[10px] font-black text-slate-900 uppercase tracking-wider">Languages</h2>
+                    <h2 className="text-[16px] font-black text-slate-900 uppercase tracking-wider">Languages</h2>
                   </div>
-                  <div className="space-y-1 text-[10.5px]">
+                  <div className="space-y-1 text-[13px]">
                     {languages.map((lang, index) => (
                       <div key={index} className="flex justify-between">
                         <span className="text-slate-800 font-bold">{lang.name}</span>
@@ -257,13 +245,13 @@ export default function ResumePage() {
                     <div className="w-5 h-5 rounded bg-slate-900 flex items-center justify-center">
                       <Wrench className="w-3 h-3 text-white" />
                     </div>
-                    <h2 className="text-[10px] font-black text-slate-900 uppercase tracking-wider">Tools</h2>
+                    <h2 className="text-[16px] font-black text-slate-900 uppercase tracking-wider">Tools</h2>
                   </div>
                   <div className="flex flex-wrap gap-1">
                     {tools.map((tool) => (
                       <span
                         key={tool}
-                        className="text-[9px] bg-slate-200 text-slate-900 px-1.5 py-0.5 rounded font-bold"
+                        className="text-[13px] bg-slate-200 text-slate-900 px-1.5 py-0.5 rounded font-bold"
                       >
                         {tool}
                       </span>
@@ -272,6 +260,22 @@ export default function ResumePage() {
                 </section>
               </div>
             </div>
+            {/* Core Competencies */}
+            <section className="mt-2">
+              <div className="flex items-center gap-2.5 mb-2.5">
+                <div className="w-6 h-6 rounded-md bg-slate-900 flex items-center justify-center">
+                  <Zap className="w-3.5 h-3.5 text-white" />
+                </div>
+                <h2 className="text-md font-black text-slate-900 uppercase tracking-wider">Core Competencies</h2>
+              </div>
+              <div className="flex flex-wrap gap-1.5 pl-1">
+                {coreCompetencies.map((skill) => (
+                  <span key={skill} className="text-[12px] bg-slate-900 text-white px-2 py-0.5 rounded font-bold">
+                    {skill}
+                  </span>
+                ))}
+              </div>
+            </section>
           </div>
         </div>
 
@@ -290,10 +294,10 @@ export default function ResumePage() {
             {/* Mini Header */}
             <header className="flex justify-between items-center mb-4 pb-3 border-b-[3px] border-slate-900">
               <div>
-                <h1 className="text-xl font-black text-slate-900 tracking-tight">{personalInfo.name.toUpperCase()}</h1>
-                <p className="text-[11px] text-slate-700 font-bold tracking-wide">{personalInfo.title}</p>
+                <h1 className="text-sm font-black text-slate-900 tracking-tight">{personalInfo.name.toUpperCase()}</h1>
+                <p className="text-[13px] text-slate-700 font-bold tracking-wide">{personalInfo.title}</p>
               </div>
-              <div className="text-right text-[10px] text-slate-700">
+              <div className="text-right text-[12px] text-slate-700">
                 <p className="font-bold">{personalInfo.email}</p>
                 <p className="font-semibold">{personalInfo.phone}</p>
               </div>
@@ -317,15 +321,15 @@ export default function ResumePage() {
                       <div className="w-6 h-6 rounded bg-slate-900 flex items-center justify-center">
                         {IconComponent && <IconComponent className="w-3.5 h-3.5 text-white" />}
                       </div>
-                      <h3 className="text-xs font-black text-slate-900 uppercase tracking-wide">{category.title}</h3>
+                      <h3 className="text-[14px] font-black text-slate-900 uppercase tracking-wide">{category.title}</h3>
                     </div>
 
                     <div className="space-y-2.5 pl-1">
                       {category.items.map((item, index) => (
                         <div key={index} className={`border-l-[3px] ${item.borderColor} pl-3 bg-slate-50`}>
-                          <p className="font-black text-slate-900 text-[11.5px]">{item.name}</p>
-                          <p className="text-[10.5px] text-slate-700 mt-0.5">{item.technologies}</p>
-                          <p className="text-[9.5px] text-slate-600 mt-0.5 italic">
+                          <p className="font-black text-slate-900 text-[12px]">{item.name}</p>
+                          <p className="text-[12px] text-slate-900 mt-0.5">{item.technologies}</p>
+                          <p className="text-[11.5px] text-slate-900 mt-0.5 italic">
                             {item.level} • {item.experience}
                           </p>
                         </div>
@@ -353,10 +357,10 @@ export default function ResumePage() {
             {/* Mini Header */}
             <header className="flex justify-between items-center mb-4 pb-3 border-b-[3px] border-slate-900">
               <div>
-                <h1 className="text-xl font-black text-slate-900 tracking-tight">{personalInfo.name.toUpperCase()}</h1>
-                <p className="text-[11px] text-slate-700 font-bold tracking-wide">{personalInfo.title}</p>
+                <h1 className="text-sm font-black text-slate-900 tracking-tight">{personalInfo.name.toUpperCase()}</h1>
+                <p className="text-[13px] text-slate-700 font-bold tracking-wide">{personalInfo.title}</p>
               </div>
-              <div className="text-right text-[10px] text-slate-700">
+              <div className="text-right text-[12px] text-slate-700">
                 <p className="font-bold">{personalInfo.email}</p>
                 <p className="font-semibold">{personalInfo.phone}</p>
               </div>
@@ -371,28 +375,28 @@ export default function ResumePage() {
             </div>
 
             {/* Projects - Dynamic Rendering */}
-            <div className="space-y-4">
+            <div className="space-y-2">
               {projects.slice(0, 4).map((project, index) => (
                 <div key={index} className={`border-l-[4px] ${project.borderColor} pl-4 py-1`}>
                   <div className="flex justify-between items-start mb-1">
                     <div>
-                      <h3 className="font-black text-slate-900 text-[13px]">{project.title}</h3>
-                      <p className="text-[10.5px] text-slate-600 font-bold">{project.role}</p>
+                      <h3 className="font-black text-slate-900 text-[15px]">{project.title}</h3>
+                      <p className="text-[12.5px] text-slate-800 font-bold">{project.role}</p>
                     </div>
-                    <span className="text-[9.5px] text-slate-900 font-bold bg-slate-200 px-2 py-0.5 rounded">
+                    <span className="text-[11.5px] text-slate-900 font-bold bg-slate-200 px-2 py-0.5 rounded">
                       {project.duration}
                     </span>
                   </div>
-                  <p className="text-[10.5px] text-slate-700 mb-1.5">{project.description}</p>
+                  <p className="text-[12px] text-slate-900 mb-1.5">{project.description}</p>
                   <div className="flex flex-wrap gap-1 mb-1.5">
                     {project.technologies.map((tech) => (
-                      <span key={tech} className="text-[8.5px] bg-slate-900 text-white px-1.5 py-0.5 rounded font-bold">
+                      <span key={tech} className="text-[12.5px] bg-slate-900 text-white px-1.5 py-0.5 rounded font-bold">
                         {tech}
                       </span>
                     ))}
                   </div>
                   {project.highlights.length > 0 && (
-                    <ul className="text-[10px] text-slate-700 space-y-0.5">
+                    <ul className="text-[12px] text-slate-900 space-y-0.5">
                       {project.highlights.map((highlight, idx) => (
                         <li key={idx} className="flex gap-1.5">
                           <ChevronRight className="w-2.5 h-2.5 text-slate-500 mt-0.5 flex-shrink-0" />
@@ -422,10 +426,10 @@ export default function ResumePage() {
             {/* Mini Header */}
             <header className="flex justify-between items-center mb-4 pb-3 border-b-[3px] border-slate-900">
               <div>
-                <h1 className="text-xl font-black text-slate-900 tracking-tight">{personalInfo.name.toUpperCase()}</h1>
-                <p className="text-[11px] text-slate-700 font-bold tracking-wide">{personalInfo.title}</p>
+                <h1 className="text-sm font-black text-slate-900 tracking-tight">{personalInfo.name.toUpperCase()}</h1>
+                <p className="text-[13px] text-slate-700 font-bold tracking-wide">{personalInfo.title}</p>
               </div>
-              <div className="text-right text-[10px] text-slate-700">
+              <div className="text-right text-[12px] text-slate-700">
                 <p className="font-bold">{personalInfo.email}</p>
                 <p className="font-semibold">{personalInfo.phone}</p>
               </div>
@@ -445,23 +449,23 @@ export default function ResumePage() {
                 <div key={index} className={`border-l-[4px] ${project.borderColor} pl-4 py-1`}>
                   <div className="flex justify-between items-start mb-1">
                     <div>
-                      <h3 className="font-black text-slate-900 text-[13px]">{project.title}</h3>
-                      <p className="text-[10.5px] text-slate-600 font-bold">{project.role}</p>
+                      <h3 className="font-black text-slate-900 text-[15px]">{project.title}</h3>
+                      <p className="text-[12.5px] text-slate-600 font-bold">{project.role}</p>
                     </div>
-                    <span className="text-[9.5px] text-slate-900 font-bold bg-slate-200 px-2 py-0.5 rounded">
+                    <span className="text-[11.5px] text-slate-900 font-bold bg-slate-200 px-2 py-0.5 rounded">
                       {project.duration}
                     </span>
                   </div>
-                  <p className="text-[10.5px] text-slate-700 mb-1.5">{project.description}</p>
+                  <p className="text-[12px] text-slate-700 mb-1.5">{project.description}</p>
                   <div className="flex flex-wrap gap-1 mb-1.5">
                     {project.technologies.map((tech) => (
-                      <span key={tech} className="text-[8.5px] bg-slate-900 text-white px-1.5 py-0.5 rounded font-bold">
+                      <span key={tech} className="text-[12.5px] bg-slate-900 text-white px-1.5 py-0.5 rounded font-bold">
                         {tech}
                       </span>
                     ))}
                   </div>
                   {project.highlights.length > 0 && (
-                    <ul className="text-[10px] text-slate-700 space-y-0.5">
+                    <ul className="text-[12px] text-slate-700 space-y-0.5">
                       {project.highlights.map((highlight, idx) => (
                         <li key={idx} className="flex gap-1.5">
                           <ChevronRight className="w-2.5 h-2.5 text-slate-500 mt-0.5 flex-shrink-0" />
