@@ -21,6 +21,9 @@ import {
   GitBranch,
   Wrench,
   Settings,
+  Building,
+  BriefcaseBusiness,
+  ShieldCheck,
 } from "lucide-react"
 import {
   personalInfo,
@@ -151,10 +154,10 @@ export default function ResumePage() {
                     {experiences.map((exp, index) => (
                       <div key={index} className={`border-l-[3px] ${exp.borderColor} pl-3`}>
                         <div className="flex justify-between items-start relative">
-                          <div className="w-5 h-5 rounded-md bg-slate-900 flex items-center justify-center shadow-sm absolute -left-5 top-1">
-                            <Briefcase className="w-3 h-3 text-white" />
-                          </div>
-                          <div>
+                            <div className="w-6 h-6 rounded-md bg-slate-900 flex items-center justify-center shadow-sm absolute -left-6.5 top-0">
+                            <ShieldCheck className="w-3 h-3 text-white" />
+                            </div>
+                          <div className="pl-2">
                             <h3 className="font-black text-slate-900 text-[15px]">{exp.title}</h3>
                             <p className="text-[11.5px] text-slate-700 font-bold">
                               {exp.company} · {exp.location}
@@ -377,9 +380,12 @@ export default function ResumePage() {
             {/* Projects - Dynamic Rendering */}
             <div className="space-y-2">
               {projects.slice(0, 4).map((project, index) => (
-                <div key={index} className={`border-l-[4px] ${project.borderColor} pl-4 py-1`}>
-                  <div className="flex justify-between items-start mb-1">
-                    <div>
+                <div key={index} className={`border-l-[4px] ${project.borderColor} pl-4`}>
+                  <div className="flex justify-between items-start mb-1 relative">
+                     <div className="w-6 h-6 rounded-md bg-slate-900 flex items-center justify-center shadow-sm absolute -left-7.5 top-0">
+                        <ShieldCheck className="w-3 h-3 text-white" />
+                        </div>
+                    <div className="pl-1">
                       <h3 className="font-black text-slate-900 text-[15px]">{project.title}</h3>
                       <p className="text-[12.5px] text-slate-800 font-bold">{project.role}</p>
                     </div>
@@ -446,9 +452,12 @@ export default function ResumePage() {
             {/* Additional Projects - Last Three */}
             <div className="space-y-4">
               {projects.slice(-3).map((project, index) => (
-                <div key={index} className={`border-l-[4px] ${project.borderColor} pl-4 py-1`}>
-                  <div className="flex justify-between items-start mb-1">
-                    <div>
+                <div key={index} className={`border-l-[4px] ${project.borderColor} pl-4`}>
+                  <div className="flex justify-between items-start mb-1 relative">
+                     <div className="w-6 h-6 rounded-md bg-slate-900 flex items-center justify-center shadow-sm absolute -left-7.5 top-0">
+                            <ShieldCheck className="w-3 h-3 text-white" />
+                            </div>
+                    <div className="pl-1">
                       <h3 className="font-black text-slate-900 text-[15px]">{project.title}</h3>
                       <p className="text-[12.5px] text-slate-600 font-bold">{project.role}</p>
                     </div>
