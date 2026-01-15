@@ -24,6 +24,7 @@ import {
   Building,
   BriefcaseBusiness,
   ShieldCheck,
+  Globe,
 } from "lucide-react"
 import {
   personalInfo,
@@ -38,6 +39,7 @@ import {
   projects,
 } from "./resume-data"
 import { Button } from "@/components/common"
+import Link from "next/link"
 const iconMap = {
   Layers,
   Server,
@@ -93,7 +95,15 @@ export default function ResumePage() {
                   <h1 className="text-3xl font-black text-slate-900 tracking-tight">
                     {personalInfo.name.toUpperCase()}
                   </h1>
-                  <p className="text-base text-slate-700 font-bold mt-0.5 tracking-wide">{personalInfo.title}</p>
+                  <div className="flex justify-between">
+
+                    <p className="text-base text-slate-700 font-bold mt-0.5 tracking-wide">{personalInfo.title}</p>
+                    <Link href={`${personalInfo.portfolio}`} className="text-[12px] text-slate-700 font-bold mt-0.5 tracking-wide flex items-center gap-1.5">
+                      <Globe className="w-3.5 h-3.5 text-slate-700" />
+                      {personalInfo.portfolio}
+                    </Link>
+
+                  </div>
 
                   {/* Contact Row */}
                   <div className="flex flex-wrap items-center gap-x-4 gap-y-1.5 mt-3 text-[12.5px] text-slate-800">
@@ -101,24 +111,24 @@ export default function ResumePage() {
                       <Phone className="w-3.5 h-3.5 text-slate-700" />
                       {personalInfo.phone}
                     </span>
-                    <span className="flex items-center gap-1.5 font-semibold">
+                    <Link href={`mailto:${personalInfo.email}`} className="flex items-center gap-1.5 font-semibold">
                       <Mail className="w-3.5 h-3.5 text-slate-700" />
                       {personalInfo.email}
-                    </span>
+                    </Link>
                     <span className="flex items-center gap-1.5 font-semibold">
                       <MapPin className="w-3.5 h-3.5 text-slate-700" />
                       {personalInfo.location}
                     </span>
                   </div>
                   <div className="flex items-center gap-x-4 mt-1.5 text-[12.5px] text-slate-800">
-                    <span className="flex items-center gap-1.5 font-semibold">
+                    <Link href={`${personalInfo.linkedin}`} className="flex items-center gap-1.5 font-semibold">
                       <Linkedin className="w-3.5 h-3.5 text-slate-700" />
                       {personalInfo.linkedin}
-                    </span>
-                    <span className="flex items-center gap-1.5 font-semibold">
+                    </Link>
+                    <Link href={`${personalInfo.github}`} className="flex items-center gap-1.5 font-semibold">
                       <Github className="w-3.5 h-3.5 text-slate-700" />
                       {personalInfo.github}
-                    </span>
+                    </Link>
                   </div>
                 </div>
               </div>
@@ -154,9 +164,9 @@ export default function ResumePage() {
                     {experiences.map((exp, index) => (
                       <div key={index} className={`border-l-[3px] ${exp.borderColor} pl-3`}>
                         <div className="flex justify-between items-start relative">
-                            <div className="w-6 h-6 rounded-md bg-slate-900 flex items-center justify-center shadow-sm absolute -left-6.5 top-0">
+                          <div className="w-6 h-6 rounded-md bg-slate-900 flex items-center justify-center shadow-sm absolute -left-6.5 top-0">
                             <ShieldCheck className="w-3 h-3 text-white" />
-                            </div>
+                          </div>
                           <div className="pl-2">
                             <h3 className="font-black text-slate-900 text-[15px]">{exp.title}</h3>
                             <p className="text-[11.5px] text-slate-700 font-bold">
@@ -301,8 +311,14 @@ export default function ResumePage() {
                 <p className="text-[13px] text-slate-700 font-bold tracking-wide">{personalInfo.title}</p>
               </div>
               <div className="text-right text-[12px] text-slate-700">
-                <p className="font-bold">{personalInfo.email}</p>
-                <p className="font-semibold">{personalInfo.phone}</p>
+                <Link href={`mailto:${personalInfo.email}`} className="font-bold">{personalInfo.email}</Link>
+                <p className="font-semibold flex items-center gap-1">
+                  {personalInfo.phone} |
+                  <Link href={`${personalInfo.portfolio}`} className="text-[12px] text-slate-700 font-bold mt-0.5 tracking-wide flex items-center gap-1.5">
+                    <Globe className="w-3.5 h-3.5 text-slate-700" />
+                    {personalInfo.portfolio}
+                  </Link>
+                </p>
               </div>
             </header>
 
@@ -364,9 +380,14 @@ export default function ResumePage() {
                 <p className="text-[13px] text-slate-700 font-bold tracking-wide">{personalInfo.title}</p>
               </div>
               <div className="text-right text-[12px] text-slate-700">
-                <p className="font-bold">{personalInfo.email}</p>
-                <p className="font-semibold">{personalInfo.phone}</p>
-              </div>
+                <Link href={`mailto:${personalInfo.email}`} className="font-bold">{personalInfo.email}</Link>
+                <p className="font-semibold flex items-center gap-1">
+                  {personalInfo.phone} |
+                  <Link href={`${personalInfo.portfolio}`} className="text-[12px] text-slate-700 font-bold mt-0.5 tracking-wide flex items-center gap-1.5">
+                    <Globe className="w-3.5 h-3.5 text-slate-700" />
+                    {personalInfo.portfolio}
+                  </Link>
+                </p>              </div>
             </header>
 
             {/* Projects Section */}
@@ -382,9 +403,9 @@ export default function ResumePage() {
               {projects.slice(0, 4).map((project, index) => (
                 <div key={index} className={`border-l-[4px] ${project.borderColor} pl-4`}>
                   <div className="flex justify-between items-start mb-1 relative">
-                     <div className="w-6 h-6 rounded-md bg-slate-900 flex items-center justify-center shadow-sm absolute -left-7.5 top-0">
-                        <ShieldCheck className="w-3 h-3 text-white" />
-                        </div>
+                    <div className="w-6 h-6 rounded-md bg-slate-900 flex items-center justify-center shadow-sm absolute -left-7.5 top-0">
+                      <ShieldCheck className="w-3 h-3 text-white" />
+                    </div>
                     <div className="pl-1">
                       <h3 className="font-black text-slate-900 text-[15px]">{project.title}</h3>
                       <p className="text-[12.5px] text-slate-800 font-bold">{project.role}</p>
@@ -436,9 +457,14 @@ export default function ResumePage() {
                 <p className="text-[13px] text-slate-700 font-bold tracking-wide">{personalInfo.title}</p>
               </div>
               <div className="text-right text-[12px] text-slate-700">
-                <p className="font-bold">{personalInfo.email}</p>
-                <p className="font-semibold">{personalInfo.phone}</p>
-              </div>
+                <Link href={`mailto:${personalInfo.email}`} className="font-bold">{personalInfo.email}</Link>
+                <p className="font-semibold flex items-center gap-1">
+                  {personalInfo.phone} |
+                  <Link href={`${personalInfo.portfolio}`} className="text-[12px] text-slate-700 font-bold mt-0.5 tracking-wide flex items-center gap-1.5">
+                    <Globe className="w-3.5 h-3.5 text-slate-700" />
+                    {personalInfo.portfolio}
+                  </Link>
+                </p>              </div>
             </header>
 
             {/* Additional Projects Section */}
@@ -454,9 +480,9 @@ export default function ResumePage() {
               {projects.slice(-3).map((project, index) => (
                 <div key={index} className={`border-l-[4px] ${project.borderColor} pl-4`}>
                   <div className="flex justify-between items-start mb-1 relative">
-                     <div className="w-6 h-6 rounded-md bg-slate-900 flex items-center justify-center shadow-sm absolute -left-7.5 top-0">
-                            <ShieldCheck className="w-3 h-3 text-white" />
-                            </div>
+                    <div className="w-6 h-6 rounded-md bg-slate-900 flex items-center justify-center shadow-sm absolute -left-7.5 top-0">
+                      <ShieldCheck className="w-3 h-3 text-white" />
+                    </div>
                     <div className="pl-1">
                       <h3 className="font-black text-slate-900 text-[15px]">{project.title}</h3>
                       <p className="text-[12.5px] text-slate-600 font-bold">{project.role}</p>

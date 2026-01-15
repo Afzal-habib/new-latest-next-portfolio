@@ -8,6 +8,7 @@ export const personalInfo = {
     location: "Harbanspura, Lahore, Pakistan",
     linkedin: "https://www.linkedin.com/in/afzal-habib-5298a0272/",
     github: "https://github.com/afzalhabibi",
+    portfolio: "https://afzalhabib.vercel.app/",
     profileImage: "resume/images/profile06.jpeg",
 }
 
