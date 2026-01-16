@@ -86,9 +86,9 @@ export default function ResumePage() {
               <div className="flex items-start gap-5">
                 <div className="w-28 h-28 rounded-xl overflow-hidden border-3 border-slate-900 shadow-lg flex-shrink-0">
                   <img
-                    src={personalInfo.profileImage || "/placeholder.svg"}
-                    alt={personalInfo.name}
-                    className="w-full h-full object-cover object-bottom"
+                  src={personalInfo.profileImage || "/placeholder.svg"}
+                  alt={personalInfo.name}
+                  className="w-full h-full object-cover scale-140 object-[50%_calc(100%+40px)]"
                   />
                 </div>
                 <div className="flex-1">

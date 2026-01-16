@@ -183,8 +183,37 @@ export default function AboutPage() {
 
       {/* Intro Section */}
       <Section className="bg-muted/30">
-        <div className="grid gap-12 lg:grid-cols-2 lg:items-center">
-          {/* Elite Professional Profile Showcase */}
+        <div className="grid gap-12 lg:grid-cols-2 lg:items-center ">
+         
+
+          {/* Content */}
+          <motion.div
+            initial={{ opacity: 0, x: 50 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6, delay: 0.2 }}
+            className="space-y-4"
+          >
+            <h2 className="text-3xl font-bold md:text-4xl">{aboutContent.intro}</h2>
+            <p className="text-lg text-muted-foreground">{aboutContent.summary}</p>
+            <p className="text-muted-foreground">{aboutContent.vision}</p>
+
+            {/* Quick Stats */}
+            <div className="grid grid-cols-2 gap-4 pt-4">
+              {aboutContent.highlights.map((stat, index) => (
+                <motion.div
+                  key={index}
+                  whileHover={{ scale: 1.05 }}
+                  className="rounded-lg border border-border bg-card p-4 text-center"
+                >
+                  <p className="text-2xl font-bold text-primary">{stat.value}</p>
+                  <p className="text-sm text-muted-foreground">{stat.label}</p>
+                </motion.div>
+              ))}
+            </div>
+          </motion.div>
+
+           {/* Elite Professional Profile Showcase */}
           <motion.div
             initial={{ opacity: 0, scale: 0.8, rotateY: -25 }}
             whileInView={{ opacity: 1, scale: 1, rotateY: 0 }}
@@ -261,10 +290,10 @@ export default function AboutPage() {
                     transition={{ duration: 0.3 }}
                   >
                     <Image
-                      src="/images/profile06.jpeg"
+                      src="/resume/images/profile-picture-professional-2.png"
                       alt="Professional Profile"
                       fill
-                      className="object-cover object-bottom transition-all duration-700 hover:brightness-110 hover:contrast-105"
+                      className="object-cover object-[50%_calc(100%+90px)] transition-all scale-150 duration-700 hover:brightness-110 hover:contrast-105"
                       priority
                       sizes="(max-width: 768px) 280px, (max-width: 1024px) 320px, 400px"
                       quality={100}
@@ -355,33 +384,6 @@ export default function AboutPage() {
                   <div className="absolute bottom-0 left-0 right-0 h-20 bg-gradient-to-t from-white/5 to-transparent" />
                 </div>
               </div>
-            </div>
-          </motion.div>
-
-          {/* Content */}
-          <motion.div
-            initial={{ opacity: 0, x: 50 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6, delay: 0.2 }}
-            className="space-y-4"
-          >
-            <h2 className="text-3xl font-bold md:text-4xl">{aboutContent.intro}</h2>
-            <p className="text-lg text-muted-foreground">{aboutContent.summary}</p>
-            <p className="text-muted-foreground">{aboutContent.vision}</p>
-
-            {/* Quick Stats */}
-            <div className="grid grid-cols-2 gap-4 pt-4">
-              {aboutContent.highlights.map((stat, index) => (
-                <motion.div
-                  key={index}
-                  whileHover={{ scale: 1.05 }}
-                  className="rounded-lg border border-border bg-card p-4 text-center"
-                >
-                  <p className="text-2xl font-bold text-primary">{stat.value}</p>
-                  <p className="text-sm text-muted-foreground">{stat.label}</p>
-                </motion.div>
-              ))}
             </div>
           </motion.div>
         </div>

@@ -116,11 +116,21 @@ function ProfileImage() {
   }
 
   return (
+    // <Image
+    //   src="/images/profile2.jpeg"
+    //   alt="Afzal - Full Stack Developer"
+    //   fill
+    //   className="object-cover object-top"
+    //   priority
+    //   sizes="(max-width: 640px) 260px, (max-width: 1024px) 300px, 380px"
+    //   onError={() => setImageError(true)}
+    //   quality={90}
+    // />
     <Image
-      src="/images/profile2.jpeg"
-      alt="Afzal - Full Stack Developer"
+      src="/resume/images/profile-picture-professional-2.png"
+      alt="Professional Profile"
       fill
-      className="object-cover object-top"
+      className="object-cover object-[50%_calc(100%+90px)] transition-all scale-150 duration-700"
       priority
       sizes="(max-width: 640px) 260px, (max-width: 1024px) 300px, 380px"
       onError={() => setImageError(true)}
