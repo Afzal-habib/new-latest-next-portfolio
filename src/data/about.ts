@@ -6,7 +6,7 @@ export const aboutContent = {
   tagline: 'Full-Stack Developer & UI/UX Enthusiast',
   
   // Summary
-  summary: `I'm a passionate Full-Stack Developer with over 2.5 years of experience building 
+  summary: `I'm a passionate Full-Stack Developer with over 3 years of experience building 
   modern web applications. I specialize in React, Next.js, and Node.js, with a keen eye 
   for creating intuitive user experiences and writing clean, maintainable code.`,
   
@@ -22,7 +22,7 @@ export const aboutContent = {
   
   // Key highlights/stats
   highlights: [
-    { label: 'Years of Experience', value: '2.5+' },
+    { label: 'Years of Experience', value: '3+' },
     { label: 'Projects Completed', value: '15+' },
     { label: 'Happy Clients', value: '15+' },
     { label: 'Technologies Mastered', value: '10+' },

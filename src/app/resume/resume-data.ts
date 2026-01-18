@@ -12,7 +12,7 @@ export const personalInfo = {
     profileImage: "resume/images/profile-picture-professional-2.png",
 }
 
-export const summary = `Results-driven Full Stack Developer with 2.5+ years of experience architecting and delivering scalable web and mobile solutions. Expert in MERN stack, Next.js, and enterprise application development with proven success in building ERP systems, e-commerce platforms, and real-time applications. Committed to clean code architecture, performance optimization, and delivering exceptional user experiences.`
+export const summary = `Results-driven Full Stack Developer with 3+ years of experience architecting and delivering scalable web and mobile solutions. Expert in MERN stack, Next.js, and enterprise application development with proven success in building ERP systems, e-commerce platforms, and real-time applications. Committed to clean code architecture, performance optimization, and delivering exceptional user experiences.`
 
 export const experiences = [
     {
@@ -172,7 +172,7 @@ export const skills = {
                 name: "Runtime & Frameworks",
                 technologies: "Node.js, Express.js, Core PHP, REST APIs",
                 level: "Advanced",
-                experience: "2.5 years experience",
+                experience: "3 years experience",
                 borderColor: "border-slate-900",
             },
             {
