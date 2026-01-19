@@ -4,17 +4,21 @@ import { useParams, notFound } from 'next/navigation'
 import { motion } from 'framer-motion'
 import Link from 'next/link'
 import * as LucideIcons from 'lucide-react'
+import { useState } from 'react'
 import { PageHero } from '@/components/layout'
 import { Section, SectionHeading, Card, CardContent, Badge, Button } from '@/components/common'
 import { getProjectBySlug, projects } from '@/data/projects'
 import { staggerContainer, staggerItem } from '@/lib/animations'
 import { PROJECT_STATUS_COLORS } from '@/lib/constants'
 import type { ProjectStatus } from '@/types/project'
+import Image from 'next/image'
 
 export default function ProjectDetailPage() {
   const params = useParams()
   const slug = params.slug as string
   const project = getProjectBySlug(slug)
+  const [currentImageIndex, setCurrentImageIndex] = useState(0)
+  const [showModal, setShowModal] = useState(false)
 
   if (!project) {
     notFound()
@@ -38,15 +42,59 @@ export default function ProjectDetailPage() {
         <div className="grid gap-8 lg:grid-cols-3">
           {/* Main Content */}
           <div className="lg:col-span-2 space-y-8">
-            {/* Featured Image */}
+            {/* Project Gallery */}
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-              className="relative aspect-video overflow-hidden rounded-2xl bg-gradient-to-br from-primary/20 via-accent/10 to-primary/5"
+              className="space-y-4"
             >
-              <div className="absolute inset-0 flex items-center justify-center">
-                <span className="text-6xl font-bold text-primary/20">{project.title.charAt(0)}</span>
+              {/* Main Image */}
+              <div
+                className="relative aspect-video overflow-hidden rounded-2xl bg-gradient-to-br from-primary/20 via-accent/10 to-primary/5 cursor-pointer"
+                onClick={() => setShowModal(true)}
+              >
+                <Image
+                  src={project.images[currentImageIndex].url}
+                  alt={project.images[currentImageIndex].alt}
+                  fill
+                  priority
+                  quality={100}
+                  className="w-full h-full object-cover transition-transform hover:scale-105"
+                />
+                {project.images[currentImageIndex].caption && (
+                  <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/60 to-transparent p-4">
+                    <p className="text-sm text-white font-medium">{project.images[currentImageIndex].caption}</p>
+                  </div>
+                )}
+                <div className="absolute inset-0 bg-black/0 hover:bg-black/10 transition-colors flex items-center justify-center opacity-0 hover:opacity-100">
+                  <LucideIcons.Expand className="h-8 w-8 text-white" />
+                </div>
               </div>
+
+              {/* Thumbnails */}
+              {project.images.length > 1 && (
+                <div className="flex gap-3 overflow-x-auto pb-2 scrollbar-hide">
+                  {project.images.map((image, index) => (
+                    <button
+                      key={index}
+                      onClick={() => setCurrentImageIndex(index)}
+                      className={`relative flex-shrink-0 w-20 h-20 md:w-24 md:h-24 rounded-lg overflow-hidden border-2 transition-all ${
+                        index === currentImageIndex
+                          ? 'border-primary shadow-lg scale-105'
+                          : 'border-muted hover:border-primary/50'
+                      }`}
+                    >
+                      <Image
+                        src={image.url}
+                        alt={image.alt}
+                        fill
+                        className="object-cover"
+                        sizes="96px"
+                      />
+                    </button>
+                  ))}
+                </div>
+              )}
             </motion.div>
 
             {/* Description */}
@@ -230,7 +278,7 @@ export default function ProjectDetailPage() {
             subtitle="Insights and takeaways from this project"
             align="center"
           />
-          
+
           <motion.div
             variants={staggerContainer}
             initial="hidden"
@@ -324,6 +372,62 @@ export default function ProjectDetailPage() {
           </div>
         </motion.div>
       </Section>
+
+      {/* Image Gallery Modal */}
+      {showModal && (
+        <div
+          className="fixed inset-0 z-50 flex items-center justify-center bg-black/90 backdrop-blur-sm"
+          onClick={() => setShowModal(false)}
+        >
+          <div className="relative max-w-5xl max-h-full p-4" onClick={(e) => e.stopPropagation()}>
+            <Image
+              src={project.images[currentImageIndex].url}
+              alt={project.images[currentImageIndex].alt}
+              width={1200}
+              height={800}
+              className="max-w-full max-h-[80vh] object-contain rounded-lg"
+            />
+            {project.images[currentImageIndex].caption && (
+              <div className="mt-4 text-center">
+                <p className="text-white text-lg font-medium">{project.images[currentImageIndex].caption}</p>
+              </div>
+            )}
+            <button
+              onClick={() => setShowModal(false)}
+              className="absolute -top-12 right-0 text-white hover:text-primary transition-colors"
+            >
+              <LucideIcons.X className="h-8 w-8" />
+            </button>
+            {project.images.length > 1 && (
+              <>
+                <button
+                  onClick={() => setCurrentImageIndex((prev) => (prev > 0 ? prev - 1 : project.images.length - 1))}
+                  className="absolute left-4 top-1/2 -translate-y-1/2 text-white hover:text-primary transition-colors bg-black/50 hover:bg-black/70 rounded-full p-3"
+                >
+                  <LucideIcons.ChevronLeft className="h-6 w-6" />
+                </button>
+                <button
+                  onClick={() => setCurrentImageIndex((prev) => (prev < project.images.length - 1 ? prev + 1 : 0))}
+                  className="absolute right-4 top-1/2 -translate-y-1/2 text-white hover:text-primary transition-colors bg-black/50 hover:bg-black/70 rounded-full p-3"
+                >
+                  <LucideIcons.ChevronRight className="h-6 w-6" />
+                </button>
+                <div className="absolute bottom-4 left-1/2 -translate-x-1/2 flex gap-2">
+                  {project.images.map((_, index) => (
+                    <button
+                      key={index}
+                      onClick={() => setCurrentImageIndex(index)}
+                      className={`w-2 h-2 rounded-full transition-all ${
+                        index === currentImageIndex ? 'bg-primary' : 'bg-white/50'
+                      }`}
+                    />
+                  ))}
+                </div>
+              </>
+            )}
+          </div>
+        </div>
+      )}
     </>
   )
 }

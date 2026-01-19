@@ -490,9 +490,14 @@ export default function HomePage() {
                   <Card variant="elevated" hover="lift" className="h-full overflow-hidden group">
                     <CardContent className="p-0">
                       <div className="relative aspect-video overflow-hidden bg-gradient-to-br from-primary/20 via-accent/10 to-primary/5">
-                        <div className="absolute inset-0 flex items-center justify-center">
-                          <span className="text-4xl font-bold text-primary/20">{project.title.charAt(0)}</span>
-                        </div>
+                        <Image
+                          src={project.images[0].url}
+                          alt={project.title}
+                          fill
+                          priority
+                          quality={100}
+                          className="w-full h-full object-cover"
+                        />
                       </div>
                       <div className="p-4">
                         <Badge variant="secondary" className="mb-2">{project.category}</Badge>

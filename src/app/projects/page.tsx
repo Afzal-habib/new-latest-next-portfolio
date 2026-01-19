@@ -10,14 +10,15 @@ import { projects, getProjectsByCategory, getProjectCategories, getFeaturedProje
 import { staggerContainer, staggerItem } from '@/lib/animations'
 import { PROJECT_STATUS_COLORS } from '@/lib/constants'
 import type { ProjectCategory, ProjectStatus } from '@/types/project'
+import Image from 'next/image'
 
 export default function ProjectsPage() {
   const [activeCategory, setActiveCategory] = useState<ProjectCategory | 'All'>('All')
   const categories = getProjectCategories()
   const featuredProjects = getFeaturedProjects()
-  
-  const filteredProjects = activeCategory === 'All' 
-    ? projects 
+
+  const filteredProjects = activeCategory === 'All'
+    ? projects
     : getProjectsByCategory(activeCategory)
 
   return (
@@ -35,7 +36,7 @@ export default function ProjectsPage() {
           subtitle="Highlighted projects that showcase my best work"
           align="center"
         />
-        
+
         <motion.div
           variants={staggerContainer}
           initial="hidden"
@@ -50,9 +51,16 @@ export default function ProjectsPage() {
                   <CardContent className="p-0">
                     {/* Project Image/Preview */}
                     <div className="relative aspect-video overflow-hidden bg-gradient-to-br from-primary/20 via-accent/10 to-primary/5">
-                      <div className="absolute inset-0 flex items-center justify-center">
-                        <LucideIcons.Image className="h-16 w-16 text-muted-foreground/30" />
-                      </div>
+                    
+                      {/* Project Image/Preview */}
+                      <Image
+                        src={project.images[0].url}
+                        alt={project.title}
+                        fill
+                        priority
+                        quality={100}
+                        className="w-full h-full object-cover"
+                      />
                       {/* Overlay */}
                       <div className="absolute inset-0 bg-gradient-to-t from-background/90 via-background/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4">
                         <div className="flex gap-3">
@@ -83,7 +91,7 @@ export default function ProjectsPage() {
                         </Badge>
                       </div>
                     </div>
-                    
+
                     {/* Content */}
                     <div className="p-4 space-y-4">
                       <div>
@@ -95,7 +103,7 @@ export default function ProjectsPage() {
                           {project.description}
                         </p>
                       </div>
-                      
+
                       {/* Technologies */}
                       <div className="flex flex-wrap gap-2">
                         {project.technologies.slice(0, 5).map((tech, i) => (
@@ -109,7 +117,7 @@ export default function ProjectsPage() {
                           </Badge>
                         )}
                       </div>
-                      
+
                       {/* Metrics & View More */}
                       <div className="flex items-center justify-between pt-2 text-sm text-muted-foreground">
                         {project.metrics && project.metrics.users !== undefined ? (
@@ -147,11 +155,10 @@ export default function ProjectsPage() {
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
             onClick={() => setActiveCategory('All')}
-            className={`rounded-full px-4 py-2 text-sm font-medium transition-all cursor-pointer ${
-              activeCategory === 'All'
+            className={`rounded-full px-4 py-2 text-sm font-medium transition-all cursor-pointer ${activeCategory === 'All'
                 ? 'bg-primary text-primary-foreground'
                 : 'bg-muted hover:bg-muted/80'
-            }`}
+              }`}
           >
             All
           </motion.button>
@@ -161,17 +168,16 @@ export default function ProjectsPage() {
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
               onClick={() => setActiveCategory(category)}
-              className={`rounded-full px-4 py-2 text-sm font-medium transition-all cursor-pointer ${
-                activeCategory === category
+              className={`rounded-full px-4 py-2 text-sm font-medium transition-all cursor-pointer ${activeCategory === category
                   ? 'bg-primary text-primary-foreground'
                   : 'bg-muted hover:bg-muted/80'
-              }`}
+                }`}
             >
               {category}
             </motion.button>
           ))}
         </div>
-        
+
         {/* Projects Grid */}
         <AnimatePresence mode="wait">
           <motion.div
@@ -194,9 +200,14 @@ export default function ProjectsPage() {
                     <CardContent className="p-0">
                       {/* Image */}
                       <div className="relative aspect-video overflow-hidden bg-gradient-to-br from-primary/10 to-accent/10">
-                        <div className="absolute inset-0 flex items-center justify-center">
-                          <LucideIcons.Image className="h-12 w-12 text-muted-foreground/20" />
-                        </div>
+                        <Image
+                        src={project.images[0].url}
+                        alt={project.title}
+                        fill
+                        priority
+                        quality={100}
+                        className="w-full h-full object-cover"
+                      />
                         {/* Quick Actions Overlay */}
                         <div className="absolute inset-0 bg-background/80 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center gap-3">
                           {project.liveUrl && (
@@ -225,7 +236,7 @@ export default function ProjectsPage() {
                           </Badge>
                         </div>
                       </div>
-                      
+
                       {/* Content */}
                       <div className="p-4 space-y-3">
                         <Badge variant="secondary" className="text-xs">{project.category}</Badge>
@@ -235,7 +246,7 @@ export default function ProjectsPage() {
                         <p className="text-sm text-muted-foreground line-clamp-2">
                           {project.shortDescription || project.description}
                         </p>
-                        
+
                         {/* Tech Stack & View More */}
                         <div className="flex items-center justify-between pt-2">
                           <div className="flex flex-wrap gap-1.5">
@@ -262,7 +273,7 @@ export default function ProjectsPage() {
             ))}
           </motion.div>
         </AnimatePresence>
-        
+
         {filteredProjects.length === 0 && (
           <motion.div
             initial={{ opacity: 0 }}

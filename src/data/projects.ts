@@ -60,6 +60,7 @@ Key modules include lead generation and qualification, client onboarding, projec
     id: '2',
     title: 'E-Commerce Platform (MERN Stack)',
     slug: 'ecommerce-mern',
+    liveUrl: 'https://pg-shop.cognitivebeam.com/',
     shortDescription: 'Full-stack e-commerce platform with secure payment integration and admin panel',
     description: 'Complete e-commerce solution built with MERN stack featuring user authentication, product catalog, shopping cart, secure payment processing, and comprehensive admin dashboard.',
     longDescription: `A full-featured e-commerce platform demonstrating expertise in the MERN (MongoDB, Express, React, Node.js) stack.
@@ -74,9 +75,39 @@ Implemented secure authentication system, integrated multiple payment gateways, 
     endDate: '2025-08-30',
     images: [
       {
-        url: 'https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=1200',
+        url: '/projects/pg-shops/img1.png',
         alt: 'E-commerce storefront',
         isFeatured: true,
+        caption: 'Modern e-commerce interface with product catalog',
+      },
+      {
+        url: '/projects/pg-shops/img2.png',
+        alt: 'E-commerce storefront',
+        isFeatured: true,
+        caption: 'Modern e-commerce interface with product catalog',
+      },
+      {
+        url: '/projects/pg-shops/img3.png',
+        alt: 'E-commerce storefront',
+        isFeatured: false,
+        caption: 'Modern e-commerce interface with product catalog',
+      },
+      {
+        url: '/projects/pg-shops/img4.png',
+        alt: 'E-commerce storefront',
+        isFeatured: false,
+        caption: 'Modern e-commerce interface with product catalog',
+      },
+      {
+        url: '/projects/pg-shops/img5.png',
+        alt: 'E-commerce storefront',
+        isFeatured: false,
+        caption: 'Modern e-commerce interface with product catalog',
+      },
+      {
+        url: '/projects/pg-shops/img6.png',
+        alt: 'E-commerce storefront',
+        isFeatured: false,
         caption: 'Modern e-commerce interface with product catalog',
       },
     ],
