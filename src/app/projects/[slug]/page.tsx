@@ -78,10 +78,10 @@ export default function ProjectDetailPage() {
                     <button
                       key={index}
                       onClick={() => setCurrentImageIndex(index)}
-                      className={`relative flex-shrink-0 w-20 h-20 md:w-24 md:h-24 rounded-lg overflow-hidden border-2 transition-all ${
+                      className={`relative flex-shrink-0 w-20 h-20 md:w-24 md:h-24 rounded-lg overflow-hidden border-2 transition-all duration-200 ${
                         index === currentImageIndex
-                          ? 'border-primary shadow-lg scale-105'
-                          : 'border-muted hover:border-primary/50'
+                          ? 'border-primary ring-2 ring-primary/20 shadow-lg scale-105'
+                          : 'border-muted hover:border-primary/50 hover:shadow-md'
                       }`}
                     >
                       <Image
