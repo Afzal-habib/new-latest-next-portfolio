@@ -86,9 +86,9 @@ export default function ResumePage() {
               <div className="flex items-start gap-5">
                 <div className="w-28 h-28 rounded-xl overflow-hidden border-3 border-slate-900 shadow-lg flex-shrink-0">
                   <img
-                  src={personalInfo.profileImage || "/placeholder.svg"}
-                  alt={personalInfo.name}
-                  className="w-full h-full object-cover scale-140 object-[50%_calc(100%+40px)]"
+                    src={personalInfo.profileImage || "/placeholder.svg"}
+                    alt={personalInfo.name}
+                    className="w-full h-full object-cover scale-140 object-[50%_calc(100%+40px)]"
                   />
                 </div>
                 <div className="flex-1">
@@ -407,8 +407,13 @@ export default function ResumePage() {
                       <ShieldCheck className="w-3 h-3 text-white" />
                     </div>
                     <div className="pl-1">
-                      <h3 className="font-black text-slate-900 text-[15px]">{project.title}</h3>
-                      <p className="text-[12.5px] text-slate-800 font-bold">{project.role}</p>
+                      <h3 className="font-black text-slate-900 text-[15px]">{project.title}
+                        {project.liveUrl ? (
+                          <a className="text-[13px] text-slate-600 font-bold" href={project.liveUrl}> ({project.liveUrl})</a>
+                        ) : (
+                          <span className="text-[13px] text-slate-600 font-bold"> (Not Public)</span>
+                        )}
+                      </h3>                      <p className="text-[12.5px] text-slate-800 font-bold">{project.role}</p>
                     </div>
                     <span className="text-[11.5px] text-slate-900 font-bold bg-slate-200 px-2 py-0.5 rounded">
                       {project.duration}
@@ -477,14 +482,102 @@ export default function ResumePage() {
 
             {/* Additional Projects - Last Three */}
             <div className="space-y-4">
-              {projects.slice(-3).map((project, index) => (
+              {projects.slice(4, 7).map((project, index) => (
                 <div key={index} className={`border-l-[4px] ${project.borderColor} pl-4`}>
                   <div className="flex justify-between items-start mb-1 relative">
                     <div className="w-6 h-6 rounded-md bg-slate-900 flex items-center justify-center shadow-sm absolute -left-7.5 top-0">
                       <ShieldCheck className="w-3 h-3 text-white" />
                     </div>
                     <div className="pl-1">
-                      <h3 className="font-black text-slate-900 text-[15px]">{project.title}</h3>
+                      <h3 className="font-black text-slate-900 text-[15px]">{project.title}
+                        {project.liveUrl ? (
+                          <a className="text-[13px] text-slate-600 font-bold" href={project.liveUrl}> ({project.liveUrl})</a>
+                        ) : (
+                          <span className="text-[13px] text-slate-600 font-bold"> (Not Public)</span>
+                        )}
+                      </h3>                      <p className="text-[12.5px] text-slate-600 font-bold">{project.role}</p>
+                    </div>
+                    <span className="text-[11.5px] text-slate-900 font-bold bg-slate-200 px-2 py-0.5 rounded">
+                      {project.duration}
+                    </span>
+                  </div>
+                  <p className="text-[12px] text-slate-700 mb-1.5">{project.description}</p>
+                  <div className="flex flex-wrap gap-1 mb-1.5">
+                    {project.technologies.map((tech) => (
+                      <span key={tech} className="text-[12.5px] bg-slate-900 text-white px-1.5 py-0.5 rounded font-bold">
+                        {tech}
+                      </span>
+                    ))}
+                  </div>
+                  {project.highlights.length > 0 && (
+                    <ul className="text-[12px] text-slate-700 space-y-0.5">
+                      {project.highlights.map((highlight, idx) => (
+                        <li key={idx} className="flex gap-1.5">
+                          <ChevronRight className="w-2.5 h-2.5 text-slate-500 mt-0.5 flex-shrink-0" />
+                          <span>{highlight}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  )}
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+
+        {/* ==================== PAGE 5 - More Projects ==================== */}
+        <div className="resume-page relative overflow-hidden">
+          {/* Professional Background Design */}
+          <div className="absolute top-0 right-0 w-[190px] h-[190px] opacity-[0.03] print:opacity-[0.05]">
+            <div className="w-full h-full border-[26px] border-slate-900 rounded-full" />
+          </div>
+          <div className="absolute bottom-0 left-0 w-[170px] h-[170px] opacity-[0.03] print:opacity-[0.05]">
+            <div className="w-full h-full border-[24px] border-slate-900 rounded-full" />
+          </div>
+          <div className="absolute top-1/4 right-0 w-2 h-20 bg-slate-900 opacity-[0.08] print:opacity-[0.1]" />
+
+          <div className="relative px-10 py-7">
+            {/* Mini Header */}
+            <header className="flex justify-between items-center mb-4 pb-3 border-b-[3px] border-slate-900">
+              <div>
+                <h1 className="text-sm font-black text-slate-900 tracking-tight">{personalInfo.name.toUpperCase()}</h1>
+                <p className="text-[13px] text-slate-700 font-bold tracking-wide">{personalInfo.title}</p>
+              </div>
+              <div className="text-right text-[12px] text-slate-700">
+                <Link href={`mailto:${personalInfo.email}`} className="font-bold">{personalInfo.email}</Link>
+                <p className="font-semibold flex items-center gap-1">
+                  {personalInfo.phone} |
+                  <Link href={`${personalInfo.portfolio}`} className="text-[12px] text-slate-700 font-bold mt-0.5 tracking-wide flex items-center gap-1.5">
+                    <Globe className="w-3.5 h-3.5 text-slate-700" />
+                    {personalInfo.portfolio}
+                  </Link>
+                </p>              </div>
+            </header>
+
+            {/* More Projects Section */}
+            <div className="flex items-center gap-2.5 mb-4">
+              <div className="w-8 h-8 rounded-md bg-slate-900 flex items-center justify-center shadow-sm">
+                <Folder className="w-5 h-5 text-white" />
+              </div>
+              <h2 className="text-lg font-black text-slate-900 uppercase tracking-wider">More Projects</h2>
+            </div>
+
+            {/* More Projects - Last Four */}
+            <div className="space-y-4">
+              {projects.slice(-4).map((project, index) => (
+                <div key={index} className={`border-l-[4px] ${project.borderColor} pl-4`}>
+                  <div className="flex justify-between items-start mb-1 relative">
+                    <div className="w-6 h-6 rounded-md bg-slate-900 flex items-center justify-center shadow-sm absolute -left-7.5 top-0">
+                      <ShieldCheck className="w-3 h-3 text-white" />
+                    </div>
+                    <div className="pl-1">
+                      <h3 className="font-black text-slate-900 text-[15px]">{project.title}
+                        {project.liveUrl ? (
+                          <a className="text-[13px] text-slate-600 font-bold" href={project.liveUrl}> ({project.liveUrl})</a>
+                        ) : (
+                          <span className="text-[13px] text-slate-600 font-bold"> (Not Public)</span>
+                        )}
+                      </h3>
                       <p className="text-[12.5px] text-slate-600 font-bold">{project.role}</p>
                     </div>
                     <span className="text-[11.5px] text-slate-900 font-bold bg-slate-200 px-2 py-0.5 rounded">

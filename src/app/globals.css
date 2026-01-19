@@ -321,7 +321,9 @@ html {
   mask-image: radial-gradient(ellipse 60% 60% at 50% 30%, black 0%, transparent 70%);
   -webkit-mask-image: radial-gradient(ellipse 60% 60% at 50% 30%, black 0%, transparent 70%);
 }
-
+button{
+  cursor: pointer !important;
+}
 /* Dot pattern - refined */
 .hero-dot-pattern {
   background-image: radial-gradient(
