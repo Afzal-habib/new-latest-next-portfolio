@@ -19,7 +19,15 @@ import type { SkillCategory } from '@/types/skill'
 import { ExperienceTimelineItem } from '@/app/about/page'
 
 // Rotating titles for hero section
-const HERO_TITLES = ['Software Engineer', 'Developer', 'Coder', 'Programmer', 'Tech Enthusiast', 'Full Stack Developer']
+const HERO_TITLES = [
+  'MERN Stack Dev',   // 20
+  'Full Stack Engineer',    // 19
+  'JavaScript Expert',    // 19
+  'Node React Engineer',    // 19
+  'Scalable Web Expert',   // 20
+  'Next.js Expert'   // 20
+];
+
 
 // Pro-level animated rotating text with smooth animation
 function RotatingText({ texts, interval = 2500 }: { texts: string[]; interval?: number }) {

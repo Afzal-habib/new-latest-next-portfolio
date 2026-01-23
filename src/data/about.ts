@@ -4,30 +4,26 @@ export const aboutContent = {
   // Hero section content
   intro: "Hi, I'm Afzal Habib",
   tagline: 'Full-Stack Developer & UI/UX Enthusiast',
-  
+
   // Summary
-  summary: `I'm a passionate Full-Stack Developer with over 3 years of experience building 
-  modern web applications. I specialize in React, Next.js, and Node.js, with a keen eye 
-  for creating intuitive user experiences and writing clean, maintainable code.`,
-  
+  summary: `Results-driven MERN Stack Developer with 3+ years of professional experience in full-stack web development. Expertise in React.js, Next.js, Node.js, Express.js, and database technologies including MongoDB, MySQL, and PostgreSQL. Hands-on experience building ERP/CRM systems, e-commerce applications, POS solutions, inventory management systems, real-time chat applications (Socket.IO, Supabase), and real estate websites.`,
+
   // Vision/Mission
   vision: `I believe in building software that makes a difference. My goal is to create 
   products that are not only functional but also delightful to use. I'm constantly learning 
   new technologies and best practices to deliver the best solutions for my clients.`,
-  
+
   // Approach
-  approach: `My approach combines technical expertise with design thinking. I start by 
-  understanding the problem deeply, then architect solutions that are scalable, maintainable, 
-  and user-centric. I value clean code, comprehensive testing, and continuous improvement.`,
-  
+  approach: `I follow a structured, engineering-driven approach to software development—starting with system design and data modeling, followed by clean architecture implementation and performance optimization. I emphasize best practices such as modular codebases, test coverage, version control, and continuous improvement to deliver secure and scalable applications.`,
+
   // Key highlights/stats
   highlights: [
     { label: 'Years of Experience', value: '3+' },
     { label: 'Projects Completed', value: '15+' },
     { label: 'Happy Clients', value: '15+' },
-    { label: 'Technologies Mastered', value: '10+' },
+    { label: 'Technologies Mastered', value: '20+' },
   ],
-  
+
   // Values
   values: [
     {
@@ -51,7 +47,7 @@ export const aboutContent = {
       icon: 'MessageSquare',
     },
   ],
-  
+
   // Certifications
   certifications: [
     {
@@ -73,7 +69,7 @@ export const aboutContent = {
       location: 'Lahore, Pakistan',
     },
   ],
-  
+
   // Education
   education: [
     {
@@ -83,7 +79,7 @@ export const aboutContent = {
       location: 'New York, USA',
     },
   ],
-  
+
   // Experience/Timeline
   experience: [
     {
@@ -162,7 +158,7 @@ export const aboutContent = {
       },
     },
   ],
-  
+
   // Personal interests (optional)
   interests: [
     'Open Source Contributing',
@@ -193,5 +189,5 @@ export const siteConfig = {
   author: 'Afzal Habib',
   phone: '+92 3231103430',
   email: 'afzalhaabib786@gmail.com',
-  keywords: ['Full-Stack Developer', 'React Developer', 'Next.js', 'Node.js', 'Web Developer', 'Portfolio'],
+  keywords: ['Full-Stack Developer', 'MERN Stack Developer','React Developer', 'Next.js', 'Node.js', 'Web Developer', 'Portfolio'],
 }
