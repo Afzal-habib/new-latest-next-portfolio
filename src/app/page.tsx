@@ -341,7 +341,7 @@ export default function HomePage() {
                 />
 
                 {/* Stylized frame - outer ring */}
-                <div className="relative w-[260px] h-[340px] sm:w-[300px] sm:h-[380px] lg:w-[380px] lg:h-[460px] mx-auto">
+                <div className="relative w-[330px] h-[360px] sm:w-[300px] sm:h-[380px] lg:w-[380px] lg:h-[460px] mx-auto">
                   {/* Gradient border frame */}
                   <div className="absolute inset-0 rounded-[1.5rem] sm:rounded-[2rem] lg:rounded-[2.5rem] bg-gradient-to-br from-primary via-primary/50 to-primary/20 p-[2px] sm:p-[3px]">
                     <div className="w-full h-full rounded-[1.4rem] sm:rounded-[1.9rem] lg:rounded-[2.4rem] bg-background" />

@@ -142,7 +142,7 @@ export default function ProjectsPage() {
       </Section>
 
       {/* All Projects */}
-      <Section>
+      <Section animated={false}>
         <SectionHeading
           title="All Projects"
           subtitle="Explore my complete portfolio"

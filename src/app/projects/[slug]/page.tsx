@@ -50,7 +50,7 @@ export default function ProjectDetailPage() {
             >
               {/* Main Image */}
               <div
-                className="relative aspect-video overflow-hidden rounded-2xl bg-gradient-to-br from-primary/20 via-accent/10 to-primary/5 cursor-pointer"
+                className="relative aspect-[4/3] md:aspect-video overflow-hidden rounded-2xl bg-gradient-to-br from-primary/20 via-accent/10 to-primary/5 cursor-pointer"
                 onClick={() => setShowModal(true)}
               >
                 <Image
@@ -59,7 +59,7 @@ export default function ProjectDetailPage() {
                   fill
                   priority
                   quality={100}
-                  className="w-full h-full object-cover transition-transform hover:scale-105"
+                  className="w-full max-w-100 h-full object-cover transition-transform hover:scale-105"
                 />
                 {project.images[currentImageIndex].caption && (
                   <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/60 to-transparent p-4">
@@ -73,7 +73,7 @@ export default function ProjectDetailPage() {
 
               {/* Thumbnails */}
               {project.images.length > 1 && (
-                <div className="flex gap-3 overflow-x-auto pb-2 scrollbar-hide">
+                <div className="flex gap-3 overflow-x-auto pb-2 scrollbar-hide max-w-100 w-full">
                   {project.images.map((image, index) => (
                     <button
                       key={index}
@@ -379,22 +379,21 @@ export default function ProjectDetailPage() {
           className="fixed inset-0 z-50 flex items-center justify-center bg-black/90 backdrop-blur-sm"
           onClick={() => setShowModal(false)}
         >
-          <div className="relative max-w-5xl max-h-full p-4" onClick={(e) => e.stopPropagation()}>
+          <div className="relative w-100 h-full md:max-w-5xl md:max-h-full p-0 md:p-4" onClick={(e) => e.stopPropagation()}>
             <Image
               src={project.images[currentImageIndex].url}
               alt={project.images[currentImageIndex].alt}
-              width={1200}
-              height={800}
-              className="max-w-full max-h-[80vh] object-contain rounded-lg"
+             fill
+              className="max-w-100 h-full md:max-h-[80vh] object-contain rounded-lg"
             />
             {project.images[currentImageIndex].caption && (
-              <div className="mb-3 text-center">
-                <p className="text-white text-lg font-medium">{project.images[currentImageIndex].caption}</p>
+              <div className="mb-2 md:mb-3 text-center">
+                <p className="text-white text-base md:text-lg font-medium">{project.images[currentImageIndex].caption}</p>
               </div>
             )}
             <button
               onClick={() => setShowModal(false)}
-              className="absolute -top-2 right-0 text-white hover:text-primary transition-colors cursor-pointer"
+              className="absolute top-2 right-2 md:-top-2 md:right-0 text-white hover:text-primary transition-colors cursor-pointer"
             >
               <LucideIcons.X className="h-5 w-5" />
             </button>
@@ -402,17 +401,17 @@ export default function ProjectDetailPage() {
               <>
                 <button
                   onClick={() => setCurrentImageIndex((prev) => (prev > 0 ? prev - 1 : project.images.length - 1))}
-                  className="absolute left-4 top-1/2 -translate-y-1/2 text-white hover:text-primary transition-colors bg-black/50 hover:bg-black/70 rounded-full p-3 cursor-pointer"
+                  className="absolute left-2 md:left-4 top-1/2 -translate-y-1/2 text-white hover:text-primary transition-colors bg-black/50 hover:bg-black/70 rounded-full p-3 cursor-pointer"
                 >
                   <LucideIcons.ChevronLeft className="h-6 w-6" />
                 </button>
                 <button
                   onClick={() => setCurrentImageIndex((prev) => (prev < project.images.length - 1 ? prev + 1 : 0))}
-                  className="absolute right-4 top-1/2 -translate-y-1/2 text-white hover:text-primary transition-colors bg-black/50 hover:bg-black/70 rounded-full p-3 cursor-pointer"
+                  className="absolute right-2 md:right-4 top-1/2 -translate-y-1/2 text-white hover:text-primary transition-colors bg-black/50 hover:bg-black/70 rounded-full p-3 cursor-pointer"
                 >
                   <LucideIcons.ChevronRight className="h-6 w-6" />
                 </button>
-                <div className="absolute bottom-4 left-1/2 -translate-x-1/2 flex gap-2">
+                <div className="absolute bottom-2 md:bottom-4 left-1/2 -translate-x-1/2 flex gap-2">
                   {project.images.map((_, index) => (
                     <button
                       key={index}
