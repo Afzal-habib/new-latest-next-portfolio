@@ -379,7 +379,7 @@ export default function ProjectDetailPage() {
           className="fixed inset-0 z-50 flex items-center justify-center bg-black/90 backdrop-blur-sm"
           onClick={() => setShowModal(false)}
         >
-          <div className="relative w-100 h-full md:max-w-5xl md:max-h-full p-0 md:p-4" onClick={(e) => e.stopPropagation()}>
+          <div className="relative w-100 h-full md:max-w-5xl md:max-h-full p-0 md:p-4 mt-8" onClick={(e) => e.stopPropagation()}>
             <Image
               src={project.images[currentImageIndex].url}
               alt={project.images[currentImageIndex].alt}
@@ -387,13 +387,13 @@ export default function ProjectDetailPage() {
               className="max-w-100 h-full md:max-h-[80vh] object-contain rounded-lg"
             />
             {project.images[currentImageIndex].caption && (
-              <div className="mb-2 md:mb-3 text-center">
+              <div className="mb-2 md:mb-3 text-center absolute bottom-4 md:bottom-6 w-full left-1/2 -translate-x-1/2  ">
                 <p className="text-white text-base md:text-lg font-medium">{project.images[currentImageIndex].caption}</p>
               </div>
             )}
             <button
               onClick={() => setShowModal(false)}
-              className="absolute top-2 right-2 md:-top-2 md:right-0 text-white hover:text-primary transition-colors cursor-pointer"
+              className="absolute top-4 right-2 md:top-10 md:right-0 text-white hover:text-primary transition-colors cursor-pointer z-100"
             >
               <LucideIcons.X className="h-5 w-5" />
             </button>
