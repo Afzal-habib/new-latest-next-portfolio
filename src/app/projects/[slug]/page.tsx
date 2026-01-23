@@ -59,7 +59,7 @@ export default function ProjectDetailPage() {
                   fill
                   priority
                   quality={100}
-                  className="w-full max-w-100 h-full object-cover transition-transform hover:scale-105"
+                  className="w-full max-w-100 md:max-w-full h-full object-cover transition-transform hover:scale-105"
                 />
                 {project.images[currentImageIndex].caption && (
                   <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/60 to-transparent p-4">
@@ -73,7 +73,7 @@ export default function ProjectDetailPage() {
 
               {/* Thumbnails */}
               {project.images.length > 1 && (
-                <div className="flex gap-3 overflow-x-auto pb-2 scrollbar-hide max-w-100 w-full">
+                <div className="flex gap-3 overflow-x-auto pb-2 scrollbar-hide max-w-100 md:max-w-full w-full">
                   {project.images.map((image, index) => (
                     <button
                       key={index}
@@ -379,15 +379,15 @@ export default function ProjectDetailPage() {
           className="fixed inset-0 z-50 flex items-center justify-center bg-black/90 backdrop-blur-sm"
           onClick={() => setShowModal(false)}
         >
-          <div className="relative w-100 h-full md:max-w-5xl md:max-h-full p-0 md:p-4 mt-8" onClick={(e) => e.stopPropagation()}>
+          <div className="relative w-100 md:w-full h-full md:max-w-[90vw] md:max-h-full p-0 md:p-4 mt-8" onClick={(e) => e.stopPropagation()}>
             <Image
               src={project.images[currentImageIndex].url}
               alt={project.images[currentImageIndex].alt}
              fill
-              className="max-w-100 h-full md:max-h-[80vh] object-contain rounded-lg"
+              className="max-w-100 md:max-w-full h-full md:max-h-[80vh] object-contain rounded-lg"
             />
             {project.images[currentImageIndex].caption && (
-              <div className="mb-2 md:mb-3 text-center absolute bottom-4 md:bottom-6 w-full left-1/2 -translate-x-1/2  ">
+              <div className="mb-2 md:mb-3 text-center absolute bottom-18 md:bottom-16 w-full left-1/2 -translate-x-1/2  ">
                 <p className="text-white text-base md:text-lg font-medium">{project.images[currentImageIndex].caption}</p>
               </div>
             )}
@@ -411,7 +411,7 @@ export default function ProjectDetailPage() {
                 >
                   <LucideIcons.ChevronRight className="h-6 w-6" />
                 </button>
-                <div className="absolute bottom-2 md:bottom-4 left-1/2 -translate-x-1/2 flex gap-2">
+                <div className="absolute bottom-16 md:bottom-16 left-1/2 -translate-x-1/2 flex gap-2">
                   {project.images.map((_, index) => (
                     <button
                       key={index}
