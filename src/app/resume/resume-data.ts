@@ -4,7 +4,7 @@ export const personalInfo = {
     name: "Afzal Habib",
     title: "Full Stack Developer",
     phone: "+92 323 1103430",
-    email: "afzalhabib786@gmail.com",
+    email: "afzalhaabib786@gmail.com",
     location: "Harbanspura, Lahore, Pakistan",
     linkedin: "https://www.linkedin.com/in/afzal-habib-5298a0272/",
     github: "https://github.com/afzalhabibi",
