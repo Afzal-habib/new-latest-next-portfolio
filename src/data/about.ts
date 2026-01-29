@@ -6,7 +6,7 @@ export const aboutContent = {
   tagline: 'Full-Stack Developer & UI/UX Enthusiast',
 
   // Summary
-  summary: `Results-driven MERN Stack Developer with 3+ years of professional experience in full-stack web development. Expertise in React.js, Next.js, Node.js, Express.js, and database technologies including MongoDB, MySQL, and PostgreSQL. Hands-on experience building ERP/CRM systems, e-commerce applications, POS solutions, inventory management systems, real-time chat applications (Socket.IO, Supabase), and real estate websites.`,
+  summary: `Results-driven MERN Stack Developer with 3+ years of professional experience in full-stack web development. Expertise in React.js, Next.js, Node.js, Express.js, Nest.js and database technologies including MongoDB, MySQL, and PostgreSQL. Hands-on experience building ERP/CRM systems, e-commerce applications, POS solutions, inventory management systems, real-time chat applications (Socket.IO, Supabase), and real estate websites.`,
 
   // Vision/Mission
   vision: `I believe in building software that makes a difference. My goal is to create 
@@ -51,13 +51,13 @@ export const aboutContent = {
   // Certifications
   certifications: [
     {
-      name: 'MERN STACK',
+      name: 'MERN STACK Development',
       issuer: 'House of Professional',
       date: 'Mar 2022',
       location: 'Johar Town, Lahore',
     },
     {
-      name: 'Frontend Development',
+      name: 'MERN STACK Development',
       issuer: 'Ideoversity Institute',
       date: 'Sep 2022',
       location: 'Arfa IT Tower, Lahore',
@@ -73,7 +73,7 @@ export const aboutContent = {
   // Education
   education: [
     {
-      degree: 'Bachelor of Science in Computer Science',
+      degree: 'Bachelor of Science in Software Engineering',
       school: 'University of Technology',
       year: '2019',
       location: 'New York, USA',

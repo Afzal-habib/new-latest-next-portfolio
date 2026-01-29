@@ -21,6 +21,8 @@ export default function SkillDetailPage() {
     notFound()
   }
 
+  const Icon = (LucideIcons as unknown as Record<string, React.ComponentType<{ className?: string }>>)[skill.icon]
+
   // Get adjacent skills for navigation
   const currentIndex = skills.findIndex((s) => s.slug === slug)
   const prevSkill = currentIndex > 0 ? skills[currentIndex - 1] : null
@@ -64,7 +66,7 @@ export default function SkillDetailPage() {
               className="flex items-start gap-6"
             >
               <div className={`h-20 w-20 rounded-2xl bg-gradient-to-br ${categoryGradient} flex items-center justify-center`}>
-                <span className="text-3xl font-bold text-white">{skill.name.charAt(0)}</span>
+                <Icon className="text-5xl h-10 w-10 font-bold text-white" />
               </div>
               <div className="flex-1">
                 <div className="flex items-center gap-3 flex-wrap">
@@ -194,25 +196,26 @@ export default function SkillDetailPage() {
                 <CardContent className="p-4">
                   <h3 className="font-semibold mb-4">Related Skills</h3>
                   <div className="space-y-3">
-                    {relatedSkills.map((relatedSkill) => (
-                      <Link
-                        key={relatedSkill.id}
-                        href={`/skills/${relatedSkill.slug}`}
-                        className="flex items-center gap-3 p-2 -mx-2 rounded-lg hover:bg-muted transition-colors"
-                      >
-                        <div className={`h-8 w-8 rounded-lg bg-gradient-to-br ${categoryGradient} flex items-center justify-center`}>
-                          <span className="text-sm font-bold text-white">
-                            {relatedSkill.name.charAt(0)}
-                          </span>
-                        </div>
-                        <div className="flex-1">
-                          <p className="text-sm font-medium">{relatedSkill.name}</p>
-                          <p className="text-xs text-muted-foreground">
-                            {relatedSkill.proficiency}% • {relatedSkill.yearsOfExperience}y
-                          </p>
-                        </div>
-                      </Link>
-                    ))}
+                    {relatedSkills.map((relatedSkill) => {
+                      const Icon = (LucideIcons as unknown as Record<string, React.ComponentType<{ className?: string }>>)[relatedSkill.icon]
+                      return (
+                        <Link
+                          key={relatedSkill.id}
+                          href={`/skills/${relatedSkill.slug}`}
+                          className="flex items-center gap-3 p-2 -mx-2 rounded-lg hover:bg-muted transition-colors"
+                        >
+                          <div className={`h-8 w-8 rounded-lg bg-gradient-to-br ${categoryGradient} flex items-center justify-center`}>
+                            {Icon && <Icon className="text-sm font-bold text-white" />}
+                          </div>
+                          <div className="flex-1">
+                            <p className="text-sm font-medium">{relatedSkill.name}</p>
+                            <p className="text-xs text-muted-foreground">
+                              {relatedSkill.proficiency}% • {relatedSkill.yearsOfExperience}y
+                            </p>
+                          </div>
+                        </Link>
+                      )
+                    })}
                   </div>
                 </CardContent>
               </Card>

@@ -84,13 +84,13 @@ export const education = [
 
 export const certifications = [
     {
-        name: "MERN Stack",
+        name: "MERN Stack Development",
         issuer: "House of Professional",
         date: "Mar 2022",
         location: "Johar Town, Lahore",
     },
     {
-        name: "Frontend Development",
+        name: "MERN Stack Development",
         issuer: "Ideoversity",
         date: "Sep 2022",
         location: "Arfa IT Tower, Lahore",
@@ -111,16 +111,18 @@ export const languages = [
 
 export const coreCompetencies = [
     "Full Stack Development",
+    "MERN Stack Development",
+    "PERN Stack Development",
     "System Architecture",
     "API Design",
     "Database Design",
     "Real-time Applications",
     "Mobile Development",
     "Payment Integration",
-    "Authentication Systems",
+    // "Authentication Systems",
 ]
 
-export const tools = ["Git", "GitHub", "GitLab", "VS Code", "Postman", "Figma", "Vercel"]
+export const tools = ["Git", "GitHub", "GitLab", "VS Code", "Postman", "Figma", "Vercel","Github Copilot","Cursor"]
 
 export const skills = {
     frontend: {
@@ -143,7 +145,7 @@ export const skills = {
             },
             {
                 name: "Styling Frameworks",
-                technologies: "Tailwind CSS, Bootstrap, Styled Components",
+                technologies: "Tailwind CSS, Bootstrap, ShadCN UI, Radix UI, Styled Components",
                 level: "Expert",
                 experience: "3 years experience",
                 borderColor: "border-slate-900",
@@ -170,7 +172,7 @@ export const skills = {
         items: [
             {
                 name: "Runtime & Frameworks",
-                technologies: "Node.js, Express.js, Core PHP, REST APIs",
+                technologies: "Node.js, Express.js,Nest.js, Core PHP, REST APIs",
                 level: "Advanced",
                 experience: "3 years experience",
                 borderColor: "border-slate-900",
