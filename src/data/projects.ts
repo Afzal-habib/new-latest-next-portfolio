@@ -247,8 +247,8 @@ Features include customer management, sales history tracking, daily sales report
     role: 'Full-Stack Developer',
     status: 'Completed',
     category: 'Full-Stack',
-    startDate: '2025-01-01',
-    endDate: '2025-02-28',
+    startDate: '2024-01-01',
+    endDate: '2024-02-28',
     images: [
       {
         url: 'https://images.unsplash.com/photo-1556740738-b6a63e27c4df?w=1200',
@@ -502,8 +502,8 @@ Implemented with responsive Bootstrap design, dynamic EJS templating for content
     role: 'Frontend Developer & Backend Integration',
     status: 'Completed',
     category: 'Frontend',
-    startDate: '2024-11-01',
-    endDate: '2025-01-31',
+    startDate: '2023-11-01',
+    endDate: '2024-01-31',
     images: [
       {
         url: '/projects/real-estate/pentz1.png',
@@ -566,8 +566,8 @@ Built with modern Bootstrap design, dynamic EJS templating, and integrated conta
     role: 'Frontend Developer & Backend Integration',
     status: 'Completed',
     category: 'Frontend',
-    startDate: '2024-12-01',
-    endDate: '2025-02-28',
+    startDate: '2023-12-01',
+    endDate: '2024-02-28',
     images: [
       {
         url: '/projects/real-estate/tobe1.png',
@@ -623,8 +623,8 @@ Built with responsive design using CSS3 and JavaScript, dynamic animations via G
     role: 'Frontend Developer',
     status: 'Completed',
     category: 'Frontend',
-    startDate: '2024-01-01',
-    endDate: '2024-12-31',
+    startDate: '2023-01-01',
+    endDate: '2023-12-31',
     images: [
       {
         url: '/projects/real-estate/buildwise1.png',

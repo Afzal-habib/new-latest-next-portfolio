@@ -6,7 +6,7 @@ export const aboutContent = {
   tagline: 'Full-Stack Developer & UI/UX Enthusiast',
 
   // Summary
-  summary: `Results-driven MERN Stack Developer with 3+ years of professional experience in full-stack web development. Expertise in React.js, Next.js, Node.js, Express.js, Nest.js and database technologies including MongoDB, MySQL, and PostgreSQL. Hands-on experience building ERP/CRM systems, e-commerce applications, POS solutions, inventory management systems, real-time chat applications (Socket.IO, Supabase), and real estate websites.`,
+  summary: `Results-driven MERN Stack Developer with 3.5+ years of professional experience in full-stack web development. Expertise in React.js, Next.js, Node.js, Express.js, Nest.js and database technologies including MongoDB, MySQL, and PostgreSQL. Hands-on experience building ERP/CRM systems, e-commerce applications, POS solutions, inventory management systems, real-time chat applications (Socket.IO, Supabase), and real estate websites.`,
 
   // Vision/Mission
   vision: `I believe in building software that makes a difference. My goal is to create 
@@ -18,9 +18,9 @@ export const aboutContent = {
 
   // Key highlights/stats
   highlights: [
-    { label: 'Years of Experience', value: '3+' },
-    { label: 'Projects Completed', value: '15+' },
-    { label: 'Happy Clients', value: '15+' },
+    { label: 'Years of Experience', value: '3.5+' },
+    { label: 'Projects Completed', value: '20+' },
+    { label: 'Happy Clients', value: '20+' },
     { label: 'Technologies Mastered', value: '20+' },
   ],
 
@@ -107,7 +107,7 @@ export const aboutContent = {
     {
       role: 'Full Stack Developer',
       company: 'Devgiant',
-      period: 'Apr 2024 - Sep 2025',
+      period: 'Feb 2024 - Sep 2025',
       description: 'Developed and maintained full-stack web applications using MERN stack technologies. Focused on building scalable e-commerce platforms, inventory management systems, and POS solutions with secure authentication and payment integrations.',
       highlights: [
         'Built multiple e-commerce websites with user authentication and payment processing',
@@ -125,8 +125,8 @@ export const aboutContent = {
     },
     {
       role: 'Frontend Developer',
-      company: 'Heapware',
-      period: 'Sep 2023 - Mar 2024',
+      company: 'Heapware Technologies',
+      period: 'Jan 2023 - Jan 2024',
       description: 'Specialized in frontend development using React.js, HTML, CSS, and JavaScript. Created responsive and interactive user interfaces for various client projects, including real estate websites and mobile applications.',
       highlights: [
         'Developed responsive real estate websites with advanced filtering and image galleries',
@@ -141,9 +141,9 @@ export const aboutContent = {
       },
     },
     {
-      role: 'Intern',
-      company: 'Ideoversity',
-      period: 'Jun 2023 - Aug 2023',
+      role: 'MERN Stack Internship',
+      company: 'Corelogix',
+      period: 'Jun 2022 - Dec 2022',
       description: 'Completed an intensive internship program focusing on full-stack development fundamentals. Gained hands-on experience with PHP, MySQL, and modern JavaScript frameworks while contributing to small-scale projects.',
       highlights: [
         'Learned how to professionally write clean and maintainable code',
@@ -152,9 +152,9 @@ export const aboutContent = {
         'Participated in code reviews and learned best practices for version control with Git',
       ],
       companyInfo: {
-        content: 'At Ideoversity, I  gained experience with fundamental of  JavaScript, Bootstrap and mastered HTML, CSS, and developed skills in version control, code reviews, and collaborative programming practices.',
-        location: 'Faisal Town, Lahore, Pakistan',
-        company: 'Ideoversity',
+        content: 'At Corelogix, I  gained experience with fundamental of  JavaScript, Bootstrap and mastered HTML, CSS, and developed skills in version control, code reviews, and collaborative programming practices.',
+        location: 'Gulberg, Lahore, Pakistan',
+        company: 'Corelogix',
       },
     },
   ],
@@ -183,11 +183,11 @@ export const contactInfo = {
 export const siteConfig = {
   name: 'Afzal Habib',
   title: 'Afzal | Full-Stack Developer',
-  description: 'Professional portfolio of Afzal, a Full-Stack Developer specializing in React, Next.js, and Node.js. Building modern web applications with clean code and great user experiences.',
+  description: 'Professional portfolio of Afzal, a Full-Stack Developer specializing in React, Next.js, Nest.js and Node.js. Building modern web applications with clean code and great user experiences.',
   url: 'https://afzalhabib.vercel.app/',
   ogImage: 'https://afzalhabib.vercel.app/og-image.jpg',
   author: 'Afzal Habib',
   phone: '+92 3231103430',
   email: 'afzalhaabib786@gmail.com',
-  keywords: ['Full-Stack Developer', 'MERN Stack Developer','React Developer', 'Next.js', 'Node.js', 'Web Developer', 'Portfolio'],
+  keywords: ['Full-Stack Developer', 'MERN Stack Developer','React Developer', 'Next.js', 'Nest.js', 'Node.js', 'Web Developer', 'Portfolio'],
 }

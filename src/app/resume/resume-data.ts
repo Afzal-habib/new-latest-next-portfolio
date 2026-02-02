@@ -12,7 +12,7 @@ export const personalInfo = {
     profileImage: "resume/images/profile-picture-professional-2.png",
 }
 
-export const summary = `Results-driven Full Stack Developer with 3+ years of experience architecting and delivering scalable web and mobile solutions. Expert in MERN stack, Next.js, and enterprise application development with proven success in building ERP systems, e-commerce platforms, and real-time applications. Committed to clean code architecture, performance optimization, and delivering exceptional user experiences.`
+export const summary = `Results-driven Full Stack Developer with 3.5+ years of experience architecting and delivering scalable web and mobile solutions. Expert in MERN stack,PERN Stack,Nest.js, Next.js, and enterprise application development with proven success in building ERP systems, e-commerce platforms, and real-time applications. Committed to clean code architecture, performance optimization, and delivering exceptional user experiences.`
 
 export const experiences = [
     {
@@ -32,7 +32,7 @@ export const experiences = [
         title: "Full Stack Developer",
         company: "Devgiant",
         location: "Lahore",
-        duration: "Apr 2024 - Sep 2025",
+        duration: "Fab 2024 - Sep 2025",
         highlights: [
             "Built scalable e-commerce platforms with Squareup & Shippo integration",
             "Designed inventory systems with real-time stock tracking and analytics",
@@ -44,9 +44,9 @@ export const experiences = [
     },
     {
         title: "Frontend Developer",
-        company: "Heapware",
+        company: "Heapware Technologies",
         location: "Lahore",
-        duration: "Sep 2023 - Mar 2024",
+        duration: "Jan 2023 - Jan 2024",
         highlights: [
             "Developed responsive web applications using React.js and modern CSS",
             "Created real estate websites with advanced filtering capabilities",
@@ -55,10 +55,10 @@ export const experiences = [
         borderColor: "border-slate-700",
     },
     {
-        title: "Development Intern",
-        company: "Ideoversity",
-        location: "Faisal Town, Lahore",
-        duration: "Jun 2023 - Aug 2023",
+        title: "MERN Stack Internship",
+        company: "Corelogix",
+        location: "Gulberg, Lahore",
+        duration: "Jun 2022 - Dec 2022",
         highlights: [
             "Built frontend projects using JavaScript, Bootstrap, and Git version control",
             'Collaborated with senior developers to learn best practices in web development',
@@ -76,7 +76,7 @@ export const education = [
         duration: "2021 - 2025",
     },
     {
-        degree: "ICS (Computer Science)",
+        degree: "FSc Pre-Engineering",
         institution: "Faizaia Inter College",
         duration: "2019 - 2021",
     },
@@ -122,7 +122,7 @@ export const coreCompetencies = [
     // "Authentication Systems",
 ]
 
-export const tools = ["Git", "GitHub", "GitLab", "VS Code", "Postman", "Figma", "Vercel","Github Copilot","Cursor"]
+export const tools = ["Git", "GitHub", "GitLab","Docker","CI/CD Pipeline", "VS Code", "Postman", "Figma", "Vercel","Github Copilot","Cursor"]
 
 export const skills = {
     frontend: {
@@ -133,7 +133,7 @@ export const skills = {
                 name: "Languages & Core",
                 technologies: "HTML5, CSS3, JavaScript (ES6+), TypeScript",
                 level: "Expert",
-                experience: "3 years experience",
+                experience: "4 years experience",
                 borderColor: "border-slate-900",
             },
             {
@@ -289,21 +289,21 @@ export const skills = {
                 name: "Version Control",
                 technologies: "Git, GitHub, GitLab, Branching Strategies",
                 level: "Expert",
-                experience: "3 years experience",
+                experience: "4 years experience",
                 borderColor: "border-slate-900",
             },
             {
                 name: "Deployment & CI/CD",
-                technologies: "Vercel, Digital Ocean, GitHub Actions",
+                technologies: "Docker, Vercel, Digital Ocean, GitHub Actions",
                 level: "Advanced",
                 experience: "3 years experience",
                 borderColor: "border-slate-900",
             },
             {
                 name: "Design & Documentation",
-                technologies: "Figma, Postman, Technical Writing , Promt Engineering",
+                technologies: "Figma, Postman, Technical Writing , Prompt Engineering",
                 level: "Advanced",
-                experience: "3 years experience",
+                experience: "4 years experience",
                 borderColor: "border-slate-900",
             },
         ],
@@ -372,7 +372,7 @@ export const projects = [
     {
         title: "Point of Sale (POS) System",
         role: "Full-Stack Developer",
-        duration: "Jan - Feb 2025",
+        duration: "2024",
         description:
             "Professional POS for retail with fast checkout, barcode support, invoice generation, and sales analytics.",
         technologies: ["Core PHP", "MySQL", "JavaScript", "Bootstrap", "TCPDF"],
@@ -473,7 +473,7 @@ export const projects = [
     {
         title: "Pentz Properties Real Estate Website",
         role: "Frontend Developer & Backend Integration",
-        duration: "2024",
+        duration: "2023",
         description: "Professional real estate platform with property search, sold listings, and comprehensive tools",
         technologies: ["Bootstrap", "EJS", "JavaScript", "CSS3", "HTML5", "Font Awesome", "Node.js", "Express.js"],
         highlights: [
@@ -490,7 +490,7 @@ export const projects = [
     {
         title: "To Be Real Estate Website",
         role: "Frontend Developer & Backend Integration",
-        duration: "2024",
+        duration: "2023",
         description: "Advanced real estate platform with comprehensive property categories and interactive features",
         technologies: ["Bootstrap", "EJS", "JavaScript", "CSS3", "HTML5", "Font Awesome", "Node.js", "Express.js"],
         highlights: [
@@ -509,7 +509,7 @@ export const projects = [
     {
         title: "Buildwise Estimators Website",
         role: "Frontend Developer",
-        duration: "2024",
+        duration: "2023",
         description: "Professional construction estimating website with service listings, project portfolios, and contact forms",
         technologies: ["HTML5", "CSS3", "JavaScript", "GSAP", "Font Awesome", "Tawk.to"],
         highlights: [
