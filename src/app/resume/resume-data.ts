@@ -12,7 +12,7 @@ export const personalInfo = {
     profileImage: "resume/images/profile-picture-professional-2.png",
 }
 
-export const summary = `Results-driven Full Stack Developer with 3.5+ years of experience architecting and delivering scalable web and mobile solutions. Expert in MERN stack,PERN Stack,Nest.js, Next.js, and enterprise application development with proven success in building ERP systems, e-commerce platforms, and real-time applications. Committed to clean code architecture, performance optimization, and delivering exceptional user experiences.`
+export const summary = `Results-driven Full Stack Developer with 5+ years of experience architecting and delivering scalable web and mobile solutions. Expert in MERN stack,PERN Stack,Nest.js, Next.js, and enterprise application development with proven success in building ERP systems, e-commerce platforms, and real-time applications. Committed to clean code architecture, performance optimization, and delivering exceptional user experiences.`
 
 export const experiences = [
     {
@@ -58,7 +58,7 @@ export const experiences = [
         title: "MERN Stack Internship",
         company: "Corelogix",
         location: "Gulberg, Lahore",
-        duration: "Jun 2022 - Dec 2022",
+        duration: "Jun 2021 - Dec 2022",
         highlights: [
             "Built frontend projects using JavaScript, Bootstrap, and Git version control",
             'Collaborated with senior developers to learn best practices in web development',

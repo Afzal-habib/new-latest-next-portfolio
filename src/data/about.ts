@@ -6,7 +6,7 @@ export const aboutContent = {
   tagline: 'Full-Stack Developer & UI/UX Enthusiast',
 
   // Summary
-  summary: `Results-driven MERN Stack Developer with 3.5+ years of professional experience in full-stack web development. Expertise in React.js, Next.js, Node.js, Express.js, Nest.js and database technologies including MongoDB, MySQL, and PostgreSQL. Hands-on experience building ERP/CRM systems, e-commerce applications, POS solutions, inventory management systems, real-time chat applications (Socket.IO, Supabase), and real estate websites.`,
+  summary: `Results-driven MERN Stack Developer with 5+ years of professional experience in full-stack web development. Expertise in React.js, Next.js, Node.js, Express.js, Nest.js and database technologies including MongoDB, MySQL, and PostgreSQL. Hands-on experience building ERP/CRM systems, e-commerce applications, POS solutions, inventory management systems, real-time chat applications (Socket.IO, Supabase), and real estate websites.`,
 
   // Vision/Mission
   vision: `I believe in building software that makes a difference. My goal is to create 
@@ -18,7 +18,7 @@ export const aboutContent = {
 
   // Key highlights/stats
   highlights: [
-    { label: 'Years of Experience', value: '3.5+' },
+    { label: 'Years of Experience', value: '5+' },
     { label: 'Projects Completed', value: '20+' },
     { label: 'Happy Clients', value: '20+' },
     { label: 'Technologies Mastered', value: '20+' },
@@ -141,9 +141,9 @@ export const aboutContent = {
       },
     },
     {
-      role: 'MERN Stack Internship',
+      role: 'MERN Stack Internship and Junior Developer',
       company: 'Corelogix',
-      period: 'Jun 2022 - Dec 2022',
+      period: 'Jun 2021 - Dec 2022',
       description: 'Completed an intensive internship program focusing on full-stack development fundamentals. Gained hands-on experience with PHP, MySQL, and modern JavaScript frameworks while contributing to small-scale projects.',
       highlights: [
         'Learned how to professionally write clean and maintainable code',
