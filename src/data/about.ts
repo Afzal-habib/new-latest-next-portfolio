@@ -19,9 +19,9 @@ export const aboutContent = {
   // Key highlights/stats
   highlights: [
     { label: 'Years of Experience', value: '5+' },
-    { label: 'Projects Completed', value: '20+' },
-    { label: 'Happy Clients', value: '20+' },
-    { label: 'Technologies Mastered', value: '20+' },
+    { label: 'Projects Completed', value: '30+' },
+    { label: 'Happy Clients', value: '30+' },
+    { label: 'Technologies Mastered', value: '30+' },
   ],
 
   // Values
@@ -53,19 +53,19 @@ export const aboutContent = {
     {
       name: 'MERN STACK Development',
       issuer: 'House of Professional',
-      date: 'Mar 2022',
+      date: 'Mar 2021',
       location: 'Johar Town, Lahore',
     },
     {
       name: 'MERN STACK Development',
       issuer: 'Ideoversity Institute',
-      date: 'Sep 2022',
+      date: 'Apr 2022',
       location: 'Arfa IT Tower, Lahore',
     },
     {
       name: 'Backend Development',
       issuer: 'UET Lahore',
-      date: 'Jan 2023',
+      date: 'Sep 2022',
       location: 'Lahore, Pakistan',
     },
   ],
