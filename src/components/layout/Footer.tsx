@@ -30,7 +30,7 @@ export function Footer({ className }: FooterProps) {
             <p className="text-sm text-muted-foreground">
               {siteConfig.description}
             </p>
-            <SocialLinks iconSize="sm" variant="muted" animated={false} />
+            {/* <SocialLinks iconSize="sm" variant="muted" animated={false} /> */}
           </div>
 
           {/* Quick Links */}

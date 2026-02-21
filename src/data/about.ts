@@ -2,7 +2,7 @@
 
 export const aboutContent = {
   // Hero section content
-  intro: "Hi, I'm Afzal Habib",
+  intro: "Hi, I'm Muhammad Afzal",
   tagline: 'Full-Stack Developer & UI/UX Enthusiast',
 
   // Summary
@@ -171,7 +171,7 @@ export const aboutContent = {
 
 // Contact information
 export const contactInfo = {
-  email: 'afzalhaabib786@gmail.com',
+  email: 'muhammadafzal11030@gmail.com',
   phone: '+92 3231103430',
   location: 'Qalanderpura main bazar, Harbanspura,Lahore, Pakistan',
   timezone: 'EST (UTC-5)',
@@ -181,13 +181,13 @@ export const contactInfo = {
 
 // Site metadata
 export const siteConfig = {
-  name: 'Afzal Habib',
+  name: 'Muhammad Afzal',
   title: 'Afzal | Full-Stack Developer',
   description: 'Professional portfolio of Afzal, a Full-Stack Developer specializing in React, Next.js, Nest.js and Node.js. Building modern web applications with clean code and great user experiences.',
-  url: 'https://afzalhabib.vercel.app/',
-  ogImage: 'https://afzalhabib.vercel.app/og-image.jpg',
-  author: 'Afzal Habib',
+  url: 'https://m-afzal.vercel.app/',
+  ogImage: 'https://m-afzal.vercel.app/og-image.jpg',
+  author: 'Muhammad Afzal',
   phone: '+92 3231103430',
-  email: 'afzalhaabib786@gmail.com',
+  email: 'muhammadafzal11030@gmail.com',
   keywords: ['Full-Stack Developer', 'MERN Stack Developer','React Developer', 'Next.js', 'Nest.js', 'Node.js', 'Web Developer', 'Portfolio'],
 }

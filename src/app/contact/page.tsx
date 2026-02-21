@@ -335,13 +335,13 @@ export default function ContactPage() {
             </div>
 
             {/* Connect */}
-            <div className="space-y-4">
+            {/* <div className="space-y-4">
               <h3 className="text-xl font-semibold">Connect With Me</h3>
               <p className="text-muted-foreground">
                 Follow me on social media for updates, tips, and behind-the-scenes content.
               </p>
               <SocialLinks iconSize="lg" variant="default" />
-            </div>
+            </div> */}
 
             {/* Download CV */}
             <Card variant="elevated" className="overflow-hidden">
@@ -357,7 +357,7 @@ export default function ContactPage() {
                     </p>
                   </div>
                   <Button asChild variant="default" size="lg" className="w-full sm:w-auto">
-                    <a href="/cv/Resume_Afzal_Habib.pdf" download="Afzal-Resume_Afzal_Habib.pdf">
+                    <a href="/cv/Resume_Muhammad_Afzal.pdf" download="Afzal-Resume_Muhammad_Afzal.pdf">
                       <LucideIcons.Download className="mr-2 h-5 w-5" />
                       Download CV
                     </a>

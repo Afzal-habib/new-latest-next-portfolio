@@ -1,14 +1,14 @@
 // Resume Mock Data - All content centralized here for easy updates
 
 export const personalInfo = {
-    name: "Afzal Habib",
+    name: "Muhammad Afzal",
     title: "Full Stack Developer",
     phone: "+92 323 1103430",
-    email: "afzalhaabib786@gmail.com",
+    email: "muhammadafzal11030@gmail.com",
     location: "Harbanspura, Lahore, Pakistan",
-    linkedin: "https://www.linkedin.com/in/afzal-habib-5298a0272/",
-    github: "https://github.com/afzalhabibi",
-    portfolio: "https://afzalhabib.vercel.app/",
+    linkedin: "https://www.linkedin.com/in/muhammad-afzal-5298a0272/",
+    github: "https://github.com/muhammadafzal11030",
+    portfolio: "https://m-afzal.vercel.app/",
     profileImage: "resume/images/profile-picture-professional-2.png",
 }
 

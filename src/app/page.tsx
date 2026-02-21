@@ -258,9 +258,9 @@ export default function HomePage() {
                   initial={{ opacity: 0, y: 30 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: 0.1 }}
-                  className="block text-4xl md:text-4xl lg:text-5xl xl:text-6xl font-bold tracking-tight text-foreground"
+                  className="block text-4xl md:text-4xl lg:text-5xl xl:text-5xl font-bold tracking-tight text-foreground mb-3"
                 >
-                  I'm Afzal Habib,
+                  I'm Muhammad Afzal,
                 </motion.span>
                 <motion.span
                   initial={{ opacity: 0, y: 30 }}
@@ -292,7 +292,7 @@ export default function HomePage() {
                 className="flex flex-wrap items-center justify-center lg:justify-start gap-4"
               >
                 {/* Primary CTA with Glow */}
-                <Link href="/cv/Resume_Afzal_Habib.pdf" download>
+                <Link href="/cv/Resume_Muhammad_Afzal.pdf" download>
                   <Button
                     size="lg"
                     className="relative overflow-hidden bg-primary hover:bg-primary/90 text-primary-foreground font-semibold px-8 shadow-[0_0_30px_-5px_hsl(var(--primary)/0.5)] hover:shadow-[0_0_40px_-5px_hsl(var(--primary)/0.7)] transition-all duration-300"
@@ -315,14 +315,14 @@ export default function HomePage() {
               </motion.div>
 
               {/* Social Links */}
-              <motion.div
+              {/* <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.5 }}
                 className="mt-8 lg:mt-10 flex justify-center lg:justify-start"
               >
                 <SocialLinks iconSize="md" variant="muted" />
-              </motion.div>
+              </motion.div> */}
             </motion.div>
 
             {/* Right Side - Profile Image with Stylized Frame */}
@@ -692,7 +692,7 @@ export default function HomePage() {
                         </span>
                       </div>
                       <div>
-                        <p className="font-semibold">Afzal Habib</p>
+                        <p className="font-semibold">Muhammad Afzal</p>
                         <p className="text-sm text-muted-foreground">{experience.role}</p>
                       </div>
                     </div>

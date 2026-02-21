@@ -306,15 +306,15 @@ export default function ProjectsPage() {
               <LucideIcons.MessageSquare className="h-5 w-5" />
               Start a Conversation
             </Link>
-            <a
-              href="https://github.com/afzalhabibi"
+            {/* <a
+              href="https://github.com/muhammadafzal11030"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 rounded-lg border border-border px-6 py-3 font-medium transition-all hover:bg-muted hover:scale-105"
             >
               <LucideIcons.Github className="h-5 w-5" />
               View GitHub
-            </a>
+            </a> */}
           </div>
         </motion.div>
       </Section>

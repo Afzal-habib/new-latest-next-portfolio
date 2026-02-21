@@ -99,7 +99,7 @@ export function Header() {
 
             {/* Desktop Actions */}
             <div className="hidden items-center gap-3 md:flex">
-              <SocialLinks iconSize="sm" variant="muted" />
+              {/* <SocialLinks iconSize="sm" variant="muted" /> */}
               <div className="h-6 w-px bg-border" />
               <ColorThemeSwitcher />
               <ThemeToggle />
@@ -163,9 +163,9 @@ export function Header() {
                   </motion.div>
                 )
               })}
-              <motion.div variants={fadeIn} className="pt-4">
+              {/* <motion.div variants={fadeIn} className="pt-4">
                 <SocialLinks iconSize="lg" variant="muted" />
-              </motion.div>
+              </motion.div> */}
             </motion.nav>
           </motion.div>
         )}
