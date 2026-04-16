@@ -4,7 +4,7 @@ export const socialLinks: SocialLink[] = [
   {
     id: '1',
     platform: 'linkedin',
-    url: 'https://www.linkedin.com/in/muhammad-afzal-5298a0272/',
+    url: 'https://www.linkedin.com/in/afzal-habib-5298a0272/',
     label: 'LinkedIn',
     icon: 'Linkedin',
     username: 'afzal-habib-5298a0272',
@@ -13,7 +13,7 @@ export const socialLinks: SocialLink[] = [
   {
     id: '2',
     platform: 'github',
-    url: 'https://github.com/muhammadafzal11030',
+    url: 'https://github.com/AfzalHabibi',
     label: 'GitHub',
     icon: 'Github',
     username: 'afzalhabibi',

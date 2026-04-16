@@ -260,7 +260,7 @@ export default function HomePage() {
                   transition={{ duration: 0.6, delay: 0.1 }}
                   className="block text-4xl md:text-4xl lg:text-5xl xl:text-5xl font-bold tracking-tight text-foreground mb-3"
                 >
-                  I'm Muhammad Afzal,
+                  I'm Afzal Habib,
                 </motion.span>
                 <motion.span
                   initial={{ opacity: 0, y: 30 }}
@@ -481,7 +481,7 @@ export default function HomePage() {
             <p className="mb-2 text-sm font-semibold uppercase tracking-wider text-primary">Portfolio</p>
             <h2 className="mb-4 text-3xl font-bold md:text-4xl">Featured Projects</h2>
             <p className="mx-auto max-w-2xl text-muted-foreground">
-              A selection of my recent work showcasing my skills in web development and design.
+              A selection of my recent work showcasing my skills in web and app development and design.
             </p>
           </motion.div>
 
@@ -692,7 +692,7 @@ export default function HomePage() {
                         </span>
                       </div>
                       <div>
-                        <p className="font-semibold">Muhammad Afzal</p>
+                        <p className="font-semibold">Afzal Habib</p>
                         <p className="text-sm text-muted-foreground">{experience.role}</p>
                       </div>
                     </div>
@@ -758,7 +758,7 @@ export default function HomePage() {
               {[
                 {
                   q: 'What services do you offer?',
-                  a: 'Full-stack web development, UI/UX design, and consulting.',
+                  a: 'Full-stack web and app development, UI/UX design, and consulting.',
                 },
                 {
                   q: 'What is your typical project timeline?',

@@ -2,11 +2,11 @@
 
 export const aboutContent = {
   // Hero section content
-  intro: "Hi, I'm Muhammad Afzal",
+  intro: "Hi, I'm Afzal Habib",
   tagline: 'Full-Stack Developer & UI/UX Enthusiast',
 
   // Summary
-  summary: `Results-driven MERN Stack Developer with 5+ years of professional experience in full-stack web development. Expertise in React.js, Next.js, Node.js, Express.js, Nest.js and database technologies including MongoDB, MySQL, and PostgreSQL. Hands-on experience building ERP/CRM systems, e-commerce applications, POS solutions, inventory management systems, real-time chat applications (Socket.IO, Supabase), and real estate websites.`,
+  summary: `Results-driven MERN Stack Developer with 5+ years of professional experience in full-stack web and app development. Expertise in React.js, Next.js, Node.js, Express.js, Nest.js and database technologies including MongoDB, MySQL, and PostgreSQL. Hands-on experience building ERP/CRM systems, e-commerce applications, POS solutions, inventory management systems, real-time chat applications (Socket.IO, Supabase), and real estate websites.`,
 
   // Vision/Mission
   vision: `I believe in building software that makes a difference. My goal is to create 
@@ -83,9 +83,27 @@ export const aboutContent = {
   // Experience/Timeline
   experience: [
     {
+      role: 'Lead Full Stack Developer & System Architect',
+      company: 'Spell Link Pvt Ltd',
+      period: 'Feb 2026 - Present',
+      description: 'Led the development of a full-scale travel booking platform for flights, hotels, and car rentals (TravelTourUp), and a car sale & rental marketplace with user listings, bookings, and authentication (CarHub). Architected a complete CRM system for an estimation company with client portal and real-time chat.',
+      highlights: [
+        'Led development of a full-scale travel booking platform for flights, hotels, and car rentals (TravelTourUp)',
+        'Built and managed a car sale & rental marketplace with user listings, bookings, and authentication (CarHub)',
+        'Architected a complete CRM system for an estimation company with client portal and real-time chat',
+        'Developed scalable web applications using Laravel and modern frontend practices',
+        'Handled end-to-end project lifecycle including planning, architecture, development, and deployment',
+      ],
+      companyInfo: {
+        content: 'At Spell Link, I led the development of a full-scale travel booking platform for flights, hotels, and car rentals (TravelTourUp), and a car sale & rental marketplace with user listings, bookings, and authentication (CarHub). I architected a complete CRM system for an estimation company with client portal and real-time chat.',
+        location: 'Lahore, Pakistan',
+        company: 'Spell Link Pvt Ltd',
+      },
+    },
+    {
       role: 'Senior Full Stack Developer',
       company: 'Depllc (Digi Era Pro)',
-      period: 'Sep 2025 - Present',
+      period: 'Sep 2025 - Feb 2026',
       description: 'Leading the development and implementation of a comprehensive ERP/CRM system for Depllc, utilizing Next.js, Tailwind CSS, MongoDB, and Supabase. Oversaw project architecture, authentication modules, department management, and real-time communication features.',
       highlights: [
         'Implemented and lead the development of a full-featured ERP/CRM system using Next.js and Tailwind CSS',
@@ -171,7 +189,7 @@ export const aboutContent = {
 
 // Contact information
 export const contactInfo = {
-  email: 'muhammadafzal11030@gmail.com',
+  email: 'afzalhaabib786@gmail.com',
   phone: '+92 3231103430',
   location: 'Qalanderpura main bazar, Harbanspura,Lahore, Pakistan',
   timezone: 'EST (UTC-5)',
@@ -181,13 +199,13 @@ export const contactInfo = {
 
 // Site metadata
 export const siteConfig = {
-  name: 'Muhammad Afzal',
+  name: 'Afzal Habib',
   title: 'Afzal | Full-Stack Developer',
   description: 'Professional portfolio of Afzal, a Full-Stack Developer specializing in React, Next.js, Nest.js and Node.js. Building modern web applications with clean code and great user experiences.',
-  url: 'https://m-afzal.vercel.app/',
-  ogImage: 'https://m-afzal.vercel.app/og-image.jpg',
-  author: 'Muhammad Afzal',
+  url: 'https://afzalhabib.com/',
+  ogImage: 'https://afzalhabib.com/og-image.jpg',
+  author: 'Afzal Habib',
   phone: '+92 3231103430',
-  email: 'muhammadafzal11030@gmail.com',
+  email: 'afzalhaabib786@gmail.com',
   keywords: ['Full-Stack Developer', 'MERN Stack Developer','React Developer', 'Next.js', 'Nest.js', 'Node.js', 'Web Developer', 'Portfolio'],
 }

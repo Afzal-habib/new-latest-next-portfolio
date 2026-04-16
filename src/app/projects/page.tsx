@@ -25,7 +25,7 @@ export default function ProjectsPage() {
     <>
       <PageHero
         title="My Projects"
-        subtitle="A curated collection of projects showcasing my skills in web development, design, and problem-solving."
+        subtitle="A curated collection of projects showcasing my skills in web and app development, design, and problem-solving."
         showSocialLinks
       />
 
@@ -307,7 +307,7 @@ export default function ProjectsPage() {
               Start a Conversation
             </Link>
             {/* <a
-              href="https://github.com/muhammadafzal11030"
+              href="https://github.com/AfzalHabibi"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 rounded-lg border border-border px-6 py-3 font-medium transition-all hover:bg-muted hover:scale-105"

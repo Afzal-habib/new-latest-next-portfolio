@@ -7,9 +7,9 @@ const _geist = Geist({ subsets: ["latin"] })
 const _geistMono = Geist_Mono({ subsets: ["latin"] })
 
 export const metadata: Metadata = {
-  title: "Muhammad Afzal - Full Stack Developer Resume",
+  title: "Afzal Habib - Full Stack Developer Resume",
   description:
-    "Professional resume of Muhammad Afzal - MERN Stack Developer with expertise in Next.js, React, Node.js, and mobile development",
+    "Professional resume of Afzal Habib - MERN Stack Developer with expertise in Next.js, React, Node.js, and mobile development",
   generator: "v0.app",
   icons: {
     icon: '/images/main-logo.png',

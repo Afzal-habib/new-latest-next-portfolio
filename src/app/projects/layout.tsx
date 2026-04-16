@@ -3,10 +3,10 @@ import { siteConfig } from '@/data/about'
 
 export const metadata: Metadata = {
   title: 'Projects',
-  description: `Explore the portfolio of ${siteConfig.author}. A curated collection of web development projects showcasing skills in React, Next.js, TypeScript, and modern web technologies.`,
+  description: `Explore the portfolio of ${siteConfig.author}. A curated collection of web and app development projects showcasing skills in React, Next.js, TypeScript, and modern web technologies.`,
   openGraph: {
     title: `Projects | ${siteConfig.name}`,
-    description: `Explore the portfolio of ${siteConfig.author}. A curated collection of web development projects.`,
+    description: `Explore the portfolio of ${siteConfig.author}. A curated collection of web and app development projects.`,
   },
 }
 

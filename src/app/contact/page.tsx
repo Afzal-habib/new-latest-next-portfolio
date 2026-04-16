@@ -389,7 +389,7 @@ export default function ContactPage() {
               {[
                 {
                   q: 'What services do you offer?',
-                  a: 'Full-stack web development, UI/UX design, and consulting.',
+                  a: 'Full-stack web and app development, UI/UX design, and consulting.',
                 },
                 {
                   q: 'What is your typical project timeline?',

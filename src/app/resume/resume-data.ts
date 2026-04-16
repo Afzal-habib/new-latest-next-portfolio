@@ -1,14 +1,14 @@
 // Resume Mock Data - All content centralized here for easy updates
 
 export const personalInfo = {
-    name: "Muhammad Afzal",
+    name: "Afzal Habib",
     title: "Full Stack Developer",
     phone: "+92 323 1103430",
-    email: "muhammadafzal11030@gmail.com",
+    email: "afzalhaabib786@gmail.com",
     location: "Harbanspura, Lahore, Pakistan",
-    linkedin: "https://www.linkedin.com/in/muhammad-afzal-5298a0272/",
-    github: "https://github.com/muhammadafzal11030",
-    portfolio: "https://m-afzal.vercel.app/",
+    linkedin: "https://www.linkedin.com/in/afzal-habib-5298a0272/",
+    github: "https://github.com/AfzalHabibi",
+    portfolio: "https://afzalhabib.com/",
     profileImage: "resume/images/profile-picture-professional-2.png",
 }
 
@@ -16,15 +16,26 @@ export const summary = `Results-driven Full Stack Developer with 5+ years of exp
 
 export const experiences = [
     {
+        title: "Lead Full Stack Developer",
+        company: "Spell Link Pvt Ltd",
+        location: "Lahore",
+        duration: "Feb 2026 - Present",
+        highlights: [
+            "Led end-to-end development of a travel booking platform for flights, hotels, and car rentals (TravelTourUp)",
+            "Built a car sale & rental marketplace with user listings, bookings, and authentication (CarHub)",
+            "Architected a CRM system with client portal and real-time chat for an estimation company",
+        ],
+        borderColor: "border-slate-900",
+    },
+    {
         title: "Senior Full Stack Developer",
         company: "Depllc (Digi Era Pro)",
         location: "Lahore",
-        duration: "Sep 2025 - Present",
+        duration: "Sep 2025 - Feb 2026",
         highlights: [
             "Lead development of enterprise ERP/CRM system with 13+ integrated modules",
             "Implemented real-time communication(whatsapp and slack inspired) using Supabase WebSockets",
             "Managed 9-stage workflow from lead generation to project completion",
-            "Architected multi-tier authentication with 2FA and role-based access control",
         ],
         borderColor: "border-slate-900",
     },
@@ -34,12 +45,11 @@ export const experiences = [
         location: "Lahore",
         duration: "Fab 2024 - Sep 2025",
         highlights: [
-            "Built scalable e-commerce platforms with Squareup & Shippo integration",
-            "Designed inventory systems with real-time stock tracking and analytics",
-            "Implemented Real estate websites with advanced filtering",
-            "Architected secure RESTful APIs with Node.js & Express.js",
-            "Developed cross-platform mobile apps using React Native & Expo",
+            "Developed e-commerce and real estate platforms",
+            "Built inventory systems with real-time tracking",
+            "Created secure APIs with Node.js/Express.js",
         ],
+   
         borderColor: "border-slate-700",
     },
     {
@@ -48,10 +58,9 @@ export const experiences = [
         location: "Lahore",
         duration: "Jan 2023 - Jan 2024",
         highlights: [
-            "Developed responsive web applications using React.js and modern CSS",
-            "Created real estate websites with advanced filtering capabilities",
-            "Optimized frontend performance and SEO for better user experience",
+            "Built React web apps and real estate sites with modern UI",
         ],
+   
         borderColor: "border-slate-700",
     },
     {
@@ -60,11 +69,9 @@ export const experiences = [
         location: "Gulberg, Lahore",
         duration: "Jun 2021 - Dec 2022",
         highlights: [
-            "Built frontend projects using JavaScript, Bootstrap, and Git version control",
-            'Collaborated with senior developers to learn best practices in web development',
-            'Build many Template Based Projects like "Portfolio Website", "Business Website", and "E-Commerce Website"',
-
+            "Built frontend projects and learned modern dev practices",
         ],
+   
         borderColor: "border-slate-500",
     },
 ]
