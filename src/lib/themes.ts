@@ -168,7 +168,7 @@ export const themes: Record<ThemeName, Theme> = {
       ring: '217 91% 60%',
     },
   },
-  // Crimson Red - Bold & Modern (Default)
+  // Crimson Red - Bold & Modern
   crimson: {
     name: 'crimson',
     label: 'Crimson',

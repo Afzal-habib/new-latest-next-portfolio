@@ -5,45 +5,44 @@
    ======================================== */
 
 :root {
-  /* Light Mode Colors - Modern Blue Theme */
+  /* Light Mode — Midnight theme (matches themes.ts `midnight.light`) */
   --background: 0 0% 100%;
   --foreground: 222 47% 11%;
-  
 
   --card: 0 0% 100%;
   --card-foreground: 222 47% 11%;
-  
+
   --popover: 0 0% 100%;
   --popover-foreground: 222 47% 11%;
-  
-  --primary: 0 84% 60%;
+
+  --primary: 221 83% 53%;
   --primary-foreground: 0 0% 100%;
-  
-  --secondary: 0 20% 96%;
-  --secondary-foreground: 222.2 47.4% 11.2%;
-  
-  --muted: 0 20% 96%;
-  --muted-foreground: 0 10% 45%;
-  
-  --accent: 0 84% 60%;
+
+  --secondary: 210 40% 96%;
+  --secondary-foreground: 222 47% 11%;
+
+  --muted: 210 40% 96%;
+  --muted-foreground: 215 16% 47%;
+
+  --accent: 221 83% 53%;
   --accent-foreground: 0 0% 100%;
-  
+
   --destructive: 0 84.2% 60.2%;
   --destructive-foreground: 210 40% 98%;
-  
-  --border: 0 15% 90%;
-  --input: 0 15% 90%;
-  --ring: 0 84% 60%;
-  
+
+  --border: 214 32% 91%;
+  --input: 214 32% 91%;
+  --ring: 221 83% 53%;
+
   /* Custom colors */
   --success: 142.1 76.2% 36.3%;
   --warning: 45.4 93.4% 47.5%;
-  
+
   /* Hero gradient colors */
   --hero-bg-start: 220 60% 98%;
-  --hero-bg-mid: 240 50% 97%;
-  --hero-bg-end: 260 40% 98%;
-  --hero-gradient-accent: 0 84% 60%;
+  --hero-bg-mid: 221 40% 97%;
+  --hero-bg-end: 230 45% 98%;
+  --hero-gradient-accent: 221 83% 53%;
   
   /* Radius */
   --radius: 0.625rem;
@@ -56,40 +55,40 @@
 }
 
 .dark {
-  /* Dark Mode Colors */
+  /* Dark Mode — Midnight theme (matches themes.ts `midnight.dark`) */
   --background: 222 47% 6%;
   --foreground: 210 40% 98%;
-  
+
   --card: 222 47% 8%;
   --card-foreground: 210 40% 98%;
-  
+
   --popover: 222 47% 8%;
   --popover-foreground: 210 40% 98%;
-  
-  --primary: 0 72% 51%;
-  --primary-foreground: 0 0% 100%;
-  
+
+  --primary: 217 91% 60%;
+  --primary-foreground: 222 47% 11%;
+
   --secondary: 217 33% 12%;
   --secondary-foreground: 210 40% 98%;
-  
+
   --muted: 217 33% 12%;
   --muted-foreground: 215 20% 55%;
-  
-  --accent: 0 72% 51%;
-  --accent-foreground: 0 0% 100%;
-  
+
+  --accent: 217 91% 60%;
+  --accent-foreground: 222 47% 11%;
+
   --destructive: 0 62.8% 50.6%;
   --destructive-foreground: 210 40% 98%;
-  
+
   --border: 217 33% 15%;
   --input: 217 33% 15%;
-  --ring: 0 72% 51%;
-  
+  --ring: 217 91% 60%;
+
   /* Hero gradient colors - dark mode */
-  --hero-bg-start: 220 30% 8%;
-  --hero-bg-mid: 240 25% 10%;
-  --hero-bg-end: 260 20% 12%;
-  --hero-gradient-accent: 0 72% 51%;
+  --hero-bg-start: 222 47% 7%;
+  --hero-bg-mid: 220 35% 9%;
+  --hero-bg-end: 217 40% 11%;
+  --hero-gradient-accent: 217 91% 60%;
 }
 
 /* ========================================
