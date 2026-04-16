@@ -292,7 +292,7 @@ export default function HomePage() {
                 className="flex flex-wrap items-center justify-center lg:justify-start gap-4"
               >
                 {/* Primary CTA with Glow */}
-                <Link href="/cv/Resume_Muhammad_Afzal.pdf" download>
+                <Link href="/cv/Resume_Afzal_Habib.pdf" download>
                   <Button
                     size="lg"
                     className="relative overflow-hidden bg-primary hover:bg-primary/90 text-primary-foreground font-semibold px-8 shadow-[0_0_30px_-5px_hsl(var(--primary)/0.5)] hover:shadow-[0_0_40px_-5px_hsl(var(--primary)/0.7)] transition-all duration-300"
