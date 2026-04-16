@@ -2,6 +2,163 @@ import { Project } from '@/types'
 
 export const projects: Project[] = [
   {
+    id: '12',
+    title: 'TravelTourUp',
+    slug: 'traveltourup',
+    liveUrl: 'https://www.traveltourup.com',
+    shortDescription: 'Travel booking platform for flights, hotels, and rental cars in one place',
+    description:
+      'Full-featured travel booking platform where users book flights, hotels, and rental cars from a single interface. API-driven architecture focused on performance, reliability, and a smooth path from search to confirmation.',
+    longDescription: `TravelTourUp is a scalable, API-driven travel product built end-to-end on Next.js with Supabase for authentication and persistence. Third-party integrations power supply: Duffel for flights and hotels, CarTrawler for rental cars, and Resend for transactional email.
+
+The focus is dependable booking flows, clear pricing and itinerary presentation, and operational safety—retries, timeouts, structured logging, and strict separation of test vs production credentials across integrations.`,
+    technologies: [
+      'Next.js',
+      'TypeScript',
+      'Supabase',
+      'Resend',
+      'Duffel',
+      'CarTrawler',
+      'Tailwind CSS',
+    ],
+    featuredTechnologies: ['Next.js', 'Supabase', 'Duffel'],
+    role: 'Founder & Lead Full Stack Developer',
+    status: 'In Progress',
+    category: 'Full-Stack',
+    startDate: '2026-02-01',
+    images: [
+      {
+        url: 'https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=1200',
+        alt: 'Travel booking and flights concept',
+        isFeatured: true,
+        caption: 'Multi-vertical travel booking: flights, hotels, and cars',
+      },
+    ],
+    contributions: [
+      'Designed overall system architecture and led delivery from planning through production deployment',
+      'Integrated third-party travel APIs for flights, hotels, and car rentals with resilient error handling',
+      'Built frontend and backend features end-to-end, including auth, booking flows, and transactional email',
+      'Implemented Supabase-backed authentication, persistence, and secure access patterns across booking journeys',
+      'Configured Resend for transactional emails with reliable templating and delivery',
+      'Established a consistent API integration layer with retries, timeouts, and structured logging for Duffel and CarTrawler',
+      'Normalized itinerary, passenger, and rental-driver data across suppliers before persisting confirmed bookings',
+      'Shipped mobile-first, responsive UI with itinerary review, pricing breakdowns, and accessible form patterns',
+    ],
+    challenges: [
+      'Coordinating multiple suppliers with different payloads, errors, and idempotency rules in one checkout journey',
+      'Keeping search and results performant while respecting external API rate limits and quotas',
+      'Presenting complex fare and rental rules clearly without overwhelming first-time bookers',
+    ],
+    learnings: [
+      'Patterns for normalizing third-party travel APIs into a single product experience',
+      'Production-hardening integrations with structured logging, retries, and environment isolation',
+      'Supabase auth and data modeling for multi-step booking state',
+    ],
+    featured: true,
+    order: -2,
+    tags: ['Travel', 'Next.js', 'Supabase', 'API Integrations', 'Full-Stack'],
+    isOpenSource: false,
+  },
+  {
+    id: '13',
+    title: 'CarHub',
+    slug: 'carhub-laravel',
+    liveUrl: 'https://carhub.pk',
+    shortDescription: 'Laravel marketplace for listing cars for sale or rent and customer bookings',
+    description:
+      'Laravel-based marketplace where users register, list vehicles for sale or rent, and customers discover listings, enquire, and complete bookings—with admin tools for quality and trust.',
+    longDescription: `CarHub connects sellers and renters with buyers through a full Laravel stack: Blade UI, REST-style endpoints where appropriate, MySQL for relational inventory and bookings, and email-driven updates for enquiries and status changes.
+
+The product emphasizes clear listing workflows, discovery with search and filters, validated media galleries, and Laravel-native security (CSRF, policies, guarded routes) across the marketplace.`,
+    technologies: ['Laravel', 'PHP', 'MySQL', 'Blade', 'JavaScript', 'REST APIs', 'Tailwind CSS'],
+    featuredTechnologies: ['Laravel', 'MySQL', 'PHP'],
+    role: 'Lead Full Stack Developer',
+    status: 'In Progress',
+    category: 'Full-Stack',
+    startDate: '2026-02-01',
+    images: [
+      {
+        url: 'https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?w=1200',
+        alt: 'Car marketplace and automotive',
+        isFeatured: true,
+        caption: 'Vehicle listings for sale and rent with booking flows',
+      },
+    ],
+    contributions: [
+      'Implemented account onboarding, profiles, and role-aware access for sellers and customers',
+      'Built listing management for sale and rental inventory with media, pricing, and availability',
+      'Developed booking and enquiry flows so customers can reserve or request vehicles from active listings',
+      'Shipped admin and moderation tools to keep listings quality high and disputes low',
+      'Delivered discovery with search, filters, and sorting by price, location, and vehicle attributes',
+      'Designed MySQL schema and indexes for high-traffic marketplace queries',
+      'Built seller dashboards for listing performance, enquiries, and booking funnel visibility',
+      'Implemented validated media uploads, organized storage, and thumbnails for multi-photo galleries',
+    ],
+    challenges: [
+      'Modeling sale vs rental rules, availability, and overlapping enquiries without double-booking',
+      'Scaling discovery queries and indexes as listing volume grows',
+      'Balancing seller freedom with moderation and trust signals for buyers',
+    ],
+    learnings: [
+      'Laravel authorization patterns and policy-driven access for multi-sided marketplaces',
+      'Schema design for listings, media, and booking state in MySQL',
+      'Email notification design for enquiry-heavy workflows',
+    ],
+    featured: true,
+    order: -1,
+    tags: ['Laravel', 'Marketplace', 'MySQL', 'Full-Stack', 'Automotive'],
+    isOpenSource: false,
+  },
+  {
+    id: '14',
+    title: 'Estimation Company CRM',
+    slug: 'estimation-company-crm',
+    shortDescription: 'Laravel CRM with client portal, chat, and lead-to-job workflows for estimators',
+    description:
+      'End-to-end Laravel CRM for an estimation business: leads, quotes, jobs, documents, dashboards, a dedicated client portal, and real-time chat between staff and clients.',
+    longDescription: `This CRM is tailored to estimation workflows—pipeline visibility, quote versioning, document centralization, and handoffs between estimators and coordinators. A client portal keeps approvals, files, and status in one place instead of scattered email threads.
+
+Real-time chat reduces back-and-forth on active jobs, while dashboards and exports support operational reporting. Soft deletes, activity timelines, and audit-friendly fields support handovers and dispute review.`,
+    technologies: ['Laravel', 'PHP', 'MySQL', 'WebSockets', 'Blade', 'JavaScript', 'Tailwind CSS'],
+    featuredTechnologies: ['Laravel', 'MySQL', 'WebSockets'],
+    role: 'Lead Full Stack Developer',
+    status: 'In Progress',
+    category: 'Full-Stack',
+    startDate: '2026-02-01',
+    images: [
+      {
+        url: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=1200',
+        alt: 'CRM dashboard and analytics',
+        isFeatured: true,
+        caption: 'CRM, client portal, and in-app collaboration',
+      },
+    ],
+    contributions: [
+      'Modeled CRM entities and permissions for estimators, managers, and client-facing users',
+      'Delivered client portal for estimates, approvals, file exchange, and status visibility',
+      'Integrated in-app chat for fast clarification between teams and clients on active jobs',
+      'Built dashboards and exports for pipeline visibility and operational reporting',
+      'Implemented lead-to-quote-to-job workflows with stage tracking, assignments, and audit-friendly history',
+      'Centralized documents and revision context attached to the correct job and quote',
+      'Shipped quote versioning with readable change history for scope, line items, and totals',
+      'Used soft deletes, activity timelines, and consistent audit fields for handovers and dispute review',
+    ],
+    challenges: [
+      'Designing permissions so clients see only their work while staff retain full operational context',
+      'Keeping chat, portal activity, and email notifications aligned without duplicate noise',
+      'Modeling quote revisions and document lineage without losing traceability',
+    ],
+    learnings: [
+      'B2B CRM information architecture for estimation and construction-adjacent workflows',
+      'Realtime messaging patterns alongside traditional Laravel request/response flows',
+      'Reporting and export design for pipeline and job-level KPIs',
+    ],
+    featured: true,
+    order: 0,
+    tags: ['CRM', 'Laravel', 'Client Portal', 'Realtime', 'B2B'],
+    isOpenSource: false,
+  },
+  {
     id: '1',
     title: 'Depllc ERP/CRM System',
     slug: 'depllc-erp-crm',

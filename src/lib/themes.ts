@@ -462,7 +462,7 @@ export const themes: Record<ThemeName, Theme> = {
 // ACTIVE THEME CONFIGURATION
 // ===========================================
 
-export const ACTIVE_THEME: ThemeName = 'crimson'
+export const ACTIVE_THEME: ThemeName = 'midnight'
 
 // Get the current active theme
 export const getActiveTheme = (): Theme => themes[ACTIVE_THEME]
