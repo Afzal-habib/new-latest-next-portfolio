@@ -22,7 +22,6 @@ import {
   Wrench,
   Settings,
   Building,
-  BriefcaseBusiness,
   ShieldCheck,
   Globe,
 } from "lucide-react"
@@ -37,6 +36,7 @@ import {
   tools,
   skills,
   projects,
+  spellLinkProjects,
 } from "./resume-data"
 import { Button } from "@/components/common"
 import Link from "next/link"
@@ -361,7 +361,113 @@ export default function ResumePage() {
           </div>
         </div>
 
-        {/* ==================== PAGE 3 - Projects ==================== */}
+        {/* ==================== PAGE 3 - Spell Link (current role) projects ==================== */}
+        <div className="resume-page relative overflow-hidden">
+          <div className="absolute top-0 right-0 w-[220px] h-[220px] opacity-[0.03] print:opacity-[0.05]">
+            <div className="w-full h-full border-[30px] border-slate-900 rounded-full" />
+          </div>
+          <div className="absolute bottom-0 left-0 w-[150px] h-[150px] opacity-[0.03] print:opacity-[0.05]">
+            <div className="w-full h-full border-[20px] border-slate-900 rounded-full" />
+          </div>
+          <div className="absolute top-1/2 right-0 w-2 h-20 bg-slate-900 opacity-[0.08] print:opacity-[0.1]" />
+
+          <div className="relative px-10 py-7">
+            <header className="flex justify-between items-center mb-3 pb-3 border-b-[3px] border-slate-900">
+              <div>
+                <h1 className="text-sm font-black text-slate-900 tracking-tight">{personalInfo.name.toUpperCase()}</h1>
+                <p className="text-[13px] text-slate-700 font-bold tracking-wide">{personalInfo.title}</p>
+              </div>
+              <div className="text-right text-[12px] text-slate-700">
+                <Link href={`mailto:${personalInfo.email}`} className="font-bold">
+                  {personalInfo.email}
+                </Link>
+                <p className="font-semibold flex items-center gap-1">
+                  {personalInfo.phone} |
+                  <Link
+                    href={`${personalInfo.portfolio}`}
+                    className="text-[12px] text-slate-700 font-bold mt-0.5 tracking-wide flex items-center gap-1.5"
+                  >
+                    <Globe className="w-3.5 h-3.5 text-slate-700" />
+                    {personalInfo.portfolio}
+                  </Link>
+                </p>
+              </div>
+            </header>
+
+            <div className="flex items-center gap-2.5 mb-2">
+              <div className="w-8 h-8 rounded-md bg-slate-900 flex items-center justify-center shadow-sm">
+                <Building className="w-5 h-5 text-white" />
+              </div>
+              <div>
+                <h2 className="text-lg font-black text-slate-900 uppercase tracking-wider">Key Projects</h2>
+                <p className="text-[11px] text-slate-600 font-semibold leading-snug">
+                  Leading full-stack delivery at Spell Link Pvt Ltd — TravelTourUp, CarHub, and estimation CRM.
+                </p>
+              </div>
+            </div>
+
+            <div className="space-y-2 spell-link-projects-page">
+              {spellLinkProjects.map((project, index) => (
+                <div key={index} className={`border-l-[4px] ${project.borderColor} pl-4`}>
+                  <div className="flex justify-between items-start mb-0.5 relative">
+                    <div className="w-6 h-6 rounded-md bg-slate-900 flex items-center justify-center shadow-sm absolute -left-7.5 top-0">
+                      <ShieldCheck className="w-3 h-3 text-white" />
+                    </div>
+                    <div className="pl-1 min-w-0 flex-1 pr-2">
+                      <h3 className="font-black text-slate-900 text-[14px] leading-tight">
+                        {project.title}
+                        {project.liveUrl ? (
+                          <a
+                            className="text-[11.5px] text-slate-600 font-bold break-all"
+                            href={project.liveUrl}
+                          >
+                            {" "}
+                            ({project.liveUrl})
+                          </a>
+                        ) : (
+                          <span className="text-[11.5px] text-slate-600 font-bold"> (Not Public)</span>
+                        )}
+                      </h3>
+                      {"subtitle" in project && project.subtitle ? (
+                        <p className="text-[11px] text-slate-600 font-semibold italic mt-0.5">{project.subtitle}</p>
+                      ) : null}
+                      <p className="text-[12px] text-slate-800 font-bold mt-0.5">
+                        {project.role}
+                        {"company" in project && project.company ? ` · ${project.company}` : ""}
+                      </p>
+                    </div>
+                    <span className="text-[11px] text-slate-900 font-bold bg-slate-200 px-2 py-0.5 rounded shrink-0">
+                      {project.duration}
+                    </span>
+                  </div>
+                  <p className="text-[11.5px] text-slate-900 mb-1 leading-snug">{project.description}</p>
+                  <div className="flex flex-wrap gap-1 mb-1">
+                    {project.technologies.map((tech) => (
+                      <span
+                        key={tech}
+                        className="text-[11px] bg-slate-900 text-white px-1.5 py-0.5 rounded font-bold"
+                      >
+                        {tech}
+                      </span>
+                    ))}
+                  </div>
+                  {project.highlights.length > 0 && (
+                    <ul className="text-[11px] text-slate-900 space-y-0.5 leading-snug">
+                      {project.highlights.map((highlight, idx) => (
+                        <li key={idx} className="flex gap-1.5">
+                          <ChevronRight className="w-2.5 h-2.5 text-slate-500 mt-0.5 flex-shrink-0" />
+                          <span>{highlight}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  )}
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+
+        {/* ==================== PAGE 4 - Projects ==================== */}
         <div className="resume-page relative overflow-hidden">
           {/* Professional Background Design */}
           <div className="absolute top-0 right-0 w-[220px] h-[220px] opacity-[0.03] print:opacity-[0.05]">
@@ -443,7 +549,7 @@ export default function ResumePage() {
           </div>
         </div>
 
-        {/* ==================== PAGE 4 - Additional Projects ==================== */}
+        {/* ==================== PAGE 5 - Additional Projects ==================== */}
         <div className="resume-page relative overflow-hidden">
           {/* Professional Background Design */}
           <div className="absolute top-0 left-0 w-[200px] h-[200px] opacity-[0.03] print:opacity-[0.05]">
@@ -525,7 +631,7 @@ export default function ResumePage() {
           </div>
         </div>
 
-        {/* ==================== PAGE 5 - More Projects ==================== */}
+        {/* ==================== PAGE 6 - More Projects ==================== */}
         <div className="resume-page relative overflow-hidden">
           {/* Professional Background Design */}
           <div className="absolute top-0 right-0 w-[190px] h-[190px] opacity-[0.03] print:opacity-[0.05]">

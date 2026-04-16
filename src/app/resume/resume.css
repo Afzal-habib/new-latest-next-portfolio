@@ -253,3 +253,10 @@
 .border-l-3 {
   border-left-width: 3px;
 }
+
+/* Spell Link dedicated project page — slightly tighter vertical rhythm for print */
+@media print {
+  .spell-link-projects-page > :not([hidden]) ~ :not([hidden]) {
+    margin-top: 0.35rem !important;
+  }
+}

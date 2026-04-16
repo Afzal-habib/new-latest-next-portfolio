@@ -21,9 +21,9 @@ export const experiences = [
         location: "Lahore",
         duration: "Feb 2026 - Present",
         highlights: [
-            "Led end-to-end development of a travel booking platform for flights, hotels, and car rentals (TravelTourUp)",
-            "Built a car sale & rental marketplace with user listings, bookings, and authentication (CarHub)",
-            "Architected a CRM system with client portal and real-time chat for an estimation company",
+            "Leading and shipping TravelTourUp — travel booking for flights, hotels, and rental cars (Next.js, Supabase, Duffel, CarTrawler)",
+            "Leading CarHub — Laravel marketplace where sellers list vehicles for sale or rent and customers book securely",
+            "Leading estimation-company CRM in Laravel with full sales workflow, client portal, and integrated chat",
         ],
         borderColor: "border-slate-900",
     },
@@ -316,6 +316,91 @@ export const skills = {
         ],
     },
 }
+
+/** Featured work at Spell Link Pvt Ltd — shown on a dedicated resume page before the general project list */
+export const spellLinkProjects = [
+    {
+        title: "TravelTourUp",
+        subtitle: "Travel Booking Platform (Flights, Hotels & Cars)",
+        role: "Founder & Lead Full Stack Developer",
+        company: "Spell Link Pvt Ltd",
+        duration: "Feb 2026 - Present",
+        description:
+            "Full-featured travel booking platform where users book flights, hotels, and rental cars from one interface. API-driven architecture focused on performance, reliability, and a smooth end-to-end experience from search to confirmation.",
+        technologies: [
+            "Next.js",
+            "Supabase (Auth & Database)",
+            "Resend",
+            "Duffel (Flights & Hotels)",
+            "CarTrawler (Car Rentals)",
+        ],
+        highlights: [
+            "Designed overall system architecture and led delivery from planning through production deployment",
+            "Integrated third-party travel APIs for flights, hotels, and car rentals with resilient error handling",
+            "Built frontend and backend features end-to-end, including auth, booking flows, and transactional email",
+            "Implemented Supabase-backed authentication, persistence, and secure access patterns across booking journeys",
+            "Configured Resend for transactional emails (confirmations, updates) with reliable templating and delivery",
+            "Tuned search-to-checkout UX and API usage for responsive results pages and fewer abandoned sessions",
+            "Established a consistent API integration layer with retries, timeouts, and structured logging for Duffel and CarTrawler",
+            "Normalized itinerary, passenger, and rental-driver data across suppliers before persisting confirmed bookings",
+            "Shipped mobile-first, responsive UI with clear itinerary review, pricing breakdowns, and accessible form patterns",
+            "Applied environment-based configuration, least-privilege credentials, and strict separation of test vs production keys",
+        ],
+        borderColor: "border-slate-900",
+        isLarge: true,
+        liveUrl: "https://www.traveltourup.com",
+    },
+    {
+        title: "CarHub",
+        subtitle: "Car Sale & Rental Marketplace",
+        role: "Lead Full Stack Developer",
+        company: "Spell Link Pvt Ltd",
+        duration: "Feb 2026 - Present",
+        description:
+            "Laravel-based marketplace where registered users create accounts, list vehicles for sale or rent, and buyers or renters discover listings and complete bookings. Emphasis on trust, clear listing workflows, and a straightforward customer journey.",
+        technologies: ["Laravel", "PHP", "MySQL", "Blade", "JavaScript", "REST APIs"],
+        highlights: [
+            "Implemented account onboarding, profiles, and role-aware access for sellers and customers",
+            "Built listing management for sale and rental inventory with media, pricing, and availability",
+            "Developed booking and enquiry flows so customers can reserve or request vehicles from active listings",
+            "Shipped admin and moderation tools to keep listings quality high and disputes low",
+            "Delivered discovery with search, filters, and sorting so buyers can narrow by price, location, and vehicle type",
+            "Hardened forms, validation, and Laravel security defaults (CSRF, policies, guarded routes) across the marketplace",
+            "Designed MySQL schema and indexes for high-traffic marketplace queries (geo, price bands, make/model, availability)",
+            "Built seller dashboards for listing performance, enquiries, and booking funnel visibility",
+            "Implemented validated media uploads, organized storage, and thumbnail generation for multi-photo vehicle galleries",
+            "Added email notifications for new enquiries, booking status changes, and listing approvals or rejections",
+        ],
+        borderColor: "border-slate-900",
+        isLarge: true,
+        liveUrl: "https://carhub.pk",
+    },
+    {
+        title: "Estimation Company CRM",
+        subtitle: "CRM with Client Portal & Chat",
+        role: "Lead Full Stack Developer",
+        company: "Spell Link Pvt Ltd",
+        duration: "Feb 2026 - Present",
+        description:
+            "End-to-end Laravel CRM tailored for an estimation business: leads, quotes, jobs, documents, and reporting, plus a dedicated client portal and real-time chat so staff and clients stay aligned without email overload.",
+        technologies: ["Laravel", "PHP", "MySQL", "WebSockets / Realtime", "Blade", "JavaScript"],
+        highlights: [
+            "Modeled CRM entities and permissions for estimators, managers, and client-facing users",
+            "Delivered client portal for estimates, approvals, file exchange, and status visibility",
+            "Integrated in-app chat for fast clarification between teams and clients on active jobs",
+            "Built dashboards and exports for pipeline visibility and operational reporting",
+            "Implemented lead-to-quote-to-job workflows with stage tracking, assignments, and audit-friendly history",
+            "Centralized documents and revision context so estimates, drawings, and approvals stay attached to the right job",
+            "Shipped quote versioning with readable change history so everyone aligns on scope, line items, and totals",
+            "Added tasks, due dates, and clear ownership handoffs between estimators and coordinators on active opportunities",
+            "Implemented role-scoped notifications for portal replies, approvals, and escalations so nothing sits unread in email",
+            "Used soft deletes, immutable activity timelines, and consistent audit fields for handovers and dispute review",
+        ],
+        borderColor: "border-slate-700",
+        isLarge: true,
+        liveUrl: "",
+    },
+]
 
 export const projects = [
     {
