@@ -178,7 +178,7 @@ export default function AboutPage() {
       <PageHero
         title="About Me"
         subtitle="Discover my journey, values, and what drives me to create exceptional digital experiences."
-        showSocialLinks
+        showSocialLinks={true}
       />
 
       {/* Intro Section */}

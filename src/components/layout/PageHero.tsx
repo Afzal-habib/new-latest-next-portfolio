@@ -143,7 +143,7 @@ export function PageHero({
         </div>
 
         {/* Social Links */}
-        {/* {showSocialLinks && (
+        {showSocialLinks && (
           <motion.div
             variants={heroCTA}
             initial="hidden"
@@ -152,7 +152,7 @@ export function PageHero({
           >
             <SocialLinks variant="muted" iconSize="md" />
           </motion.div>
-        )} */}
+        )}
       </motion.div>
     </section>
   )
