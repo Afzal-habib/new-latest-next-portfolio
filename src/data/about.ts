@@ -201,7 +201,7 @@ export const contactInfo = {
 export const siteConfig = {
   name: 'Afzal Habib',
   title: 'Afzal | Full-Stack Developer',
-  description: 'Professional portfolio of Afzal, a Full-Stack Developer specializing in React, Next.js, Nest.js and Node.js. Building modern web applications with clean code and great user experiences.',
+  description: 'Senior Full-Stack Developer & System Architect specializing in React, Next.js, Nest.js and Node.js. Building modern web and app applications with clean code and great user experiences.',
   url: 'https://afzalhabib.com/',
   ogImage: 'https://afzalhabib.com/og-image.jpg',
   author: 'Afzal Habib',
