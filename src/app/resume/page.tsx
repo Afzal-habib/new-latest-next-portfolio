@@ -140,7 +140,7 @@ export default function ResumePage() {
             {/* Professional Summary */}
             <section className="mb-5">
               <p className="text-[14px] text-slate-800 leading-relaxed">
-                <span className="font-black text-slate-900">Results-driven Full Stack Developer</span>{" "}
+                <span className="font-black text-slate-900">Lead Full-Stack Engineer & System Architect</span>{" "}
                 {summary.substring(summary.indexOf("with"))}
               </p>
             </section>

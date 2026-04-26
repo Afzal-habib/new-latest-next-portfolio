@@ -6,13 +6,13 @@ export const personalInfo = {
     phone: "+92 323 1103430",
     email: "afzalhaabib786@gmail.com",
     location: "Harbanspura, Lahore, Pakistan",
-    linkedin: "https://www.linkedin.com/in/afzal-habib-5298a0272/",
+    linkedin: "www.linkedin.com/in/afzalhabibdev",
     github: "https://github.com/AfzalHabibi",
     portfolio: "https://afzalhabib.com/",
     profileImage: "resume/images/profile-picture-professional-2.png",
 }
 
-export const summary = `Results-driven Full Stack Developer with 5+ years of experience architecting and delivering scalable web and mobile solutions. Expert in MERN stack,PERN Stack,Nest.js, Next.js, and enterprise application development with proven success in building ERP systems, e-commerce platforms, and real-time applications. Committed to clean code architecture, performance optimization, and delivering exceptional user experiences.`
+export const summary = `Lead Full-Stack Engineer & System Architect with 5+ years of experience designing and delivering scalable web and mobile systems. Specialized in Next.js, React, Node.js, NestJS, and MERN/PERN stacks with strong expertise in building enterprise-grade ERP/CRM platforms, e-commerce systems, and real-time applications. Focused on system architecture, clean code practices, performance optimization, and translating complex business requirements into reliable, scalable software solutions.`
 
 export const experiences = [
     {

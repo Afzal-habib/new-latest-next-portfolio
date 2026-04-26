@@ -4,10 +4,10 @@ export const socialLinks: SocialLink[] = [
   {
     id: '1',
     platform: 'linkedin',
-    url: 'https://www.linkedin.com/in/afzal-habib-5298a0272/',
+    url: 'www.linkedin.com/in/afzalhabibdev',
     label: 'LinkedIn',
     icon: 'Linkedin',
-    username: 'afzal-habib-5298a0272',
+    username: 'afzalhabibdev',
     isActive: true,
   },
   {
