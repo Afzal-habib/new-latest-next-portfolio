@@ -21,9 +21,9 @@ export function Footer({ className }: FooterProps) {
       )}
     >
       <div className="container-custom py-6 md:py-8 pb-4">
-        <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+        <div className="grid gap-8 md:gap-12 grid-cols-12">
           {/* Brand Section */}
-          <div className="space-y-4">
+          <div className="space-y-4 col-span-12 md:col-span-5">
             <Link href="/" className="text-2xl font-bold">
               <span className="text-gradient">{siteConfig.name}</span>
             </Link>
@@ -34,7 +34,7 @@ export function Footer({ className }: FooterProps) {
           </div>
 
           {/* Quick Links */}
-          <div className="space-y-4 ">
+          <div className="space-y-4 col-span-6 md:col-span-3">
             <h3 className="text-sm font-semibold uppercase tracking-wider text-muted-foreground">
               Quick Links
             </h3>
@@ -52,7 +52,7 @@ export function Footer({ className }: FooterProps) {
           </div>
 
           {/* Contact Info */}
-          <div className="space-y-4">
+          <div className="space-y-4 col-span-6 md:col-span-4">
             <h3 className="text-sm font-semibold uppercase tracking-wider text-muted-foreground">
               Contact
             </h3>
