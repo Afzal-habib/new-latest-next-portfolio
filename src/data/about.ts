@@ -3,48 +3,46 @@
 export const aboutContent = {
   // Hero section content
   intro: "Hi, I'm Afzal Habib",
-  tagline: 'Senior Full-Stack Developer & System Architect',
+  tagline: 'Lead Software Engineer & System Architect',
 
   // Summary
-  summary: `Results-driven Senior Full-Stack Developer with 5+ years of professional experience in full-stack web and app development. Expertise in React.js, Next.js, Node.js, Express.js, Nest.js and database technologies including MongoDB, MySQL, and PostgreSQL. Hands-on experience building ERP/CRM systems, e-commerce applications, POS solutions, inventory management systems, real-time chat applications (Socket.IO, Supabase), and real estate websites.`,
+  summary: `I work with companies that need software tied to how they actually operate. I help teams clarify requirements, decide early, and deliver systems that support day-to-day work and long-term growth—not just a backlog of features. I'm a Lead Software Engineer & System Architect with 5+ years in web and mobile, leading end-to-end delivery of business-critical software.`,
 
   // Vision/Mission
-  vision: `I believe in building software that makes a difference. My goal is to create 
-  products that are not only functional but also delightful to use. I'm constantly learning 
-  new technologies and best practices to deliver the best solutions for my clients.`,
+  vision: `Before build, I map processes, validate requirements with stakeholders, and align scope and tech with cost, timeline, and risk—so the first release is maintainable, not a cycle of rework. I've led travel booking (TravelTourUp: Next.js, Supabase, suppliers, production hardening), enterprise ERP/CRM (13+ modules, workflows, reporting, client portal), marketplaces, e‑com/POS (MERN, Laravel), and React Native (offline, scanning). Core stack: Next.js, React, TypeScript, Node, Laravel, React Native, Supabase, MongoDB, MySQL, PostgreSQL, with focus on production: auth, permissions, data integrity, performance, and maintainability. I work best with teams that use software to run the business and scale sustainably—not to chase a feature list.`,
 
-  // Approach
-  approach: `I follow a structured, engineering-driven approach to software development—starting with system design and data modeling, followed by clean architecture implementation and performance optimization. I emphasize best practices such as modular codebases, test coverage, version control, and continuous improvement to deliver secure and scalable applications.`,
+  // Approach (used for consistency / future sections)
+  approach: `I start from operations and requirements: understand the process, validate with stakeholders, identify risks, sequence scope, then align the stack and architecture with cost, delivery, and future growth. Engineering follows that foundation—so the first release is maintainable, not a series of rewrites.`,
 
   // Key highlights/stats
   highlights: [
     { label: 'Years of Experience', value: '5+' },
     { label: 'Projects Completed', value: '30+' },
-    { label: 'Happy Clients', value: '30+' },
-    { label: 'Technologies Mastered', value: '30+' },
+    { label: 'ERP/CRM modules (enterprise)', value: '13+' },
+    { label: 'Technologies mastered', value: '30+' },
   ],
 
   // Values
   values: [
     {
-      title: 'Quality First',
-      description: 'I never compromise on code quality. Every line of code is written with care and tested thoroughly.',
-      icon: 'Award',
+      title: 'Business & operations first',
+      description: 'I ground delivery in how the business actually runs—so software fits workflows, not the other way around.',
+      icon: 'Target',
     },
     {
-      title: 'User-Centric',
-      description: 'Users are at the heart of everything I build. I prioritize intuitive interfaces and seamless experiences.',
-      icon: 'Users',
-    },
-    {
-      title: 'Continuous Learning',
-      description: 'Technology evolves rapidly, and so do I. I dedicate time every week to learn new skills and stay updated.',
-      icon: 'BookOpen',
-    },
-    {
-      title: 'Clear Communication',
-      description: 'I believe in transparent, regular communication. Clients are always informed about project progress.',
+      title: 'Decisions before code',
+      description: 'I work with stakeholders to clarify requirements, scope, and trade-offs early, when changes are still cheap.',
       icon: 'MessageSquare',
+    },
+    {
+      title: 'Production-minded engineering',
+      description: 'I care about auth, permissions, data integrity, performance, and how systems hold up as they grow.',
+      icon: 'ShieldCheck',
+    },
+    {
+      title: 'Stability over churn',
+      description: 'I prefer solutions that keep working: maintainable design and alignment with long-term cost and risk—not endless rework.',
+      icon: 'TrendingUp',
     },
   ],
 
@@ -83,19 +81,19 @@ export const aboutContent = {
   // Experience/Timeline
   experience: [
     {
-      role: 'Lead Full Stack Developer & System Architect',
+      role: 'Lead Software Engineer & System Architect',
       company: 'Spell Link Pvt Ltd',
       period: 'Feb 2026 - Present',
-      description: 'Led the development of a full-scale travel booking platform for flights, hotels, and car rentals (TravelTourUp), and a car sale & rental marketplace with user listings, bookings, and authentication (CarHub). Architected a complete CRM system for an estimation company with client portal and real-time chat.',
+      description: 'Lead end-to-end delivery of business-critical software. TravelTourUp: travel booking (flights, hotels, cars) on Next.js and Supabase, multiple suppliers, and production hardening (retries, timeouts, logging, environment separation). Car sale/rental marketplaces, estimation CRMs with client portal and real-time comms—Laravel and modern frontends as needed.',
       highlights: [
-        'Led development of a full-scale travel booking platform for flights, hotels, and car rentals (TravelTourUp)',
-        'Built and managed a car sale & rental marketplace with user listings, bookings, and authentication (CarHub)',
-        'Architected a complete CRM system for an estimation company with client portal and real-time chat',
-        'Developed scalable web applications using Laravel and modern frontend practices',
-        'Handled end-to-end project lifecycle including planning, architecture, development, and deployment',
+        'TravelTourUp: Next.js, Supabase, third-party suppliers, and production operations (retries, timeouts, logging, env separation)',
+        'Car sale & rental marketplaces (CarHub) with listings, bookings, and authentication',
+        'Estimation CRMs with client portal, moderation, and analytics where required',
+        'Laravel and modern frontend stacks for scalable, maintainable delivery',
+        'End-to-end ownership: planning, architecture, development, and deployment',
       ],
       companyInfo: {
-        content: 'At Spell Link, I led the development of a full-scale travel booking platform for flights, hotels, and car rentals (TravelTourUp), and a car sale & rental marketplace with user listings, bookings, and authentication (CarHub). I architected a complete CRM system for an estimation company with client portal and real-time chat.',
+        content: 'At Spell Link I lead design and delivery of platforms including TravelTourUp (Next.js, Supabase, supplier integrations) and business CRMs and marketplaces—aligned with how teams actually operate, not just feature lists.',
         location: 'Lahore, Pakistan',
         company: 'Spell Link Pvt Ltd',
       },
