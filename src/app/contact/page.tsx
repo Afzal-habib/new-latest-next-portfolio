@@ -4,10 +4,11 @@ import { useState, useEffect } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import * as LucideIcons from 'lucide-react'
 import { PageHero, SocialLinks } from '@/components/layout'
-import { Section, SectionHeading, Card, CardContent, Button } from '@/components/common'
+import { Section, SectionHeading, Card, CardContent, Button, FaqAccordion } from '@/components/common'
 import { contactInfo } from '@/data/about'
 import { staggerContainer, staggerItem } from '@/lib/animations'
 import { WEB3FORMS_CONFIG } from '@/lib/constants'
+import { faqItems } from '@/data/faq'
 
 interface FormData {
   name: string
@@ -383,51 +384,8 @@ export default function ContactPage() {
           transition={{ duration: 0.6 }}
           className='mt-8'
         >
-          {/* FAQ */}
-          <div className="space-y-4">
-            <div className="space-y-3 grid grid-cols-1 md:grid-cols-2 gap-4">
-              {[
-                {
-                  q: 'What services do you offer?',
-                  a: 'Full-stack web and app development, UI/UX design, and consulting.',
-                },
-                {
-                  q: 'What is your typical project timeline?',
-                  a: 'Depends on scope, but typically 4-8 weeks for most projects.',
-                },
-                {
-                  q: 'Do you work with international clients?',
-                  a: 'Yes! I work with clients globally and adapt to different timezones.',
-                },
-                {
-                  q: 'What technologies do you specialize in?',
-                  a: 'I specialize in React, Next.js, Node.js, MongoDB, and modern web technologies for scalable applications.',
-                },
-                {
-                  q: 'How do you ensure project quality?',
-                  a: 'Through comprehensive testing, code reviews, best practices, and regular client feedback throughout development.',
-                },
-                {
-                  q: 'Do you provide ongoing support after project completion?',
-                  a: 'Yes, I offer maintenance packages and support to ensure your application runs smoothly post-launch.',
-                },
-                {
-                  q: 'What is your development process?',
-                  a: 'I follow an agile approach: discovery, planning, development with milestones, testing, and deployment with full documentation.',
-                },
-                {
-                  q: 'Can you work with existing codebases?',
-                  a: 'Absolutely! I can refactor, optimize, or extend existing applications while maintaining code quality.',
-                },
-              ].map((faq, index) => (
-                <Card key={index} variant="outline" className="overflow-hidden">
-                  <CardContent className="p-2">
-                    <p className="font-medium text-sm">{faq.q}</p>
-                    <p className="mt-1 text-sm text-muted-foreground">{faq.a}</p>
-                  </CardContent>
-                </Card>
-              ))}
-            </div>
+          <div>
+            <FaqAccordion items={faqItems} defaultOpenIndex={0} />
           </div>
         </motion.div>
       </Section>
