@@ -65,7 +65,12 @@ export function Header() {
               href="/"
               className="text-xl font-bold tracking-tight transition-colors hover:text-primary md:text-2xl"
             >
-              <ThemedLogo src="/images/main-logo.png" alt="Logo" width={60} height={60} />
+              <ThemedLogo
+                src="/images/main-logo.png"
+                alt="Afzal Habib — Lead Software Engineer & System Architect"
+                width={60}
+                height={60}
+              />
             </Link>
 
             {/* Desktop Navigation */}

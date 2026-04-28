@@ -5,6 +5,8 @@ import './globals.css'
 import { ThemeProvider } from '@/components/providers'
 import { NavigationProgress, ScrollProgress, ScrollToTop } from '@/components/common'
 import { siteConfig } from '@/data/about'
+import { PersonWebsiteJsonLd } from '@/components/seo'
+import { absoluteUrl } from '@/lib/seo'
 import { ProfessionalLoader } from '@/components/layout/professional-loader'
 import { RouteLoader } from '@/components/common/route-loader'
 import AppShell from '@/components/layout/AppShell'
@@ -28,6 +30,9 @@ export const metadata: Metadata = {
   keywords: siteConfig.keywords,
   authors: [{ name: siteConfig.author }],
   creator: siteConfig.author,
+  alternates: {
+    canonical: '/',
+  },
   icons: {
     icon: '/images/main-logo.png',
     shortcut: '/images/main-logo.png',
@@ -36,7 +41,7 @@ export const metadata: Metadata = {
   openGraph: {
     type: 'website',
     locale: 'en_US',
-    url: siteConfig.url,
+    url: absoluteUrl('/'),
     title: siteConfig.title,
     description: siteConfig.description,
     siteName: siteConfig.name,
@@ -54,7 +59,7 @@ export const metadata: Metadata = {
     title: siteConfig.title,
     description: siteConfig.description,
     images: [siteConfig.ogImage],
-    creator: '@yourusername',
+    creator: siteConfig.twitterHandle,
   },
   robots: {
     index: true,
@@ -90,6 +95,7 @@ export default function RootLayout({
         suppressHydrationWarning
         className={`${geistSans.variable} ${geistMono.variable} min-h-screen bg-background font-sans antialiased`}
       >
+        <PersonWebsiteJsonLd />
         <ThemeProvider
           attribute="class"
           defaultTheme="dark"
