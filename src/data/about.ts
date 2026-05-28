@@ -66,6 +66,24 @@ export const aboutContent = {
       date: 'Sep 2021',
       location: 'Lahore, Pakistan',
     },
+    {
+      name: 'Generative AI with Large Language Models',
+      issuer: 'DeepLearning.AI (Coursera)',
+      date: 'May 2024',
+      location: 'Online',
+    },
+    {
+      name: 'Google AI Essentials',
+      issuer: 'Google (Coursera)',
+      date: 'Aug 2024',
+      location: 'Online',
+    },
+    {
+      name: 'AI Automation & Workflow Engineering',
+      issuer: 'Udemy',
+      date: 'Nov 2023',
+      location: 'Online',
+    },
   ],
 
   // Education

@@ -104,11 +104,11 @@ export const certifications = [
         location: "Arfa IT Tower, Lahore",
     },
     {
-        name: "Backend Development",
-        issuer: "UET Lahore",
-        date: "Sep 2021",
-        location: "Lahore, Pakistan",
-    },
+        name: 'AI Automation & Workflow Engineering',
+        issuer: 'Udemy',
+        date: 'Nov 2023',
+        location: 'Online',
+      },
 ]
 
 export const languages = [
@@ -132,7 +132,7 @@ export const coreCompetencies = [
     // "Authentication Systems",
 ]
 
-export const tools = ["Git", "GitHub", "GitLab","Docker","CI/CD Pipeline", "Postman", "Figma", "Vercel","Github Copilot","Cursor","OpenAI API"]
+export const tools = ["Git", "GitLab","Docker","CI/CD Pipeline", "Figma", "Vercel","Github Copilot","Cursor","OpenAI API"]
 
 export const skills = {
     frontend: {
