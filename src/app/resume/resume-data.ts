@@ -19,7 +19,7 @@ export const experiences = [
     {
         title: "Lead Full Stack Developer",
         company: "Spell Link Pvt Ltd",
-        location: "Lahore",
+        location: "New York, USA",
         duration: "Feb 2025 - Present",
         highlights: [
             "Leading and shipping TravelTourUp — travel booking for flights, hotels, and rental cars (Next.js, Supabase, Duffel, CarTrawler)",
@@ -30,8 +30,8 @@ export const experiences = [
     },
     {
         title: "Senior Full Stack Developer",
-        company: "Depllc (Digi Era Pro)",
-        location: "Lahore",
+        company: "Digi Era Pro",
+        location: "New York, USA",
         duration: "Sep 2024 - Feb 2025",
         highlights: [
             "Lead development of enterprise ERP/CRM system with 13+ integrated modules",

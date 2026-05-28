@@ -25,7 +25,7 @@ The focus is dependable booking flows, clear pricing and itinerary presentation,
     role: 'Founder & Lead Full Stack Developer',
     status: 'In Progress',
     category: 'Full-Stack',
-    startDate: '2026-02-01',
+    startDate: '2025-10-01',
     images: [
       {
         url: 'https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=1200',
@@ -74,6 +74,7 @@ The focus is dependable booking flows, clear pricing and itinerary presentation,
     status: 'In Progress',
     category: 'Full-Stack',
     startDate: '2025-08-01',
+    endDate: '2025-11-30',
     images: [
       {
         url: 'https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?w=1200',
@@ -122,7 +123,8 @@ Real-time chat reduces back-and-forth on active jobs, while dashboards and expor
     role: 'Lead Full Stack Developer',
     status: 'In Progress',
     category: 'Full-Stack',
-    startDate: '2026-02-01',
+    startDate: '2025-02-01',
+    endDate: '2025-07-31',
     images: [
       {
         url: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=1200',
@@ -170,8 +172,8 @@ Key modules include lead generation and qualification, client onboarding, projec
     role: 'Lead Full-Stack Developer & System Architect',
     status: 'Completed',
     category: 'Full-Stack',
-    startDate: '2025-09-23',
-    endDate: '2026-01-10',
+    startDate: '2024-09-01',
+    endDate: '2025-01-31',
     images: [
       {
         url: 'https://images.unsplash.com/photo-1551434678-e076c223a692?w=1200',
@@ -226,8 +228,8 @@ Implemented secure authentication system, integrated multiple payment gateways, 
     role: 'Full-Stack Developer',
     status: 'Completed',
     category: 'Full-Stack',
-    startDate: '2025-07-01',
-    endDate: '2025-08-30',
+    startDate: '2024-06-01',
+    endDate: '2024-08-31',
     images: [
       {
         url: '/projects/pg-shops/img1.png',
@@ -354,8 +356,8 @@ Built with security in mind, implementing role-based access control and audit lo
     role: 'Full-Stack Developer',
     status: 'Completed',
     category: 'Full-Stack',
-    startDate: '2025-03-01',
-    endDate: '2025-07-01',
+    startDate: '2024-02-01',
+    endDate: '2024-06-30',
     images: [
       {
         url: 'https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?w=1200',
@@ -403,7 +405,7 @@ Features include customer management, sales history tracking, daily sales report
     status: 'Completed',
     category: 'Full-Stack',
     startDate: '2024-01-01',
-    endDate: '2024-02-28',
+    endDate: '2024-01-31',
     images: [
       {
         url: 'https://images.unsplash.com/photo-1556740738-b6a63e27c4df?w=1200',
@@ -449,8 +451,8 @@ Implemented modern JavaScript for smooth animations, dynamic content loading, an
     role: 'Frontend Developer',
     status: 'Completed',
     category: 'Frontend',
-    startDate: '2024-09-01',
-    endDate: '2024-12-31',
+    startDate: '2023-01-01',
+    endDate: '2023-12-31',
     images: [
       {
         url: 'https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=1200',
@@ -497,8 +499,8 @@ Implemented with performance optimization for smooth scrolling through large pro
     role: 'Mobile App Developer',
     status: 'Completed',
     category: 'Mobile',
-    startDate: '2024-07-01',
-    endDate: '2024-09-30',
+    startDate: '2023-09-01',
+    endDate: '2023-12-31',
     images: [
       {
         url: 'https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?w=1200',
@@ -545,8 +547,8 @@ Features include low-stock alerts, order management, and multi-location inventor
     role: 'Mobile App Developer',
     status: 'Completed',
     category: 'Mobile',
-    startDate: '2025-05-01',
-    endDate: '2025-08-31',
+    startDate: '2023-05-01',
+    endDate: '2023-08-31',
     images: [
       {
         url: 'https://images.unsplash.com/photo-1586528116493-a029325540fa?w=1200',
@@ -594,8 +596,8 @@ Built with responsive design using Bootstrap, dynamic content rendering via EJS,
     role: 'Frontend Developer & Backend Integration',
     status: 'Completed',
     category: 'Frontend',
-    startDate: '2024-10-01',
-    endDate: '2024-12-31',
+    startDate: '2022-01-01',
+    endDate: '2022-12-31',
     images: [
       {
         url: '/projects/real-estate/ceprop1.png',
@@ -657,8 +659,8 @@ Implemented with responsive Bootstrap design, dynamic EJS templating for content
     role: 'Frontend Developer & Backend Integration',
     status: 'Completed',
     category: 'Frontend',
-    startDate: '2023-11-01',
-    endDate: '2024-01-31',
+    startDate: '2022-01-01',
+    endDate: '2022-12-31',
     images: [
       {
         url: '/projects/real-estate/pentz1.png',
@@ -721,8 +723,8 @@ Built with modern Bootstrap design, dynamic EJS templating, and integrated conta
     role: 'Frontend Developer & Backend Integration',
     status: 'Completed',
     category: 'Frontend',
-    startDate: '2023-12-01',
-    endDate: '2024-02-28',
+    startDate: '2022-01-01',
+    endDate: '2022-12-31',
     images: [
       {
         url: '/projects/real-estate/tobe1.png',
@@ -778,8 +780,8 @@ Built with responsive design using CSS3 and JavaScript, dynamic animations via G
     role: 'Frontend Developer',
     status: 'Completed',
     category: 'Frontend',
-    startDate: '2023-01-01',
-    endDate: '2023-12-31',
+    startDate: '2021-01-01',
+    endDate: '2021-12-31',
     images: [
       {
         url: '/projects/real-estate/buildwise1.png',

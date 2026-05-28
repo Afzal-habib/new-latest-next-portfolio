@@ -74,7 +74,7 @@ export const aboutContent = {
       degree: 'Bachelor of Science in Software Engineering',
       school: 'University of Technology',
       year: '2019 - 2023',
-      location: 'New York, USA',
+      location: 'Lahore, Pakistan',
     },
   ],
 
@@ -94,15 +94,15 @@ export const aboutContent = {
       ],
       companyInfo: {
         content: 'At Spell Link I lead design and delivery of platforms including TravelTourUp (Next.js, Supabase, supplier integrations) and business CRMs and marketplaces—aligned with how teams actually operate, not just feature lists.',
-        location: 'Lahore, Pakistan',
+        location: 'New York, USA',
         company: 'Spell Link Pvt Ltd',
       },
     },
     {
       role: 'Senior Full Stack Developer',
-      company: 'Depllc (Digi Era Pro)',
+      company: 'Digi Era Pro',
       period: 'Sep 2024 - Feb 2025',
-      description: 'Leading the development and implementation of a comprehensive ERP/CRM system for Depllc, utilizing Next.js, Tailwind CSS, MongoDB, and Supabase. Oversaw project architecture, authentication modules, department management, and real-time communication features.',
+      description: 'Leading the development and implementation of a comprehensive ERP/CRM system for Digi Era Pro, utilizing Next.js, Tailwind CSS, MongoDB, and Supabase. Oversaw project architecture, authentication modules, department management, and real-time communication features.',
       highlights: [
         'Implemented and lead the development of a full-featured ERP/CRM system using Next.js and Tailwind CSS',
         'Integrated real-time communication using Supabase with WebSockets and file sharing',
@@ -115,9 +115,9 @@ export const aboutContent = {
         'Developed Reporting & Analytics modules with customizable reports and data visualization',
       ],
       companyInfo: {
-        content: 'At Depllc, I mastered and lead advanced full-stack development techniques, including real-time communication with Supabase, multi-tier authentication systems, and comprehensive ERP/CRM architecture. I gained expertise in project lifecycle management from lead generation to execution.',
-        location: 'Ichra, Lahore, Pakistan',
-        company: 'Depllc',
+        content: 'At Digi Era, I mastered and lead advanced full-stack development techniques, including real-time communication with Supabase, multi-tier authentication systems, and comprehensive ERP/CRM architecture. I gained expertise in project lifecycle management from lead generation to execution.',
+        location: 'New York, USA',
+        company: 'Digi Era Pro',
       },
     },
     {
