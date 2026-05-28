@@ -106,7 +106,7 @@ export default function ResumePage() {
                   </div>
 
                   {/* Contact Row */}
-                  <div className="flex flex-wrap items-center gap-x-4 gap-y-1.5 mt-3 text-[11.5px] text-slate-800">
+                  <div className="flex flex-wrap items-center gap-x-4 gap-y-1.5 mt-3 text-[12px] text-slate-800">
                     <span className="flex items-center gap-1.5 font-semibold">
                       <Phone className="w-3.5 h-3.5 text-slate-700" />
                       {personalInfo.phone}
@@ -120,7 +120,7 @@ export default function ResumePage() {
                       {personalInfo.location}
                     </span>
                   </div>
-                  <div className="flex items-center gap-x-4 mt-1.5 text-[10.5px] text-slate-800">
+                  <div className="flex items-center gap-x-4 mt-1.5 text-[12px] text-slate-800">
                     <Link href={`${personalInfo.linkedin}`} className="flex items-center gap-1.5 font-semibold">
                       <Linkedin className="w-3.5 h-3.5 text-slate-700" />
                       {personalInfo.linkedin}

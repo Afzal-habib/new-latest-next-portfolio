@@ -6,7 +6,7 @@ export const aboutContent = {
   tagline: 'Lead Software Engineer & System Architect',
 
   // Summary
-  summary: `I lead business problem-solving through software that supports real operations and growth. I lead and help teams clarify requirements, decide early, and deliver systems that support day-to-day work and long-term growth—not just a backlog of features. I'm a Lead Software Engineer & System Architect with 5+ years in web and mobile, leading end-to-end delivery of business-critical software.`,
+  summary: `I lead business problem-solving through software that supports real operations and growth. I lead and help teams clarify requirements, decide early, and deliver systems that support day-to-day work and long-term growth—not just a backlog of features. I'm a Lead Software Engineer & System Architect with 6+ years in web and mobile, leading end-to-end delivery of business-critical software.`,
 
   // Vision/Mission
   vision: `Before build, I map processes, validate requirements with stakeholders, and align scope and tech with cost, timeline, and risk—so the first release is maintainable, not a cycle of rework. I've led travel booking (TravelTourUp: Next.js, Supabase, suppliers, production hardening), enterprise ERP/CRM (13+ modules, workflows, reporting, client portal), marketplaces, e‑com/POS (MERN, Laravel), and React Native (offline, scanning). Core stack: Next.js, React, TypeScript, Node, Laravel, React Native, Supabase, MongoDB, MySQL, PostgreSQL, with focus on production: auth, permissions, data integrity, performance, and maintainability. I work best with teams that use software to run the business and scale sustainably—not to chase a feature list.`,

@@ -1,8 +1,9 @@
+
 // Resume Mock Data - All content centralized here for easy updates
 
 export const personalInfo = {
     name: "Afzal Habib",
-    title: "Full Stack Developer",
+    title: "Lead Full Stack Engineer & System Architect",
     phone: "+92 323 1103430",
     email: "afzalhaabib786@gmail.com",
     location: "Harbanspura, Lahore, Pakistan",
@@ -12,14 +13,14 @@ export const personalInfo = {
     profileImage: "resume/images/profile-picture-professional-2.png",
 }
 
-export const summary = `Lead Full-Stack Engineer & System Architect with 5+ years of experience designing and delivering scalable web and mobile systems. Specialized in Next.js, React, Node.js, NestJS, and MERN/PERN stacks with strong expertise in building enterprise-grade ERP/CRM platforms, e-commerce systems, and real-time applications. Focused on system architecture, clean code practices, performance optimization, and translating complex business requirements into reliable, scalable software solutions.`
+export const summary = `Lead Full-Stack Engineer & System Architect with 6+ years of experience designing and delivering scalable web and mobile systems. Specialized in Next.js, React, Node.js, NestJS, and MERN/PERN stacks with strong expertise in building enterprise-grade ERP/CRM platforms, e-commerce systems, and real-time applications. Focused on system architecture, clean code practices, performance optimization, and translating complex business requirements into reliable, scalable software solutions.`
 
 export const experiences = [
     {
         title: "Lead Full Stack Developer",
         company: "Spell Link Pvt Ltd",
         location: "Lahore",
-        duration: "Feb 2026 - Present",
+        duration: "Feb 2025 - Present",
         highlights: [
             "Leading and shipping TravelTourUp — travel booking for flights, hotels, and rental cars (Next.js, Supabase, Duffel, CarTrawler)",
             "Leading CarHub — Laravel marketplace where sellers list vehicles for sale or rent and customers book securely",
@@ -31,7 +32,7 @@ export const experiences = [
         title: "Senior Full Stack Developer",
         company: "Depllc (Digi Era Pro)",
         location: "Lahore",
-        duration: "Sep 2025 - Feb 2026",
+        duration: "Sep 2024 - Feb 2025",
         highlights: [
             "Lead development of enterprise ERP/CRM system with 13+ integrated modules",
             "Implemented real-time communication(whatsapp and slack inspired) using Supabase WebSockets",
@@ -43,7 +44,7 @@ export const experiences = [
         title: "Full Stack Developer",
         company: "Devgiant",
         location: "Lahore",
-        duration: "Fab 2024 - Sep 2025",
+        duration: "Fab 2023 - Sep 2024",
         highlights: [
             "Developed e-commerce and real estate platforms",
             "Built inventory systems with real-time tracking",
@@ -56,7 +57,7 @@ export const experiences = [
         title: "Frontend Developer",
         company: "Heapware Technologies",
         location: "Lahore",
-        duration: "Jan 2023 - Jan 2024",
+        duration: "Jan 2022 - Jan 2023",
         highlights: [
             "Built React web apps and real estate sites with modern UI",
         ],
@@ -64,10 +65,10 @@ export const experiences = [
         borderColor: "border-slate-700",
     },
     {
-        title: "MERN Stack Internship",
+        title: "MERN Stack Developer",
         company: "Corelogix",
         location: "Gulberg, Lahore",
-        duration: "Jun 2021 - Dec 2022",
+        duration: "Fab 2020 - Dec 2021",
         highlights: [
             "Built frontend projects and learned modern dev practices",
         ],
@@ -79,13 +80,13 @@ export const experiences = [
 export const education = [
     {
         degree: "BS Software Engineering",
-        institution: "Virtual University of Pakistan",
-        duration: "2021 - 2025",
+        institution: "University of Engineering and Technology, Lahore",
+        duration: "2019 - 2023",
     },
     {
         degree: "FSc Pre-Engineering",
         institution: "Faizaia Inter College",
-        duration: "2019 - 2021",
+        duration: "2017 - 2019",
     },
 ]
 
@@ -93,19 +94,19 @@ export const certifications = [
     {
         name: "MERN Stack Development",
         issuer: "House of Professional",
-        date: "Mar 2021",
+        date: "Mar 2019",
         location: "Johar Town, Lahore",
     },
     {
         name: "MERN Stack Development",
         issuer: "Ideoversity",
-        date: "Apr 2022",
+        date: "Apr 2020",
         location: "Arfa IT Tower, Lahore",
     },
     {
         name: "Backend Development",
         issuer: "UET Lahore",
-        date: "Sep 2022",
+        date: "Sep 2021",
         location: "Lahore, Pakistan",
     },
 ]
@@ -140,35 +141,35 @@ export const skills = {
                 name: "Languages & Core",
                 technologies: "HTML5, CSS3, JavaScript (ES6+), TypeScript",
                 level: "Expert",
-                experience: "5 years experience",
+                experience: "6 years experience",
                 borderColor: "border-slate-900",
             },
             {
                 name: "Frameworks & Libraries",
                 technologies: "React.js, Next.js, Redux Toolkit, Context API",
                 level: "Expert",
-                experience: "3 years experience",
+                experience: "5 years experience",
                 borderColor: "border-slate-900",
             },
             {
                 name: "Styling Frameworks",
                 technologies: "Tailwind CSS, Bootstrap, ShadCN UI, Radix UI, Styled Components",
                 level: "Expert",
-                experience: "5 years experience",
+                experience: "6 years experience",
                 borderColor: "border-slate-900",
             },
             {
                 name: "Animation & Motion",
                 technologies: "Framer Motion, GSAP, Lenis, CSS Animations",
                 level: "Advanced",
-                experience: "3 years experience",
+                experience: "4 years experience",
                 borderColor: "border-slate-900",
             },
             {
                 name: "State Management",
                 technologies: "Redux, Redux Toolkit, Context API",
                 level: "Advanced",
-                experience: "3 years experience",
+                experience: "4 years experience",
                 borderColor: "border-slate-900",
             },
         ],
@@ -181,28 +182,28 @@ export const skills = {
                 name: "Runtime & Frameworks",
                 technologies: "Node.js, Express.js,Nest.js, Core PHP, REST APIs",
                 level: "Advanced",
-                experience: "4 years experience",
+                experience: "6 years experience",
                 borderColor: "border-slate-900",
             },
             {
                 name: "Authentication & Security",
                 technologies: "JWT, NextAuth.js, OAuth2, SHA-1 , bcrypt, 2FA",
                 level: "Advanced",
-                experience: "3 years experience",
+                experience: "5 years experience",
                 borderColor: "border-slate-700",
             },
             {
                 name: "Real-time Communication",
                 technologies: "Socket.io, WebSockets, Supabase Realtime",
                 level: "Advanced",
-                experience: "3 years experience",
+                experience: "4 years experience",
                 borderColor: "border-slate-700",
             },
             {
                 name: "API Development",
                 technologies: "RESTful APIs, Middleware, Validation , Error Handling",
                 level: "Advanced",
-                experience: "4 years experience",
+                experience: "5 years experience",
                 borderColor: "border-slate-700",
             },
         ],
@@ -215,21 +216,21 @@ export const skills = {
                 name: "NoSQL Databases",
                 technologies: "MongoDB, MongoDB Atlas, Aggregation Pipelines",
                 level: "Advanced",
-                experience: "3 years experience",
+                experience: "5 years experience",
                 borderColor: "border-slate-700",
             },
             {
                 name: "SQL Databases",
                 technologies: "MySQL, PostgreSQL, Complex Queries, Optimization",
                 level: "Advanced",
-                experience: "4 years experience",
+                experience: "5 years experience",
                 borderColor: "border-slate-900",
             },
             {
                 name: "ORM & BaaS",
                 technologies: "Prisma ORM, Supabase, Mongoose ODM",
                 level: "Advanced",
-                experience: "3 years experience",
+                experience: "4 years experience",
                 borderColor: "border-slate-700",
             },
         ],
@@ -242,21 +243,21 @@ export const skills = {
                 name: "Cross-Platform Framework",
                 technologies: "React Native, Expo, EAS Build, OTA Updates",
                 level: "Advanced",
-                experience: "2 years experience",
+                experience: "4 years experience",
                 borderColor: "border-slate-700",
             },
             {
                 name: "Navigation & Storage",
                 technologies: "React Navigation, Redux",
                 level: "Advanced",
-                experience: "2 years experience",
+                experience: "4 years experience",
                 borderColor: "border-slate-700",
             },
             {
                 name: "Native Features",
                 technologies: "Camera, Push Notifications, Deep Linking",
                 level: "Advanced",
-                experience: "2 years experience",
+                experience: "4 years experience",
                 borderColor: "border-slate-700",
             },
         ],
@@ -269,21 +270,21 @@ export const skills = {
                 name: "Payment Gateways",
                 technologies: "Squareup,Stripe, Webhooks, ",
                 level: "Advanced",
-                experience: "4 years experience",
+                experience: "5 years experience",
                 borderColor: "border-slate-700",
             },
             {
                 name: "Cloud Services",
                 technologies: "AWS S3, CDN, Google APIs, SendGrid, AWS SES",
                 level: "Advanced",
-                experience: "3 years experience",
+                experience: "5 years experience",
                 borderColor: "border-slate-700",
             },
             {
                 name: "Shipping & Email",
                 technologies: "Shippo,SendGrid, AWS SES , Email Templates, Automation",
                 level: "Advanced",
-                experience: "3 years experience",
+                experience: "5 years experience",
                 borderColor: "border-slate-700",
             },
         ],
@@ -296,21 +297,21 @@ export const skills = {
                 name: "Version Control",
                 technologies: "Git, GitHub, GitLab, Branching Strategies",
                 level: "Expert",
-                experience: "5 years experience",
+                experience: "6 years experience",
                 borderColor: "border-slate-900",
             },
             {
                 name: "Deployment & CI/CD",
                 technologies: "Docker, Vercel, Digital Ocean, GitHub Actions",
                 level: "Advanced",
-                experience: "3 years experience",
+                experience: "5 years experience",
                 borderColor: "border-slate-900",
             },
             {
                 name: "Design & Documentation",
                 technologies: "Figma, Postman, Technical Writing , Prompt Engineering",
                 level: "Advanced",
-                experience: "5 years experience",
+                experience: "6 years experience",
                 borderColor: "border-slate-900",
             },
         ],
@@ -324,7 +325,7 @@ export const spellLinkProjects = [
         subtitle: "Travel Booking Platform (Flights, Hotels & Cars)",
         role: "Founder & Lead Full Stack Developer",
         company: "Spell Link Pvt Ltd",
-        duration: "Feb 2026 - Present",
+        duration: "Oct 2025 - Present",
         description:
             "Full-featured travel booking platform where users book flights, hotels, and rental cars from one interface. API-driven architecture focused on performance, reliability, and a smooth end-to-end experience from search to confirmation.",
         technologies: [
@@ -355,7 +356,7 @@ export const spellLinkProjects = [
         subtitle: "Car Sale & Rental Marketplace",
         role: "Lead Full Stack Developer",
         company: "Spell Link Pvt Ltd",
-        duration: "Feb 2026 - Present",
+        duration: "Aug 2025 - Nov 2025",
         description:
             "Laravel-based marketplace where registered users create accounts, list vehicles for sale or rent, and buyers or renters discover listings and complete bookings. Emphasis on trust, clear listing workflows, and a straightforward customer journey.",
         technologies: ["Laravel", "PHP", "MySQL", "Blade", "JavaScript", "REST APIs"],
@@ -380,7 +381,7 @@ export const spellLinkProjects = [
         subtitle: "CRM with Client Portal & Chat",
         role: "Lead Full Stack Developer",
         company: "Spell Link Pvt Ltd",
-        duration: "Feb 2026 - Present",
+        duration: "Feb 2025 - Jul 2025",
         description:
             "End-to-end Laravel CRM tailored for an estimation business: leads, quotes, jobs, documents, and reporting, plus a dedicated client portal and real-time chat so staff and clients stay aligned without email overload.",
         technologies: ["Laravel", "PHP", "MySQL", "WebSockets / Realtime", "Blade", "JavaScript"],
@@ -406,7 +407,7 @@ export const projects = [
     {
         title: "Depllc ERP/CRM System",
         role: "Lead Full-Stack Developer & System Architect",
-        duration: "Sep 2025 - Jan 2026",
+        duration: "Sep 2024 - Jan 2025",
         description:
             "Enterprise-grade ERP/CRM with 13+ modules including lead management, project tracking, real-time communication, and role-based permissions for complex business workflows.",
         technologies: ["Next.js", "TypeScript", "MongoDB", "Supabase", "Redux Toolkit", "AWS S3", "Socket.io"],
@@ -426,7 +427,7 @@ export const projects = [
     {
         title: "E-Commerce Platform (MERN Stack)",
         role: "Full-Stack Developer",
-        duration: "Jul - Aug 2025",
+        duration: "Jun 2024 - Aug 2024",
         description:
             "Full-featured e-commerce solution with product catalog, shopping cart, secure checkout, and admin dashboard for inventory management.",
         technologies: ["React", "Node.js", "Express.js", "MongoDB", "Squareup", "Shippo", "Redux"],
@@ -445,7 +446,7 @@ export const projects = [
     {
         title: "Inventory Management System",
         role: "Full-Stack Developer",
-        duration: "Mar - Jul 2025",
+        duration: "Feb 2024 - Jun 2024",
         description:
             "Comprehensive inventory tracking with supplier management, automated alerts, and role-based access control.",
         technologies: ["MERN", "MySQL", "Prisma ORM", "Bootstrap", "Socket.io", "JWT"],
@@ -464,7 +465,7 @@ export const projects = [
     {
         title: "Point of Sale (POS) System",
         role: "Full-Stack Developer",
-        duration: "2024",
+        duration: "Jan 2024",
         description:
             "Professional POS for retail with fast checkout, barcode support, invoice generation, and sales analytics.",
         technologies: ["Core PHP", "MySQL", "JavaScript", "Bootstrap", "TCPDF"],
@@ -481,7 +482,7 @@ export const projects = [
     {
         title: "E-Commerce Mobile App",
         role: "Mobile Developer",
-        duration: "Jul - Sep 2024",
+        duration: "Sep 2023 - Dec 2023",
         description: "Cross-platform shopping app with product catalog, cart, and secure payment processing.",
         technologies: ["React Native", "Expo", "Redux"],
         highlights: [
@@ -503,7 +504,7 @@ export const projects = [
     {
         title: "Inventory Mobile App",
         role: "Mobile Developer",
-        duration: "May - Aug 2025",
+        duration: "May - Aug 2023",
         description: "Mobile inventory management with barcode scanning and offline-first architecture.",
         technologies: ["React Native", "Expo", "Redux"],
         highlights: [
@@ -525,7 +526,7 @@ export const projects = [
     {
         title: "Real Estate Website",
         role: "Frontend Developer",
-        duration: "Sep - Dec 2024",
+        duration: "2023",
         description:
             "Modern property showcase with advanced filtering, image galleries, Google Maps integration, and SEO optimization.",
         technologies: ["HTML5", "CSS3", "JavaScript", "Bootstrap", "Figma"],
@@ -547,7 +548,7 @@ export const projects = [
     {
         title: "CE Prop Real Estate Website",
         role: "Frontend Developer & Backend Integration",
-        duration: "2024",
+        duration: "2022",
         description: "Comprehensive real estate platform with property listings, agent management, and enquiry forms",
         technologies: ["Bootstrap", "EJS", "JavaScript", "CSS3", "HTML5", "Font Awesome", "Node.js", "Express.js"],
         highlights: [
@@ -565,7 +566,7 @@ export const projects = [
     {
         title: "Pentz Properties Real Estate Website",
         role: "Frontend Developer & Backend Integration",
-        duration: "2023",
+        duration: "2022",
         description: "Professional real estate platform with property search, sold listings, and comprehensive tools",
         technologies: ["Bootstrap", "EJS", "JavaScript", "CSS3", "HTML5", "Font Awesome", "Node.js", "Express.js"],
         highlights: [
@@ -582,7 +583,7 @@ export const projects = [
     {
         title: "To Be Real Estate Website",
         role: "Frontend Developer & Backend Integration",
-        duration: "2023",
+        duration: "2022",
         description: "Advanced real estate platform with comprehensive property categories and interactive features",
         technologies: ["Bootstrap", "EJS", "JavaScript", "CSS3", "HTML5", "Font Awesome", "Node.js", "Express.js"],
         highlights: [
@@ -601,7 +602,7 @@ export const projects = [
     {
         title: "Buildwise Estimators Website",
         role: "Frontend Developer",
-        duration: "2023",
+        duration: "2021",
         description: "Professional construction estimating website with service listings, project portfolios, and contact forms",
         technologies: ["HTML5", "CSS3", "JavaScript", "GSAP", "Font Awesome", "Tawk.to"],
         highlights: [
