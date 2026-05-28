@@ -13,7 +13,7 @@ export const personalInfo = {
     profileImage: "resume/images/profile-picture-professional-2.png",
 }
 
-export const summary = `Lead Full-Stack Engineer & System Architect with 6+ years of experience designing and delivering scalable web and mobile systems. Specialized in Next.js, React, Node.js, NestJS, and MERN/PERN stacks with strong expertise in building enterprise-grade ERP/CRM platforms, e-commerce systems, and real-time applications. Focused on system architecture, clean code practices, performance optimization, and translating complex business requirements into reliable, scalable software solutions.`
+export const summary = `Lead Full-Stack Engineer & System Architect with 6+ years of experience designing and delivering scalable web and mobile systems. Specialized in Next.js, NestJS, Python, FastAPI, and MERN/PERN stacks with strong expertise in building enterprise-grade ERP/CRM platforms, e-commerce systems, real-time applications, and AI-powered integrations. Focused on system architecture, software Engineering practices, and translating complex business requirements into reliable, scalable software solutions.`
 
 export const experiences = [
     {
@@ -120,9 +120,11 @@ export const languages = [
 export const coreCompetencies = [
     "Full Stack Development",
     "MERN Stack Development",
-    "PERN Stack Development",
+    // "PERN Stack Development",
+    "Python Development",
+    "AI Integration",
     "System Architecture",
-    "API Design",
+    // "API Design",
     "Database Design",
     "Real-time Applications",
     "Mobile Development",
@@ -130,7 +132,7 @@ export const coreCompetencies = [
     // "Authentication Systems",
 ]
 
-export const tools = ["Git", "GitHub", "GitLab","Docker","CI/CD Pipeline", "VS Code", "Postman", "Figma", "Vercel","Github Copilot","Cursor"]
+export const tools = ["Git", "GitHub", "GitLab","Docker","CI/CD Pipeline", "Postman", "Figma", "Vercel","Github Copilot","Cursor","OpenAI API"]
 
 export const skills = {
     frontend: {
@@ -180,10 +182,17 @@ export const skills = {
         items: [
             {
                 name: "Runtime & Frameworks",
-                technologies: "Node.js, Express.js,Nest.js, Core PHP, REST APIs",
+                technologies: "Node.js, Express.js, Nest.js, Python, FastAPI, Core PHP, REST APIs",
                 level: "Advanced",
                 experience: "6 years experience",
                 borderColor: "border-slate-900",
+            },
+            {
+                name: "Python & FastAPI",
+                technologies: "Python, FastAPI, Pydantic, Async APIs, Background Tasks",
+                level: "Advanced",
+                experience: "2 years experience",
+                borderColor: "border-slate-700",
             },
             {
                 name: "Authentication & Security",
@@ -267,6 +276,13 @@ export const skills = {
         title: "Third-Party Integrations",
         items: [
             {
+                name: "AI Integration",
+                technologies: "OpenAI API, LLM Integration, AI Assistants",
+                level: "Advanced",
+                experience: "2 years experience",
+                borderColor: "border-slate-900",
+            },
+            {
                 name: "Payment Gateways",
                 technologies: "Squareup,Stripe, Webhooks, ",
                 level: "Advanced",
@@ -289,6 +305,26 @@ export const skills = {
             },
         ],
     },
+    // ai: {
+    //     icon: "Settings",
+    //     title: "AI & Machine Learning",
+    //     items: [
+    //         {
+    //             name: "AI Integration",
+    //             technologies: "OpenAI API, LLM Integration, Prompt Engineering, RAG, AI Assistants",
+    //             level: "Advanced",
+    //             experience: "2 years experience",
+    //             borderColor: "border-slate-900",
+    //         },
+    //         // {
+    //         //     name: "AI-Assisted Development",
+    //         //     technologies: "GitHub Copilot, Cursor, Code Generation, Workflow Automation",
+    //         //     level: "Advanced",
+    //         //     experience: "2 years experience",
+    //         //     borderColor: "border-slate-700",
+    //         // },
+    //     ],
+    // },
     devops: {
         icon: "GitBranch",
         title: "DevOps & Tools",
@@ -410,7 +446,7 @@ export const projects = [
         duration: "Sep 2024 - Jan 2025",
         description:
             "Enterprise-grade ERP/CRM with 13+ modules including lead management, project tracking, real-time communication, and role-based permissions for complex business workflows.",
-        technologies: ["Next.js", "TypeScript", "MongoDB", "Supabase", "Redux Toolkit", "AWS S3", "Socket.io"],
+        technologies: ["Next.js", "TypeScript", "MongoDB", "Supabase", "Redux Toolkit", "AWS S3", "Socket.io", "Python", "FastAPI", "OpenAI API"],
         highlights: [
             'Architected complete system with 13+ interconnected modules',
             'Implemented multi-tier authentication with 2FA for admin and employees',
@@ -419,6 +455,7 @@ export const projects = [
             'Integrated Supabase for real-time communication and notifications',
             'Implemented secure file storage with AWS S3 and document version control',
             'Designed client portal for project visibility and communication',
+            'Integrated Python/FastAPI microservices and OpenAI API for AI-assisted workflows',
         ],
         borderColor: "border-slate-900",
         isLarge: true,

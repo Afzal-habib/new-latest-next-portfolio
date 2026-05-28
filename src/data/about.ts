@@ -9,7 +9,7 @@ export const aboutContent = {
   summary: `I lead business problem-solving through software that supports real operations and growth. I lead and help teams clarify requirements, decide early, and deliver systems that support day-to-day work and long-term growth—not just a backlog of features. I'm a Lead Software Engineer & System Architect with 6+ years in web and mobile, leading end-to-end delivery of business-critical software.`,
 
   // Vision/Mission
-  vision: `Before build, I map processes, validate requirements with stakeholders, and align scope and tech with cost, timeline, and risk—so the first release is maintainable, not a cycle of rework. I've led travel booking (TravelTourUp: Next.js, Supabase, suppliers, production hardening), enterprise ERP/CRM (13+ modules, workflows, reporting, client portal), marketplaces, e‑com/POS (MERN, Laravel), and React Native (offline, scanning). Core stack: Next.js, React, TypeScript, Node, Laravel, React Native, Supabase, MongoDB, MySQL, PostgreSQL, with focus on production: auth, permissions, data integrity, performance, and maintainability. I work best with teams that use software to run the business and scale sustainably—not to chase a feature list.`,
+  vision: `Before build, I map processes, validate requirements with stakeholders, and align scope and tech with cost, timeline, and risk—so the first release is maintainable, not a cycle of rework. I've led travel booking (TravelTourUp: Next.js, Supabase, suppliers, production hardening), enterprise ERP/CRM (13+ modules, workflows, reporting, client portal), marketplaces, e‑com/POS (MERN, Laravel), React Native (offline, scanning), and AI-powered features with Python and FastAPI. Core stack: Next.js, React, TypeScript, Node, Python, FastAPI, Laravel, React Native, Supabase, MongoDB, MySQL, PostgreSQL, with focus on production: auth, permissions, data integrity, performance, and maintainability. I work best with teams that use software to run the business and scale sustainably—not to chase a feature list.`,
 
   // Approach (used for consistency / future sections)
   approach: `I start from operations and requirements: understand the process, validate with stakeholders, identify risks, sequence scope, then align the stack and architecture with cost, delivery, and future growth. Engineering follows that foundation—so the first release is maintainable, not a series of rewrites.`,
@@ -19,7 +19,7 @@ export const aboutContent = {
     { label: 'Years of Experience', value: '6+' },
     { label: 'Projects Completed', value: '30+' },
     { label: 'ERP/CRM modules (enterprise)', value: '13+' },
-    { label: 'Technologies mastered', value: '30+' },
+    { label: 'Technologies mastered', value: '33+' },
   ],
 
   // Values
@@ -200,7 +200,7 @@ export const siteConfig = {
   name: 'Afzal Habib',
   title: 'Afzal Habib | Lead Software Engineer & System Architect',
   description:
-    'Lead Software Engineer and System Architect focused on Next.js, React, TypeScript, Node.js, Laravel, and production-ready systems for travel, ERP/CRM, and marketplaces. Based in Lahore, Pakistan — freelance and remote collaborations.',
+    'Lead Software Engineer and System Architect focused on Next.js, React, TypeScript, Node.js, Python, FastAPI, Laravel, AI integrations, and production-ready systems for travel, ERP/CRM, and marketplaces. Based in Lahore, Pakistan — freelance and remote collaborations.',
   url: 'https://afzalhabib.com/',
   ogImage: '/images/main-logo.png',
   author: 'Afzal Habib',
@@ -217,6 +217,10 @@ export const siteConfig = {
     'TypeScript',
     'Node.js',
     'Nest.js',
+    'Python',
+    'FastAPI',
+    'AI Integration',
+    'OpenAI API',
     'MERN Stack',
     'Laravel',
     'React Native',

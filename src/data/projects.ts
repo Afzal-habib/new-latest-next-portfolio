@@ -167,8 +167,8 @@ Real-time chat reduces back-and-forth on active jobs, while dashboards and expor
     longDescription: `Enterprise-level ERP/CRM system designed for managing complex business workflows across sales, support, IT, and administrative departments.
 This system features a sophisticated multi-tier authentication system with 2FA, dynamic role management with 10+ hierarchical roles, and comprehensive workflow automation across 9 project stages. The platform includes real-time communication powered by Supabase, department-based task management, and advanced reporting capabilities.
 Key modules include lead generation and qualification, client onboarding, project validation, approval workflows, task execution with time tracking, and a dedicated client portal for project visibility.`,
-    technologies: ['Next.js', 'TypeScript', 'Redux Toolkit', 'NextAuth.js', 'MongoDB', 'Supabase', 'Tailwind CSS', 'AWS S3', 'Socket.io', 'bcryptjs'],
-    featuredTechnologies: ['Next.js', 'MongoDB', 'Supabase'],
+    technologies: ['Next.js', 'TypeScript', 'Redux Toolkit', 'NextAuth.js', 'MongoDB', 'Supabase', 'Tailwind CSS', 'AWS S3', 'Socket.io', 'bcryptjs', 'Python', 'FastAPI', 'OpenAI API'],
+    featuredTechnologies: ['Next.js', 'MongoDB', 'Supabase', 'Python', 'FastAPI'],
     role: 'Lead Full-Stack Developer & System Architect',
     status: 'Completed',
     category: 'Full-Stack',
@@ -192,6 +192,7 @@ Key modules include lead generation and qualification, client onboarding, projec
       'Implemented secure file storage with AWS S3 and document version control',
       'Built comprehensive reporting and analytics dashboard',
       'Designed client portal for project visibility and communication',
+      'Integrated Python/FastAPI services and OpenAI API for AI-assisted workflows and automation',
     ],
     challenges: [
       'Managing complex role hierarchies and permission matrices across departments',
@@ -207,6 +208,7 @@ Key modules include lead generation and qualification, client onboarding, projec
       'Workflow automation patterns for complex business processes',
       'Scalable state management with Redux Toolkit for large applications',
       'Security best practices for enterprise applications',
+      'Integrating Python/FastAPI services and LLM APIs into existing Node.js ecosystems',
     ],
     featured: true,
     order: 1,
